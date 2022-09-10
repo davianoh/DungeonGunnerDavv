@@ -8,12 +8,12 @@ public class HealthBar : MonoBehaviour
 
     public void EnableHealthBar()
     {
-        healthBar.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     public void DisableHealthBar()
     {
-        healthBar.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void SetHealthBarValue(float healthPercent)
