@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cdff975ad084741a653a7ac8c08fad, type: 3}
+  m_Name: WeaponDetails_LaserBlaster
+  m_EditorClassIdentifier: 
+  weaponName: LaserBlaster
+  weaponSprite: {fileID: 21300000, guid: e9d1276e0a6b9bf42b04b5470c7073fb, type: 3}
+  weaponShootPosition: {x: 1.323, y: 0.294, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 37afda80e67514544a8fd05dcce08747, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: 57ab8b83e6d59ad4396095d050a398d9, type: 2}
+  weaponFiringSoundEffect: {fileID: 11400000, guid: 6771510f29344a94bae7c264a7baea65, type: 2}
+  weaponReloadingSoundEffect: {fileID: 11400000, guid: 9a04e34583ed7a8448e7fa11da0fe53a, type: 2}
+  hasInfiniteAmmo: 0
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 8
+  weaponAmmoCapacity: 50
+  weaponFireRate: 0.5
+  weaponPrechargeTime: 0.3
+  weaponReloadTime: 3

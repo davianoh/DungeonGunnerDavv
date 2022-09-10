@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7710e13224de304cb350840744f839d, type: 3}
+  m_Name: EnemyDetails_HedusaGreen
+  m_EditorClassIdentifier: 
+  enemyName: Hedusa Green
+  enemyPrefab: {fileID: 4031292406956938140, guid: 71a018f99dc867e4e9f762a77038f9f1, type: 3}
+  chaseDistance: 50
+  enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  enemyMaterializeTime: 2.5
+  enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
+  enemyMaterializeColor: {r: 0.84298223, g: 8.47419, b: 0, a: 1}
+  enemyWeapon: {fileID: 0}
+  firingIntervalMin: 0.1
+  firingIntervalMax: 1
+  firingDurationMin: 1
+  firingDurationMax: 2
+  firingLineOfSightRequired: 0
+  enemyHealthDetailsArray:
+  - dungeonLevel: {fileID: 11400000, guid: 0134d2df451d2df49822abed20946471, type: 2}
+    enemyHealthAmount: 25
+  - dungeonLevel: {fileID: 11400000, guid: a53824ed89aeb2143ae138b5f0ac70be, type: 2}
+    enemyHealthAmount: 30
+  - dungeonLevel: {fileID: 11400000, guid: e712ae7d3bef26744af7a5cd59857ee3, type: 2}
+    enemyHealthAmount: 35
+  - dungeonLevel: {fileID: 11400000, guid: 68fd64fd225ffe94aa549cf11ce6e46c, type: 2}
+    enemyHealthAmount: 40
+  - dungeonLevel: {fileID: 11400000, guid: 2220bf1e0488cb748adbb0a12df6f038, type: 2}
+    enemyHealthAmount: 45
+  - dungeonLevel: {fileID: 11400000, guid: 3a29d5539baf89440a35c6bc2d6f11fb, type: 2}
+    enemyHealthAmount: 50
+  isImmuneAfterHit: 0
+  hitImmunityTime: 0
