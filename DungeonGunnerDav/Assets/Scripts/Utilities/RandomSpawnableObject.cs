@@ -13,11 +13,11 @@ public class RandomSpawnableObject<T>
 
     private int ratioValueTotal = 0;
     private List<chanceBoundaries> chanceBoundariesList = new List<chanceBoundaries>();
-    private List<SpawnableObjectByLevel<T>> spawnableObjectByLevelList;
+    private SpawnableObjectByLevel<T> spawnableObjectByLevel;
 
-    public RandomSpawnableObject(List<SpawnableObjectByLevel<T>> spawnableObjectByLevelList)
+    public RandomSpawnableObject(SpawnableObjectByLevel<T> spawnableObjectByLevel)
     {
-        this.spawnableObjectByLevelList = spawnableObjectByLevelList;
+        this.spawnableObjectByLevel = spawnableObjectByLevel;
     }
 
     public T GetItem()
@@ -27,23 +27,17 @@ public class RandomSpawnableObject<T>
         chanceBoundariesList.Clear();
         T spawnableObject = default(T);
 
-        foreach(SpawnableObjectByLevel<T> spawnableObjectByLevel in spawnableObjectByLevelList)
+        foreach (SpawnableObjectRatio<T> spawnableObjectRatio in spawnableObjectByLevel.spawnableObjectRatioList)
         {
-            if(spawnableObjectByLevel.dungeonLevel == GameManager.Instance.GetCurrentDungeonLevel())
-            {
-                foreach(SpawnableObjectRatio<T> spawnableObjectRatio in spawnableObjectByLevel.spawnableObjectRatioList)
-                {
-                    int lowerBoundary = upperBoundary + 1;
-                    upperBoundary = lowerBoundary + spawnableObjectRatio.ratio - 1;
-                    ratioValueTotal += spawnableObjectRatio.ratio;
+            int lowerBoundary = upperBoundary + 1;
+            upperBoundary = lowerBoundary + spawnableObjectRatio.ratio - 1;
+            ratioValueTotal += spawnableObjectRatio.ratio;
 
-                    chanceBoundariesList.Add(new chanceBoundaries() { spawnableObject = spawnableObjectRatio.dungeonObject, lowBoundaryValue = lowerBoundary, highBoundaryValue = upperBoundary });
+            chanceBoundariesList.Add(new chanceBoundaries() { spawnableObject = spawnableObjectRatio.dungeonObject, lowBoundaryValue = lowerBoundary, highBoundaryValue = upperBoundary });
 
-                }
-            }
         }
 
-        if(chanceBoundariesList.Count == 0)
+        if (chanceBoundariesList.Count == 0)
         {
             return default(T);
         }

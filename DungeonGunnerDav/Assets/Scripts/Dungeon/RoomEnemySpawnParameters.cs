@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class RoomEnemySpawnParameters
 {
-    public LevelsSO dungeonLevel;
     public int minTotalEnemiesToSpawn;
     public int maxTotalEnemiesToSpawn;
     public int minConcurrentEnemies;

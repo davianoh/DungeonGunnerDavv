@@ -7,36 +7,21 @@ public class LevelsSO : ScriptableObject
 {
     public string id;
     public string levelName;
-    public Room room;
 
-    public List<SpawnableObjectByLevel<EnemyDetailsSO>> enemiesByLevelList;
-    public List<RoomEnemySpawnParameters> roomLevelEnemySpawnParametersList;
+    public SpawnableObjectByLevel<EnemyDetailsSO> enemiesByLevel;
+    public RoomEnemySpawnParameters roomLevelEnemySpawnParameters;
 
     public bool isClearedOfEnemies = false;
 
 
-    public int GetNumberOfEnemiesToSpawn(LevelsSO dungeonLevel)
+    public int GetNumberOfEnemiesToSpawn()
     {
-        foreach(RoomEnemySpawnParameters roomEnemySpawnParameters in roomLevelEnemySpawnParametersList)
-        {
-            if(roomEnemySpawnParameters.dungeonLevel == dungeonLevel)
-            {
-                return Random.Range(roomEnemySpawnParameters.minTotalEnemiesToSpawn, roomEnemySpawnParameters.maxTotalEnemiesToSpawn);
-            }
-        }
-        return 0;
+        return Random.Range(roomLevelEnemySpawnParameters.minTotalEnemiesToSpawn, roomLevelEnemySpawnParameters.maxTotalEnemiesToSpawn);
     }
 
-    public RoomEnemySpawnParameters GetRoomEnemySpawnParameters(LevelsSO dungeonLevel)
+    public RoomEnemySpawnParameters GetRoomEnemySpawnParameters()
     {
-        foreach(RoomEnemySpawnParameters roomEnemySpawnParameters in roomLevelEnemySpawnParametersList)
-        {
-            if(roomEnemySpawnParameters.dungeonLevel == dungeonLevel)
-            {
-                return roomEnemySpawnParameters;
-            }
-        }
-        return null;
+        return roomLevelEnemySpawnParameters;
     }
 
 }

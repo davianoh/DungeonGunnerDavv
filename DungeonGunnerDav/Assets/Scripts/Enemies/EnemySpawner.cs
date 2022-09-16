@@ -29,8 +29,8 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         if (currentLevel.isClearedOfEnemies) return;
 
-        enemiesToSpawn = currentLevel.GetNumberOfEnemiesToSpawn(GameManager.Instance.GetCurrentDungeonLevel());
-        roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters(GameManager.Instance.GetCurrentDungeonLevel());
+        enemiesToSpawn = currentLevel.GetNumberOfEnemiesToSpawn();
+        roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters();
 
         if(enemiesToSpawn == 0)
         {
@@ -66,7 +66,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     {
         Grid grid = currentRoom.instantiatedRoom.grid;
 
-        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentLevel.enemiesByLevelList);
+        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentLevel.enemiesByLevel);
 
         if(currentRoom.spawnPositionArray.Length > 0)
         {
