@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 7755034020853942152}
   - component: {fileID: -5412867497665911089}
   - component: {fileID: 4226166141809433875}
+  - component: {fileID: 5208824948241200847}
   m_Layer: 12
   m_Name: MainRoomLevel
   m_TagString: Untagged
@@ -785,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafcaf6fdbb9baf458f05688d994f5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 11400000, guid: bae11383663896c449b881c492701e51, type: 2}
+  room: {fileID: 5208824948241200847}
   grid: {fileID: 3702094243673752890}
   groundTilemap: {fileID: 1036671704320255387}
   decoration1Tilemap: {fileID: 7131477140639231288}
@@ -808,6 +809,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e02a1d64a00734e800ec4372057f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5208824948241200847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379724205932119958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678f4b91f7d50574fbe0f100e92f7ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs: {fileID: 2379724205932119958}
+  roomNodeType: {fileID: 11400000, guid: 117c436a6706d6c49a2c2b576483cfad, type: 2}
+  lowerBounds: {x: -14, y: 1}
+  upperBounds: {x: 29, y: 37}
+  templateLowerBounds: {x: -14, y: 1}
+  templateUpperBounds: {x: 29, y: 37}
+  spawnPositionArray:
+  - {x: -8, y: 6}
+  - {x: 6, y: 6}
+  instantiatedRoom: {fileID: -5412867497665911089}
+  isLit: 0
+  isPreviouslyVisited: 0
+  level: {fileID: 11400000, guid: bae11383663896c449b881c492701e51, type: 2}
 --- !u!1 &4663310829061446022
 GameObject:
   m_ObjectHideFlags: 0

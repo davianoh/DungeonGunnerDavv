@@ -9,7 +9,8 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     private int currentEnemyCount;
     private int enemiesSpawnedSoFar;
     private int enemyMaxConcurrentSpawnNumber;
-    private Room currentRoom; //Room == Level
+    private LevelsSO currentLevel; //Room == Level
+    private Room currentRoom;
     private RoomEnemySpawnParameters roomEnemySpawnParameters;
 
     private void Start()
@@ -17,25 +18,23 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         EnemySpawns(GameManager.Instance.GetCurrentLevel());
     }
 
-    private void EnemySpawns(Room room)
+    private void EnemySpawns(LevelsSO level)
     {
         enemiesSpawnedSoFar = 0;
         currentEnemyCount = 0;
-        currentRoom = room;
+        currentLevel = level;
+        currentRoom = GameManager.Instance.GetCurrentRoom();
 
-        if(currentRoom.roomNodeType.isCorridorEW || currentRoom.roomNodeType.isCorridorNS || currentRoom.roomNodeType.isEntrance)
-        {
-            return;
-        }
+        
 
-        if (currentRoom.isClearedOfEnemies) return;
+        if (currentLevel.isClearedOfEnemies) return;
 
-        enemiesToSpawn = currentRoom.GetNumberOfEnemiesToSpawn(GameManager.Instance.GetCurrentDungeonLevel());
-        roomEnemySpawnParameters = currentRoom.GetRoomEnemySpawnParameters(GameManager.Instance.GetCurrentDungeonLevel());
+        enemiesToSpawn = currentLevel.GetNumberOfEnemiesToSpawn(GameManager.Instance.GetCurrentDungeonLevel());
+        roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters(GameManager.Instance.GetCurrentDungeonLevel());
 
         if(enemiesToSpawn == 0)
         {
-            currentRoom.isClearedOfEnemies = true;
+            currentLevel.isClearedOfEnemies = true;
             return;
         }
 
@@ -67,7 +66,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     {
         Grid grid = currentRoom.instantiatedRoom.grid;
 
-        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentRoom.enemiesByLevelList);
+        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentLevel.enemiesByLevelList);
 
         if(currentRoom.spawnPositionArray.Length > 0)
         {
@@ -101,7 +100,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         enemiesSpawnedSoFar++;
         currentEnemyCount++;
 
-        Room dungeonLevel = GameManager.Instance.GetCurrentDungeonLevel();
+        LevelsSO dungeonLevel = GameManager.Instance.GetCurrentDungeonLevel();
         GameObject enemy = Instantiate(enemyDetails.enemyPrefab, position, Quaternion.identity, transform);
         enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
@@ -117,7 +116,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         if(currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
         {
-            currentRoom.isClearedOfEnemies = true;
+            currentLevel.isClearedOfEnemies = true;
             if(GameManager.Instance.gameState == GameState.engagingEnemies)
             {
                 GameManager.Instance.gameState = GameState.playingLevel;

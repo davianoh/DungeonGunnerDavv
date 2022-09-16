@@ -24,12 +24,14 @@ public class InstantiatedRoom : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         roomColliderBounds = boxCollider2D.bounds;
+        room = GetComponent<Room>();
+        DisableCollisionTilemapRenderer();
+        AddObstaclesAndPreferredPath();
     }
 
     private void Start()
     {
-        DisableCollisionTilemapRenderer();
-        AddObstaclesAndPreferredPath();
+        
     }
 
 

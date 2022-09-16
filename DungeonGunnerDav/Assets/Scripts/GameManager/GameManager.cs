@@ -22,16 +22,15 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #region ToolTip
     [Tooltip("Populate w/ the dungeon level scriptable objects")]
     #endregion
-    [SerializeField] private List<Room> levelList;
+    [SerializeField] private Transform mainMapParent;
+    [SerializeField] private List<LevelsSO> levelList;
 
     #region Tooltip
     [Tooltip("Populate w/ the starting dungeon level for testing, first level = 0")]
     #endregion
-    [SerializeField] private int currentDungeonLevelListIndex = 0;
+    [SerializeField] private int currentLevelListIndex = 0;
 
-    [SerializeField] private Room currentLevel;
-
-    private Room previousRoom;
+    private LevelsSO previousRoom;
     private PlayerDetailsSO playerDetails;
     private Player player;
 
@@ -40,9 +39,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private long gameScore;
     private int scoreMultiplier;
 
-    public InstantiatedRoom currentRoom;
+    // For Now.. !!!
+    public Room currentRoom;
 
-
+    // ROOM == SO
     protected override void Awake()
     {
         // inherated class from's awake method call
@@ -50,7 +50,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
         InstantiatePlayer();
-        currentLevel.instantiatedRoom = currentRoom;
+        InstantiateLevel(currentRoom); 
     }
 
     private void InstantiatePlayer()
@@ -58,6 +58,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         GameObject playerGameobject = Instantiate(playerDetails.playerPrefabs);
         player = playerGameobject.GetComponent<Player>();
         player.Initialize(playerDetails);
+    }
+
+    private void InstantiateLevel(Room room)
+    {
+        var generatedRoom = Instantiate(room.prefabs, mainMapParent);
+        room.level = levelList[currentLevelListIndex];
+        currentRoom = generatedRoom.GetComponent<Room>();
     }
 
     private void OnEnable()
@@ -161,7 +168,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         switch (gameState)
         {
             case GameState.gameStarted:
-                PlayDungeonLevel(currentDungeonLevelListIndex);
+                PlayDungeonLevel(currentLevelListIndex);
                 gameState = GameState.playingLevel;
                 break;
 
@@ -228,7 +235,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
-        player.gameObject.transform.position = new Vector3((currentLevel.lowerBounds.x + currentLevel.upperBounds.x) / 2f, (currentLevel.lowerBounds.y + currentLevel.upperBounds.y) / 2f, 0f);
+        player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);
 
         player.gameObject.transform.position = HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
 
@@ -243,7 +250,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         StartCoroutine(Fade(0f, 1f, 0f, Color.black));
         GetPlayer().playerControl.DisablePlayer();
 
-        string messageText = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + "\n\n" + levelList[currentDungeonLevelListIndex].levelName.ToUpper();
+        string messageText = "LEVEL " + (currentLevelListIndex + 1).ToString() + "\n\n" + levelList[currentLevelListIndex].levelName.ToUpper();
         yield return StartCoroutine(DisplayMessageRoutine(messageText, Color.white, 2f));
 
         GetPlayer().playerControl.EnablePlayer();
@@ -286,14 +293,19 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         return playerDetails.playerMinimapIcon;
     }
 
-    public Room GetCurrentLevel()
+    public LevelsSO GetCurrentLevel()
     {
-        return currentLevel;
+        return levelList[currentLevelListIndex];
     }
 
-    public Room GetCurrentDungeonLevel()
+    public Room GetCurrentRoom()
     {
-        return levelList[currentDungeonLevelListIndex];
+        return currentRoom;
+    }
+
+    public LevelsSO GetCurrentDungeonLevel()
+    {
+        return levelList[currentLevelListIndex];
     }
 
 

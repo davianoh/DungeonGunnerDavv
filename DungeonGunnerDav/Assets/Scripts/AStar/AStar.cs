@@ -4,24 +4,24 @@ using UnityEngine;
 
 public static class AStar
 {
-    public static Stack<Vector3> BuildPath(Room room, Vector3Int startGridPosition, Vector3Int endGridPosition)
+    public static Stack<Vector3> BuildPath(Room currentRoom, Vector3Int startGridPosition, Vector3Int endGridPosition)
     {
         // make it 0,0 origin grid
-        startGridPosition -= (Vector3Int)room.templateLowerBounds;
-        endGridPosition -= (Vector3Int)room.templateLowerBounds;
+        startGridPosition -= (Vector3Int)currentRoom.templateLowerBounds;
+        endGridPosition -= (Vector3Int)currentRoom.templateLowerBounds;
 
         List<Node> openNodeList = new List<Node>();
         HashSet<Node> closedNodeHashSet = new HashSet<Node>();
 
-        GridNodes gridNodes = new GridNodes(room.templateUpperBounds.x - room.templateLowerBounds.x + 1, room.templateUpperBounds.y - room.templateLowerBounds.y + 1);
+        GridNodes gridNodes = new GridNodes(currentRoom.templateUpperBounds.x - currentRoom.templateLowerBounds.x + 1, currentRoom.templateUpperBounds.y - currentRoom.templateLowerBounds.y + 1);
         Node startNode = gridNodes.GetGridNode(startGridPosition.x, startGridPosition.y);
         Node targetNode = gridNodes.GetGridNode(endGridPosition.x, endGridPosition.y);
 
-        Node endPathNode = FindShortestPath(startNode, targetNode, gridNodes, openNodeList, closedNodeHashSet, room.instantiatedRoom);
+        Node endPathNode = FindShortestPath(startNode, targetNode, gridNodes, openNodeList, closedNodeHashSet, currentRoom.instantiatedRoom);
 
         if(endPathNode != null)
         {
-            return CreatePathStack(endPathNode, room);
+            return CreatePathStack(endPathNode, currentRoom);
         }
 
         return null;

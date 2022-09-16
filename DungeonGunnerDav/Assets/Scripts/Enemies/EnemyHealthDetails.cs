@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class EnemyHealthDetails
 {
-    public Room dungeonLevel;
+    public LevelsSO dungeonLevel;
     public int enemyHealthAmount;
 }
