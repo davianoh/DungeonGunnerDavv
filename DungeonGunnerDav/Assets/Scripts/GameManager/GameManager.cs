@@ -40,7 +40,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private long gameScore;
     private int scoreMultiplier;
 
-    private InstantiatedRoom bossRoom;
+    public InstantiatedRoom currentRoom;
 
 
     protected override void Awake()
@@ -50,6 +50,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
         InstantiatePlayer();
+        currentLevel.instantiatedRoom = currentRoom;
     }
 
     private void InstantiatePlayer()
@@ -223,11 +224,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         SceneManager.LoadScene("MainGameScene");
     }
 
-    public void SetCurrentRoom(Room room)
-    {
-        previousRoom = currentLevel;
-        currentLevel = room;
-    }
+    
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {

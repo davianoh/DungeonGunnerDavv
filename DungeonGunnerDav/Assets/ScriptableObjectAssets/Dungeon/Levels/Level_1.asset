@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Level_1
   m_EditorClassIdentifier: 
   id: 1
-  levelName: 
+  levelName: Level Satu
   prefab: {fileID: 2379724205932119958, guid: bd1334ce04673574e9ddc323e8a357ff, type: 3}
   roomNodeType: {fileID: 11400000, guid: 117c436a6706d6c49a2c2b576483cfad, type: 2}
-  lowerBounds: {x: 11, y: 0}
-  upperBounds: {x: 0, y: 0}
-  templateLowerBounds: {x: 0, y: 0}
-  templateUpperBounds: {x: 0, y: 0}
+  lowerBounds: {x: -14, y: 1}
+  upperBounds: {x: 29, y: 37}
+  templateLowerBounds: {x: -14, y: 1}
+  templateUpperBounds: {x: 29, y: 37}
   spawnPositionArray:
   - {x: -6, y: 8}
   - {x: -6, y: 10}
@@ -40,7 +40,7 @@ MonoBehaviour:
     maxConcurrentEnemies: 4
     minSpawnInterval: 2
     maxSpawnInterval: 3
-  instantiatedRoom: {fileID: -5412867497665911089, guid: bd1334ce04673574e9ddc323e8a357ff, type: 3}
+  instantiatedRoom: {fileID: 0}
   isLit: 1
   isClearedOfEnemies: 0
   isPreviouslyVisited: 0

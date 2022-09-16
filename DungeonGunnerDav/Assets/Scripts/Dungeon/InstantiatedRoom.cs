@@ -80,6 +80,7 @@ public class InstantiatedRoom : MonoBehaviour
                 {
                     aStarMovementPenalty[x, y] = Settings.preferredPathAStarMovementPenalty;
                 }
+                //Debug.Log(aStarMovementPenalty[x, y] + " and " + x + ":" + y);
             }
         }
     }

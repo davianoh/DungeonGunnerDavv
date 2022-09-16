@@ -121,6 +121,7 @@ public class EnemyMovementAI : MonoBehaviour
         Vector3Int playerCellPosition = currentRoom.instantiatedRoom.grid.WorldToCell(playerPosition);
 
         Vector2Int adjustedPlayerCellPosition = new Vector2Int(playerCellPosition.x - currentRoom.templateLowerBounds.x, playerCellPosition.y - currentRoom.templateLowerBounds.y);
+        //Debug.Log("-----------------------" + adjustedPlayerCellPosition);
         int obstacle = currentRoom.instantiatedRoom.aStarMovementPenalty[adjustedPlayerCellPosition.x, adjustedPlayerCellPosition.y];
 
         if(obstacle != 0)

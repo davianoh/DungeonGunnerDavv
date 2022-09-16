@@ -17,7 +17,7 @@ public class Room : ScriptableObject
 
     public List<SpawnableObjectByLevel<EnemyDetailsSO>> enemiesByLevelList;
     public List<RoomEnemySpawnParameters> roomLevelEnemySpawnParametersList;
-    public InstantiatedRoom instantiatedRoom;
+    public InstantiatedRoom instantiatedRoom; //!
     public bool isLit = false;
     public bool isClearedOfEnemies = false;
     public bool isPreviouslyVisited = false;
