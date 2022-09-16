@@ -97,7 +97,7 @@ public class Enemy : MonoBehaviour
         destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth());
     }
 
-    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
+    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, Room dungeonLevel)
     {
         this.enemyDetails = enemyDetails;
 
@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour
         enemyMovementAI.SetUpdateFrameNumber(enemySpawnNumber % Settings.targetFrameRateToSpreadPathfindingOver);
     }
 
-    private void SetEnemyStartingHealth(DungeonLevelSO dungeonLevel)
+    private void SetEnemyStartingHealth(Room dungeonLevel)
     {
         foreach(EnemyHealthDetails enemyHealthDetails in enemyDetails.enemyHealthDetailsArray)
         {

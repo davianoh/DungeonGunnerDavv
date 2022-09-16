@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678f4b91f7d50574fbe0f100e92f7ad2, type: 3}
+  m_Name: Level_1
+  m_EditorClassIdentifier: 
+  id: 1
+  levelName: 
+  prefab: {fileID: 2379724205932119958, guid: bd1334ce04673574e9ddc323e8a357ff, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 117c436a6706d6c49a2c2b576483cfad, type: 2}
+  lowerBounds: {x: 11, y: 0}
+  upperBounds: {x: 0, y: 0}
+  templateLowerBounds: {x: 0, y: 0}
+  templateUpperBounds: {x: 0, y: 0}
+  spawnPositionArray:
+  - {x: -6, y: 8}
+  - {x: -6, y: 10}
+  enemiesByLevelList:
+  - dungeonLevel: {fileID: 11400000}
+    spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: 5d91139cb36a86347999495fc33f453d, type: 2}
+      ratio: 1
+  roomLevelEnemySpawnParametersList:
+  - dungeonLevel: {fileID: 11400000}
+    minTotalEnemiesToSpawn: 8
+    maxTotalEnemiesToSpawn: 12
+    minConcurrentEnemies: 2
+    maxConcurrentEnemies: 4
+    minSpawnInterval: 2
+    maxSpawnInterval: 3
+  instantiatedRoom: {fileID: -5412867497665911089, guid: bd1334ce04673574e9ddc323e8a357ff, type: 3}
+  isLit: 1
+  isClearedOfEnemies: 0
+  isPreviouslyVisited: 0

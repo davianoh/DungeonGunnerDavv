@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678f4b91f7d50574fbe0f100e92f7ad2, type: 3}
+  m_Name: Level_2
+  m_EditorClassIdentifier: 
+  id: 2
+  levelName: 
+  prefab: {fileID: 2379724205932119958, guid: bd1334ce04673574e9ddc323e8a357ff, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 117c436a6706d6c49a2c2b576483cfad, type: 2}
+  lowerBounds: {x: 11, y: 0}
+  upperBounds: {x: 0, y: 0}
+  templateLowerBounds: {x: 0, y: 0}
+  templateUpperBounds: {x: 0, y: 0}
+  spawnPositionArray:
+  - {x: -6, y: 8}
+  - {x: -6, y: 10}
+  enemiesByLevelList:
+  - dungeonLevel: {fileID: 0}
+    spawnableObjectRatioList: []
+  roomLevelEnemySpawnParametersList: []
+  instantiatedRoom: {fileID: 0}
+  isLit: 0
+  isClearedOfEnemies: 0
+  isPreviouslyVisited: 0

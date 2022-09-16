@@ -92,7 +92,7 @@ public class EnemyMovementAI : MonoBehaviour
 
     private void CreatePath()
     {
-        Room currentRoom = GameManager.Instance.GetCurrentRoom();
+        Room currentRoom = GameManager.Instance.GetCurrentLevel();
 
         Grid grid = currentRoom.instantiatedRoom.grid;
         Vector3Int enemyGridPosition = grid.WorldToCell(transform.position);

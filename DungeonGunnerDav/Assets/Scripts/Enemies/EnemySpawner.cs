@@ -9,24 +9,19 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     private int currentEnemyCount;
     private int enemiesSpawnedSoFar;
     private int enemyMaxConcurrentSpawnNumber;
-    private Room currentRoom;
+    private Room currentRoom; //Room == Level
     private RoomEnemySpawnParameters roomEnemySpawnParameters;
 
-    private void OnEnable()
+    private void Start()
     {
-        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+        EnemySpawns(GameManager.Instance.GetCurrentLevel());
     }
 
-    private void OnDisable()
-    {
-        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
-    }
-
-    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    private void EnemySpawns(Room room)
     {
         enemiesSpawnedSoFar = 0;
         currentEnemyCount = 0;
-        currentRoom = roomChangedEventArgs.room;
+        currentRoom = room;
 
         if(currentRoom.roomNodeType.isCorridorEW || currentRoom.roomNodeType.isCorridorNS || currentRoom.roomNodeType.isEntrance)
         {
@@ -46,7 +41,6 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         enemyMaxConcurrentSpawnNumber = GetConcurrentEnemies();
 
-        currentRoom.instantiatedRoom.LockDoors();
 
         SpawnEnemies();
     }
@@ -107,7 +101,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         enemiesSpawnedSoFar++;
         currentEnemyCount++;
 
-        DungeonLevelSO dungeonLevel = GameManager.Instance.GetCurrentDungeonLevel();
+        Room dungeonLevel = GameManager.Instance.GetCurrentDungeonLevel();
         GameObject enemy = Instantiate(enemyDetails.enemyPrefab, position, Quaternion.identity, transform);
         enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
@@ -135,8 +129,6 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
                 GameManager.Instance.previousGameState = GameState.engagingBoss;
             }
 
-            currentRoom.instantiatedRoom.UnlockDoors(Settings.doorUnlockDelay);
-            StaticEventHandler.CallRoomEnemiesDefeatedEvent(currentRoom);
         }
     }
 }

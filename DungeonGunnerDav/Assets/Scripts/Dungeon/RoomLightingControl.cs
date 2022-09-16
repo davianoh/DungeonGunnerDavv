@@ -14,26 +14,14 @@ public class RoomLightingControl : MonoBehaviour
         instantiatedRoom = GetComponent<InstantiatedRoom>();
     }
 
-    private void OnEnable()
+
+    private void Start()
     {
-        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
-    }
+        FadeInRoomLighting();
 
-    private void OnDisable()
-    {
-        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
-    }
+        FadeInDoors();
 
-    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
-    {
-        if(roomChangedEventArgs.room == instantiatedRoom.room && !instantiatedRoom.room.isLit)
-        {
-            FadeInRoomLighting();
-
-            FadeInDoors();
-
-            instantiatedRoom.room.isLit = true;
-        }
+        instantiatedRoom.room.isLit = true;
     }
 
     private void FadeInRoomLighting()

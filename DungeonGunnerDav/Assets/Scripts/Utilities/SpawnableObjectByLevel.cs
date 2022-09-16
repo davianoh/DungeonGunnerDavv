@@ -5,6 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class SpawnableObjectByLevel<T>
 {
-    public DungeonLevelSO dungeonLevel;
+    public Room dungeonLevel;
     public List<SpawnableObjectRatio<T>> spawnableObjectRatioList;
 }

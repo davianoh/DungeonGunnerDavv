@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room
+[CreateAssetMenu(fileName = "Leevl_", menuName = "Scriptable Objects/Gemastik/Level")]
+public class Room : ScriptableObject
 {
     public string id;
-    public string templateID;
+    public string levelName;
     public GameObject prefab;
     public RoomNodeTypeSO roomNodeType;
     public Vector2Int lowerBounds;
@@ -16,22 +17,12 @@ public class Room
 
     public List<SpawnableObjectByLevel<EnemyDetailsSO>> enemiesByLevelList;
     public List<RoomEnemySpawnParameters> roomLevelEnemySpawnParametersList;
-    public List<string> childRoomIDList;
-    public string parentRoomID;
-    public List<Doorway> doorWayList;
-    public bool isPositioned = false;
     public InstantiatedRoom instantiatedRoom;
     public bool isLit = false;
     public bool isClearedOfEnemies = false;
     public bool isPreviouslyVisited = false;
 
-    public Room()
-    {
-        childRoomIDList = new List<string>();
-        doorWayList = new List<Doorway>();
-    }
-
-    public int GetNumberOfEnemiesToSpawn(DungeonLevelSO dungeonLevel)
+    public int GetNumberOfEnemiesToSpawn(Room dungeonLevel)
     {
         foreach(RoomEnemySpawnParameters roomEnemySpawnParameters in roomLevelEnemySpawnParametersList)
         {
@@ -43,7 +34,7 @@ public class Room
         return 0;
     }
 
-    public RoomEnemySpawnParameters GetRoomEnemySpawnParameters(DungeonLevelSO dungeonLevel)
+    public RoomEnemySpawnParameters GetRoomEnemySpawnParameters(Room dungeonLevel)
     {
         foreach(RoomEnemySpawnParameters roomEnemySpawnParameters in roomLevelEnemySpawnParametersList)
         {
