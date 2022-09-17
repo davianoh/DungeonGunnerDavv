@@ -31,6 +31,10 @@ public class Destroyed : MonoBehaviour
         }
         else
         {
+            GameObject coinsPrefab = GameResources.Instance.coins;
+            ICollectible coins = (ICollectible)PoolManager.Instance.ReuseComponent(coinsPrefab, transform.position, Quaternion.identity);
+            coins.Initialise(destroyEventArgs.coinsAmount);
+            
             Destroy(gameObject);
         }
     }

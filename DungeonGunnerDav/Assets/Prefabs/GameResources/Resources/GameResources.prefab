@@ -56,3 +56,4 @@ MonoBehaviour:
   heartPrefab: {fileID: 1712035492245250436, guid: d4ff4fe9210164543ad2427f3e6fca56, type: 3}
   soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   doorOpenCloseSoundEffect: {fileID: 11400000, guid: 5953849a5cf26fb46b21b19b508bd5be, type: 2}
+  coins: {fileID: 4077656237430602957, guid: 4cb3a8d65e724594e884fa5c036c1962, type: 3}

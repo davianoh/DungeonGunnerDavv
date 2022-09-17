@@ -24,6 +24,12 @@ public static class StaticEventHandler
     {
         OnMultiplier?.Invoke(new MultiplierArgs() { multiplier = multiplier });
     }
+
+    public static event Action<LevelWonArgs> OnLevelWon;
+    public static void CallLevelWon(int coins)
+    {
+        OnLevelWon?.Invoke(new LevelWonArgs() { coins = coins });
+    }
 }
 
 
@@ -42,4 +48,9 @@ public class ScoreChangedArgs : EventArgs
 public class MultiplierArgs : EventArgs
 {
     public bool multiplier;
+}
+
+public class LevelWonArgs : EventArgs
+{
+    public int coins;
 }

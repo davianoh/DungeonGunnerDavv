@@ -23,12 +23,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Tooltip("Populate w/ the dungeon level scriptable objects")]
     #endregion
     [SerializeField] private Transform mainMapParent;
+    public Transform collectiblesParent;
     [SerializeField] private List<LevelsSO> levelList;
+    
 
     #region Tooltip
     [Tooltip("Populate w/ the starting dungeon level for testing, first level = 0")]
     #endregion
-    [SerializeField] private int currentLevelListIndex = 0;
+    public int currentLevelListIndex = 0;
 
     private LevelsSO previousRoom;
     private PlayerDetailsSO playerDetails;

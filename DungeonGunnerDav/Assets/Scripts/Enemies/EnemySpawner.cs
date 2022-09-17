@@ -127,7 +127,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
                 GameManager.Instance.gameState = GameState.bossStage;
                 GameManager.Instance.previousGameState = GameState.engagingBoss;
             }
-
+            StaticEventHandler.CallLevelWon(1);
         }
     }
 }

@@ -85,6 +85,11 @@ public class GameResources : MonoBehaviour
 
     public SoundEffectSO doorOpenCloseSoundEffect;
 
+    #region Header COLLECTIBLES
+    [Space(10)]
+    [Header("COLLECTIBLES")]
+    #endregion
+    public GameObject coins;
 
     #region Validation
 #if UNITY_EDITOR
