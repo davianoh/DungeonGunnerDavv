@@ -5,6 +5,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 {
+    private int timeToSurvives;
     private int enemiesToSpawn;
     private int currentEnemyCount;
     private int enemiesSpawnedSoFar;
@@ -12,6 +13,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     private LevelsSO currentLevel; //Room == Level
     private Room currentRoom;
     private RoomEnemySpawnParameters roomEnemySpawnParameters;
+
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         enemiesToSpawn = currentLevel.GetNumberOfEnemiesToSpawn();
         roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters();
+        timeToSurvives = currentLevel.GetTimeToSurvivesWavesInSeconds();
 
         if(enemiesToSpawn == 0)
         {
@@ -38,7 +41,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
             return;
         }
 
-        enemyMaxConcurrentSpawnNumber = GetConcurrentEnemies();
+        enemyMaxConcurrentSpawnNumber = roomEnemySpawnParameters.maxConcurrentEnemies;
 
 
         SpawnEnemies();
@@ -59,6 +62,18 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         }
 
         StartCoroutine(SpawnEnemiesRoutine());
+        StartCoroutine(WavesTimeStartCountingRoutine());
+
+    }
+
+    private IEnumerator WavesTimeStartCountingRoutine()
+    {
+        while(timeToSurvives > 0)
+        {
+            timeToSurvives--;
+            Debug.Log(timeToSurvives);
+            yield return new WaitForSeconds(1f);
+        }
 
     }
 
@@ -81,6 +96,10 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
                 CreateEnemy(randomEnemyHelperClass.GetItem(), grid.CellToWorld(cellPosition));
 
                 yield return new WaitForSeconds(GetEnemySpawnInterval());
+                if (timeToSurvives <= 10)
+                {
+                    break;
+                }
             }
         }
     }
@@ -90,10 +109,6 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         return (Random.Range(roomEnemySpawnParameters.minSpawnInterval, roomEnemySpawnParameters.maxSpawnInterval));
     }
 
-    private int GetConcurrentEnemies()
-    {
-        return (Random.Range(roomEnemySpawnParameters.minConcurrentEnemies, roomEnemySpawnParameters.maxConcurrentEnemies));
-    }
 
     private void CreateEnemy(EnemyDetailsSO enemyDetails, Vector3 position)
     {
@@ -114,20 +129,37 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         StaticEventHandler.CallPointsScoredEvent(destroyedEventArgs.points);
 
-        if(currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
+        if (currentEnemyCount <= 0 && timeToSurvives <= 0)
         {
+            Debug.Log("Lanjut waves");
             currentLevel.isClearedOfEnemies = true;
-            if(GameManager.Instance.gameState == GameState.engagingEnemies)
+            if (GameManager.Instance.gameState == GameState.engagingEnemies)
             {
                 GameManager.Instance.gameState = GameState.playingLevel;
                 GameManager.Instance.previousGameState = GameState.engagingEnemies;
             }
-            else if(GameManager.Instance.gameState == GameState.engagingBoss)
+            else if (GameManager.Instance.gameState == GameState.engagingBoss)
             {
                 GameManager.Instance.gameState = GameState.bossStage;
                 GameManager.Instance.previousGameState = GameState.engagingBoss;
             }
             StaticEventHandler.CallLevelWon(1);
         }
+
+        //if(currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
+        //{
+        //    currentLevel.isClearedOfEnemies = true;
+        //    if(GameManager.Instance.gameState == GameState.engagingEnemies)
+        //    {
+        //        GameManager.Instance.gameState = GameState.playingLevel;
+        //        GameManager.Instance.previousGameState = GameState.engagingEnemies;
+        //    }
+        //    else if(GameManager.Instance.gameState == GameState.engagingBoss)
+        //    {
+        //        GameManager.Instance.gameState = GameState.bossStage;
+        //        GameManager.Instance.previousGameState = GameState.engagingBoss;
+        //    }
+        //    StaticEventHandler.CallLevelWon(1);
+        //}
     }
 }

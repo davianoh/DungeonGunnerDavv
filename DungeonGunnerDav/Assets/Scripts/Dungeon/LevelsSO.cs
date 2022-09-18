@@ -9,19 +9,24 @@ public class LevelsSO : ScriptableObject
     public string levelName;
 
     public SpawnableObjectByLevel<EnemyDetailsSO> enemiesByLevel;
-    public RoomEnemySpawnParameters roomLevelEnemySpawnParameters;
+    public List<RoomEnemySpawnParameters> wavesEnemySpawnParameters;
 
     public bool isClearedOfEnemies = false;
 
 
     public int GetNumberOfEnemiesToSpawn()
     {
-        return Random.Range(roomLevelEnemySpawnParameters.minTotalEnemiesToSpawn, roomLevelEnemySpawnParameters.maxTotalEnemiesToSpawn);
+        return wavesEnemySpawnParameters[GameManager.Instance.currentLevelWavesIndex].maxTotalEnemiesToSpawn;
     }
 
     public RoomEnemySpawnParameters GetRoomEnemySpawnParameters()
     {
-        return roomLevelEnemySpawnParameters;
+        return wavesEnemySpawnParameters[GameManager.Instance.currentLevelWavesIndex];
+    }
+
+    public int GetTimeToSurvivesWavesInSeconds()
+    {
+        return wavesEnemySpawnParameters[GameManager.Instance.currentLevelWavesIndex].wavesSurviveTimeInSeconds;
     }
 
 }

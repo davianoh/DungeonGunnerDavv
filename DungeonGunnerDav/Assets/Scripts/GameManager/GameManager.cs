@@ -31,7 +31,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Tooltip("Populate w/ the starting dungeon level for testing, first level = 0")]
     #endregion
     public int currentLevelListIndex = 0;
+    public int currentLevelWavesIndex = 0;
 
+    #region Header Parameters Other
+    [Space(10)]
+    [Header("PARAMETERS OTHER")]
+    #endregion
     private LevelsSO previousRoom;
     private PlayerDetailsSO playerDetails;
     private Player player;
@@ -66,7 +71,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         var generatedRoom = Instantiate(room.prefabs, mainMapParent);
         room.level = levelList[currentLevelListIndex];
-        currentRoom = generatedRoom.GetComponent<Room>();
+        currentRoom = generatedRoom.GetComponent<Room>(); //!!!
     }
 
     private void OnEnable()
