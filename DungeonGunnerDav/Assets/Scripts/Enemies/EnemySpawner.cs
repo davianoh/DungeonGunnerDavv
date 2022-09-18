@@ -13,10 +13,12 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
     private LevelsSO currentLevel; //Room == Level
     private Room currentRoom;
     private RoomEnemySpawnParameters roomEnemySpawnParameters;
+    public int totalWavesDefeated = 0;
 
 
     private void Start()
     {
+        totalWavesDefeated = 0;
         EnemySpawns(GameManager.Instance.GetCurrentLevel());
     }
 
@@ -27,13 +29,13 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         currentLevel = level;
         currentRoom = GameManager.Instance.GetCurrentRoom();
 
-        
-
         if (currentLevel.isClearedOfEnemies) return;
 
         enemiesToSpawn = currentLevel.GetNumberOfEnemiesToSpawn();
         roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters();
         timeToSurvives = currentLevel.GetTimeToSurvivesWavesInSeconds();
+
+        MusicManager.Instance.PlayMusic(currentLevel.backgroundMusic, 0.2f, 2f);
 
         if(enemiesToSpawn == 0)
         {
@@ -75,13 +77,19 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
             yield return new WaitForSeconds(1f);
         }
 
+        while(currentEnemyCount > 0)
+        {
+            yield return null;
+        }
+
+        WavesCleared();
     }
 
     private IEnumerator SpawnEnemiesRoutine()
     {
         Grid grid = currentRoom.instantiatedRoom.grid;
 
-        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentLevel.enemiesByLevel);
+        RandomSpawnableObject<EnemyDetailsSO> randomEnemyHelperClass = new RandomSpawnableObject<EnemyDetailsSO>(currentLevel.GetWavesEnemySpawnTypes());
 
         if(currentRoom.spawnPositionArray.Length > 0)
         {
@@ -131,35 +139,58 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
         if (currentEnemyCount <= 0 && timeToSurvives <= 0)
         {
-            Debug.Log("Lanjut waves");
-            currentLevel.isClearedOfEnemies = true;
-            if (GameManager.Instance.gameState == GameState.engagingEnemies)
-            {
-                GameManager.Instance.gameState = GameState.playingLevel;
-                GameManager.Instance.previousGameState = GameState.engagingEnemies;
-            }
-            else if (GameManager.Instance.gameState == GameState.engagingBoss)
-            {
-                GameManager.Instance.gameState = GameState.bossStage;
-                GameManager.Instance.previousGameState = GameState.engagingBoss;
-            }
-            StaticEventHandler.CallLevelWon(1);
+            //WavesCleared();
+
+            //Debug.Log("Lanjut waves");
+            ////currentLevel.isClearedOfEnemies = true;
+            //if (GameManager.Instance.gameState == GameState.engagingEnemies)
+            //{
+            //    GameManager.Instance.gameState = GameState.playingLevel;
+            //    GameManager.Instance.previousGameState = GameState.engagingEnemies;
+            //}
+            //else if (GameManager.Instance.gameState == GameState.engagingBoss)
+            //{
+            //    GameManager.Instance.gameState = GameState.bossStage;
+            //    GameManager.Instance.previousGameState = GameState.engagingBoss;
+            //}
+
+            //totalWavesDefeated++;
+            //if(totalWavesDefeated < currentLevel.totalWaves)
+            //{
+            //    GameManager.Instance.currentLevelWavesIndex++;
+            //    EnemySpawns(GameManager.Instance.GetCurrentLevel());
+            //}
+            //else
+            //{
+            //    StaticEventHandler.CallLevelWon(1);
+            //}
+        }
+    }
+
+    private void WavesCleared()
+    {
+        Debug.Log("Lanjut waves");
+        //currentLevel.isClearedOfEnemies = true;
+        if (GameManager.Instance.gameState == GameState.engagingEnemies)
+        {
+            GameManager.Instance.gameState = GameState.playingLevel;
+            GameManager.Instance.previousGameState = GameState.engagingEnemies;
+        }
+        else if (GameManager.Instance.gameState == GameState.engagingBoss)
+        {
+            GameManager.Instance.gameState = GameState.bossStage;
+            GameManager.Instance.previousGameState = GameState.engagingBoss;
         }
 
-        //if(currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
-        //{
-        //    currentLevel.isClearedOfEnemies = true;
-        //    if(GameManager.Instance.gameState == GameState.engagingEnemies)
-        //    {
-        //        GameManager.Instance.gameState = GameState.playingLevel;
-        //        GameManager.Instance.previousGameState = GameState.engagingEnemies;
-        //    }
-        //    else if(GameManager.Instance.gameState == GameState.engagingBoss)
-        //    {
-        //        GameManager.Instance.gameState = GameState.bossStage;
-        //        GameManager.Instance.previousGameState = GameState.engagingBoss;
-        //    }
-        //    StaticEventHandler.CallLevelWon(1);
-        //}
+        totalWavesDefeated++;
+        if (totalWavesDefeated < currentLevel.totalWaves)
+        {
+            GameManager.Instance.currentLevelWavesIndex++;
+            EnemySpawns(GameManager.Instance.GetCurrentLevel());
+        }
+        else
+        {
+            StaticEventHandler.CallLevelWon(1);
+        }
     }
 }

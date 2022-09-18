@@ -38,6 +38,15 @@ public class GameResources : MonoBehaviour
     #endregion
     public CurrentPlayerSO currentPlayer;
 
+    #region Header Music
+    [Space(10)]
+    [Header("MUSIC")]
+    #endregion
+    public AudioMixerGroup musicMasterMixerGroup;
+    public AudioMixerSnapshot musicOnFullSnapshot;
+    public AudioMixerSnapshot musicOnLowSnapshot;
+    public AudioMixerSnapshot musicOffSnapshot;
+
     #region Header Materials
     [Space(10)]
     [Header("MATERIALS")]

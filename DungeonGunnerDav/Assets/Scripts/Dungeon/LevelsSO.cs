@@ -7,8 +7,14 @@ public class LevelsSO : ScriptableObject
 {
     public string id;
     public string levelName;
+    public MusicTrackSO backgroundMusic;
 
-    public SpawnableObjectByLevel<EnemyDetailsSO> enemiesByLevel;
+    #region Header Level Parameters
+    [Space(10)]
+    [Header("LEVEL PARAMETERS")]
+    #endregion
+    public int totalWaves;
+    public List<SpawnableObjectByLevel<EnemyDetailsSO>> wavesEnemySpawnTypes;
     public List<RoomEnemySpawnParameters> wavesEnemySpawnParameters;
 
     public bool isClearedOfEnemies = false;
@@ -22,6 +28,11 @@ public class LevelsSO : ScriptableObject
     public RoomEnemySpawnParameters GetRoomEnemySpawnParameters()
     {
         return wavesEnemySpawnParameters[GameManager.Instance.currentLevelWavesIndex];
+    }
+
+    public SpawnableObjectByLevel<EnemyDetailsSO> GetWavesEnemySpawnTypes()
+    {
+        return wavesEnemySpawnTypes[GameManager.Instance.currentLevelWavesIndex];
     }
 
     public int GetTimeToSurvivesWavesInSeconds()

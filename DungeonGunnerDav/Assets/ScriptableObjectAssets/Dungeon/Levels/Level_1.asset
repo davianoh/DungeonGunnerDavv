@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   levelName: Satu
-  enemiesByLevel:
-    spawnableObjectRatioList:
+  backgroundMusic: {fileID: 11400000, guid: 6a61f88913a786b49873f77acd8fdc18, type: 2}
+  totalWaves: 2
+  wavesEnemySpawnTypes:
+  - spawnableObjectRatioList:
     - dungeonObject: {fileID: 11400000, guid: 5d91139cb36a86347999495fc33f453d, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: e2b46e1687fbc624d990b4f3799081c2, type: 2}
+      ratio: 1
+  - spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 6cfaf0199fc37254dbc999bff8ee50f0, type: 2}
       ratio: 1
     - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
       ratio: 1
@@ -25,10 +32,10 @@ MonoBehaviour:
     maxConcurrentEnemies: 6
     minSpawnInterval: 2
     maxSpawnInterval: 2
-    wavesSurviveTimeInSeconds: 15
-  - maxTotalEnemiesToSpawn: 8
-    maxConcurrentEnemies: 6
-    minSpawnInterval: 2
-    maxSpawnInterval: 2
     wavesSurviveTimeInSeconds: 20
+  - maxTotalEnemiesToSpawn: 6
+    maxConcurrentEnemies: 4
+    minSpawnInterval: 3
+    maxSpawnInterval: 3
+    wavesSurviveTimeInSeconds: 25
   isClearedOfEnemies: 0

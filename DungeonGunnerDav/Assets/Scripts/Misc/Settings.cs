@@ -48,6 +48,11 @@ public static class Settings
     public const string playerWeapon = "playerWeapon";
     #endregion
 
+    #region Audio
+    public const float musicFadeOutTime = 0.5f;
+    public const float musicFadeInTime = 0.5f;
+    #endregion
+
     #region Firing Control
     public const float useAimAngleDistance = 3.5f; //if target distance less than this, than the aim angle will be used, else weapon aim angle will be used
     #endregion

@@ -179,10 +179,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 gameState = GameState.playingLevel;
                 break;
 
-            case GameState.gameWon:
-                if(previousGameState != GameState.gameWon)
+            case GameState.levelCompleted:
+                if(previousGameState != GameState.levelCompleted)
                 {
-                    StartCoroutine(GameWon());
+                    StartCoroutine(LevelWon());
                 }
                 break;
 
@@ -201,15 +201,15 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
 
-    private IEnumerator GameWon()
+    private IEnumerator LevelWon()
     {
-        previousGameState = GameState.gameWon;
+        previousGameState = GameState.levelCompleted;
 
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE DEFEATED THE ENTIRE DUNGEON", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED : " + gameScore.ToString("###,###0"), Color.white, 4f));
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO CONTINUE", Color.white, 0f));
 
         gameState = GameState.restartGame;
     }
