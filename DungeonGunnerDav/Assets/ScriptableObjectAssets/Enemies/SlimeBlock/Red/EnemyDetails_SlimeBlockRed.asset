@@ -26,17 +26,19 @@ MonoBehaviour:
   firingDurationMax: 5
   firingLineOfSightRequired: 1
   enemyHealthDetailsArray:
-  - dungeonLevel: {fileID: 11400000, guid: 0134d2df451d2df49822abed20946471, type: 2}
+  - dungeonLevel: {fileID: 11400000, guid: bae11383663896c449b881c492701e51, type: 2}
     enemyHealthAmount: 30
-  - dungeonLevel: {fileID: 11400000, guid: a53824ed89aeb2143ae138b5f0ac70be, type: 2}
+  - dungeonLevel: {fileID: 11400000, guid: d43c4d11b8e78314396f8abe9024e484, type: 2}
     enemyHealthAmount: 35
-  - dungeonLevel: {fileID: 11400000, guid: e712ae7d3bef26744af7a5cd59857ee3, type: 2}
+  - dungeonLevel: {fileID: 0}
     enemyHealthAmount: 40
-  - dungeonLevel: {fileID: 11400000, guid: 68fd64fd225ffe94aa549cf11ce6e46c, type: 2}
+  - dungeonLevel: {fileID: 0}
     enemyHealthAmount: 45
-  - dungeonLevel: {fileID: 11400000, guid: 2220bf1e0488cb748adbb0a12df6f038, type: 2}
+  - dungeonLevel: {fileID: 0}
     enemyHealthAmount: 50
-  - dungeonLevel: {fileID: 11400000, guid: 3a29d5539baf89440a35c6bc2d6f11fb, type: 2}
+  - dungeonLevel: {fileID: 0}
     enemyHealthAmount: 55
   isImmuneAfterHit: 0
   hitImmunityTime: 0
+  isHealthBarDisplayed: 0
+  coinsDropAmount: 1

@@ -123,7 +123,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         enemiesSpawnedSoFar++;
         currentEnemyCount++;
 
-        LevelsSO dungeonLevel = GameManager.Instance.GetCurrentDungeonLevel();
+        LevelsSO dungeonLevel = GameManager.Instance.GetCurrentLevel();
         GameObject enemy = Instantiate(enemyDetails.enemyPrefab, position, Quaternion.identity, transform);
         enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
@@ -190,7 +190,7 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         }
         else
         {
-            StaticEventHandler.CallLevelWon(1);
+            StaticEventHandler.CallLevelWon(CoinsManager.Instance.coinsInLevel);
         }
     }
 }

@@ -78,6 +78,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         StaticEventHandler.OnPointsScored += StaticEventHandler_OnPointsScored;
         StaticEventHandler.OnMultiplier += StaticEventHandler_OnMultiplier;
+        StaticEventHandler.OnLevelWon += StaticEventHandler_OnLevelWon;
         player.destroyedEvent.OnDestroyed += Player_OnDestroyed;
     }
 
@@ -85,6 +86,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         StaticEventHandler.OnPointsScored -= StaticEventHandler_OnPointsScored;
         StaticEventHandler.OnMultiplier -= StaticEventHandler_OnMultiplier;
+        StaticEventHandler.OnLevelWon -= StaticEventHandler_OnLevelWon;
         player.destroyedEvent.OnDestroyed -= Player_OnDestroyed;
     }
 
@@ -129,6 +131,15 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         scoreMultiplier = Mathf.Clamp(scoreMultiplier, 1, 30);
 
         StaticEventHandler.CallScoreChangedEvent(gameScore, scoreMultiplier);
+    }
+
+    private void StaticEventHandler_OnLevelWon(LevelWonArgs levelWonArgs)
+    {
+        int totalCoins = levelWonArgs.coins;
+        // Save coins, level won, skors;
+
+        previousGameState = gameState;
+        gameState = GameState.levelCompleted;
     }
 
 
@@ -284,6 +295,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             {
                 yield return null;
             }
+            SceneManager.LoadScene("MainMapScene");
         }
 
         yield return null;
@@ -308,11 +320,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Room GetCurrentRoom()
     {
         return currentRoom;
-    }
-
-    public LevelsSO GetCurrentDungeonLevel()
-    {
-        return levelList[currentLevelListIndex];
     }
 
 

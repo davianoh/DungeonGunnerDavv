@@ -39,6 +39,11 @@ public class EnemyDetailsSO : ScriptableObject
     public float hitImmunityTime;
     public bool isHealthBarDisplayed = false;
 
+    #region Header Enemy Drops
+    [Space(10)]
+    [Header("ENEMY DROPS")]
+    #endregion
+    public int coinsDropAmount;
 
     #region Validation
 #if UNITY_EDITOR
