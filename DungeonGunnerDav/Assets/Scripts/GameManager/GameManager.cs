@@ -23,7 +23,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Tooltip("Populate w/ the dungeon level scriptable objects")]
     #endregion
     [SerializeField] private Transform mainMapParent;
-    public Transform collectiblesParent;
     [SerializeField] private List<LevelsSO> levelList;
     
 
@@ -32,6 +31,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion
     public int currentLevelListIndex = 0;
     public int currentLevelWavesIndex = 0;
+    public int currentTotalCoinsInGame;
 
     #region Header Parameters Other
     [Space(10)]
@@ -55,10 +55,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         // inherated class from's awake method call
         base.Awake();
 
+        SaveSystem.Init();
+        Load();
+
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
         InstantiatePlayer();
         InstantiateLevel(currentRoom); 
     }
+
 
     private void InstantiatePlayer()
     {
@@ -90,20 +94,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         player.destroyedEvent.OnDestroyed -= Player_OnDestroyed;
     }
 
-
-
-    //private IEnumerator BossStage()
-    //{
-    //    bossRoom.gameObject.SetActive(true);
-    //    bossRoom.UnlockDoors(0f);
-
-    //    yield return new WaitForSeconds(2f);
-    //    yield return StartCoroutine(Fade(0f, 1f, 2f, new Color(0f, 0f, 0f, 0.4f)));
-    //    yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! YOU'VE SURVIVED ...SO FAR\n\n NOW FIND AND DEFEAT THE BOSS ...GOOD LUCK", Color.white, 5f));
-    //    yield return StartCoroutine(Fade(1f, 0f, 2f, new Color(0f, 0f, 0f, 0.4f)));
-
-
-    //}
 
     private void Player_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
     {
@@ -146,6 +136,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     // Start is called before the first frame update
     void Start()
     {
+
         previousGameState = GameState.gameStarted;
         gameState = GameState.gameStarted;
 
@@ -216,6 +207,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         previousGameState = GameState.levelCompleted;
 
+        currentLevelListIndex++;
+        currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
+        Save();
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
@@ -322,6 +316,27 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         return currentRoom;
     }
 
+    public void Save()
+    {
+        SaveObject saveObject = new SaveObject() { levelUnlock = currentLevelListIndex, coinsEarned = currentTotalCoinsInGame };
+        string json = JsonUtility.ToJson(saveObject);
+        SaveSystem.Save(json);
+    }
+
+    public void Load()
+    {
+        string saveString = SaveSystem.Load();
+        if (saveString != null)
+        {
+            SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
+            currentLevelListIndex = saveObject.levelUnlock;
+            currentTotalCoinsInGame = saveObject.coinsEarned;
+        }
+        else
+        {
+            Debug.Log("No Save");
+        }
+    }
 
 
     #region Validation

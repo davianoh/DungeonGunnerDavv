@@ -9,4 +9,6 @@ public class MainMapUI : MonoBehaviour
     {
         SceneManager.LoadScene("MainGameScene");
     }
+
+
 }

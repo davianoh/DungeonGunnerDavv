@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class CoinsManager : SingletonMonobehaviour<CoinsManager>
 {
     public int coinsInLevel = 0;
-    public int coinsInGame = 0;
     public TextMeshProUGUI coinsText;
 
     private void Start()
