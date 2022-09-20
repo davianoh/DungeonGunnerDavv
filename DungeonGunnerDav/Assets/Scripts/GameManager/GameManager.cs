@@ -24,14 +24,20 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion
     [SerializeField] private Transform mainMapParent;
     [SerializeField] private List<LevelsSO> levelList;
-    
 
+
+    #region Header Save Object Parameters
+    [Space(10)]
+    [Header("SAVE OBJECT PARAMETERS")]
+    #endregion
     #region Tooltip
     [Tooltip("Populate w/ the starting dungeon level for testing, first level = 0")]
     #endregion
     public int currentLevelListIndex = 0;
     public int currentLevelWavesIndex = 0;
     public int currentTotalCoinsInGame;
+    public List<int> weaponsOwnedList = new List<int>();
+    public List<int> weaponEquipedList = new List<int>();
 
     #region Header Parameters Other
     [Space(10)]
@@ -48,6 +54,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     // For Now.. !!!
     public Room currentRoom;
+    public List<WeaponDetailsSO> weaponList = new List<WeaponDetailsSO>();
 
     // ROOM == SO
     protected override void Awake()
@@ -57,6 +64,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         SaveSystem.Init();
         Load();
+        LoadWeapons();
 
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
         InstantiatePlayer();
@@ -210,6 +218,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentLevelListIndex++;
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
+        SaveWeapons();
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
@@ -331,6 +340,28 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
             currentLevelListIndex = saveObject.levelUnlock;
             currentTotalCoinsInGame = saveObject.coinsEarned;
+        }
+        else
+        {
+            Debug.Log("No Save");
+        }
+    }
+
+    public void SaveWeapons()
+    {
+        SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponsOwnedList, weaponEquipList = weaponEquipedList };
+        string json = JsonUtility.ToJson(saveObjectWeapons);
+        SaveSystem.SaveWeapons(json);
+    }
+
+    public void LoadWeapons()
+    {
+        string saveString = SaveSystem.LoadWeapons();
+        if (saveString != null)
+        {
+            SaveObjectWeapons saveObjectWeapons = JsonUtility.FromJson<SaveObjectWeapons>(saveString);
+            weaponsOwnedList = saveObjectWeapons.weaponOwnedList;
+            weaponEquipedList = saveObjectWeapons.weaponEquipList;
         }
         else
         {

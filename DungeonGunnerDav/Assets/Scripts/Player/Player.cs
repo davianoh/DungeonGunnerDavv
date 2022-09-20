@@ -114,10 +114,11 @@ public class Player : MonoBehaviour
 
     private void CreatePlayerStartingWeapon()
     {
-        weaponList.Clear();
+        //weaponList.Clear();
 
-        foreach(WeaponDetailsSO weaponDetails in playerDetails.startingWeaponList)
+        foreach(int weaponEquipedIndex in GameManager.Instance.weaponEquipedList)
         {
+            WeaponDetailsSO weaponDetails = GameManager.Instance.weaponList[weaponEquipedIndex];
             AddWeaponToPlayer(weaponDetails);
         }
     }
@@ -135,7 +136,7 @@ public class Player : MonoBehaviour
 
         weaponList.Add(weapon);
 
-        weapon.weaponListPosition = weaponList.Count;
+        weapon.weaponListPosition = GameManager.Instance.weaponList.Count;
 
         setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
 

@@ -15,6 +15,7 @@ public static class SaveSystem
         }
     }
 
+    // Buat save level progression dan coins
     public static void Save(string saveString)
     {
         File.WriteAllText(SAVE_FOLDER + "save.txt", saveString);
@@ -25,6 +26,25 @@ public static class SaveSystem
         if(File.Exists(SAVE_FOLDER + "save.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "save.txt");
+            return saveString;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    // Buat save weapons
+    public static void SaveWeapons(string saveString)
+    {
+        File.WriteAllText(SAVE_FOLDER + "saveWeapons.txt", saveString);
+    }
+
+    public static string LoadWeapons()
+    {
+        if (File.Exists(SAVE_FOLDER + "saveWeapons.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "saveWeapons.txt");
             return saveString;
         }
         else
