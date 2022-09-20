@@ -14,6 +14,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion
     [SerializeField] private TextMeshProUGUI messageTextTMP;
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private GameObject pauseMenu;
 
     #region Header Dungeon Level
     [Space(10)]
@@ -189,6 +190,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 gameState = GameState.playingLevel;
                 break;
 
+            case GameState.playingLevel:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                break;
+
             case GameState.levelCompleted:
                 if(previousGameState != GameState.levelCompleted)
                 {
@@ -206,6 +214,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
             case GameState.restartGame:
                 RestartGame();
+                break;
+
+            case GameState.gamePaused:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
                 break;
         }
     }
@@ -264,6 +279,26 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         // Demo code
         //RoomEnemiesDefeated();
+    }
+
+    public void PauseGameMenu()
+    {
+        if(gameState != GameState.gamePaused)
+        {
+            pauseMenu.SetActive(true);
+            GetPlayer().playerControl.DisablePlayer();
+
+            previousGameState = gameState;
+            gameState = GameState.gamePaused;
+        }
+        else if(gameState == GameState.gamePaused)
+        {
+            pauseMenu.SetActive(false);
+            GetPlayer().playerControl.EnablePlayer();
+
+            gameState = previousGameState;
+            previousGameState = GameState.gamePaused;
+        }
     }
 
     private IEnumerator DisplayDungeonLevelText()

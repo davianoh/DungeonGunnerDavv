@@ -79,4 +79,21 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
             GameResources.Instance.musicMasterMixerGroup.audioMixer.SetFloat("musicVolume", HelperUtilities.LinearToDecibels(musicVolume));
         }
     }
+
+    public void IncreaseMusicVolume()
+    {
+        int maxMusicVolume = 20;
+        if (musicVolume >= maxMusicVolume) return;
+
+        musicVolume += 1;
+        SetMusicVolume(musicVolume);
+    }
+
+    public void DecreaseMusicVolume()
+    {
+        if (musicVolume == 0) return;
+
+        musicVolume -= 1;
+        SetMusicVolume(musicVolume);
+    }
 }

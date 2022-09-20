@@ -51,17 +51,17 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
 
     private void SpawnEnemies()
     {
-        if(GameManager.Instance.gameState == GameState.bossStage)
-        {
-            GameManager.Instance.previousGameState = GameState.bossStage;
-            GameManager.Instance.gameState = GameState.engagingBoss;
-        }
+        //if(GameManager.Instance.gameState == GameState.bossStage)
+        //{
+        //    GameManager.Instance.previousGameState = GameState.bossStage;
+        //    GameManager.Instance.gameState = GameState.engagingBoss;
+        //}
 
-        if(GameManager.Instance.gameState == GameState.playingLevel)
-        {
-            GameManager.Instance.previousGameState = GameState.playingLevel;
-            GameManager.Instance.gameState = GameState.engagingEnemies;
-        }
+        //if(GameManager.Instance.gameState == GameState.playingLevel)
+        //{
+        //    GameManager.Instance.previousGameState = GameState.playingLevel;
+        //    GameManager.Instance.gameState = GameState.engagingEnemies;
+        //}
 
         StartCoroutine(SpawnEnemiesRoutine());
         StartCoroutine(WavesTimeStartCountingRoutine());
@@ -136,35 +136,6 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         currentEnemyCount--;
 
         StaticEventHandler.CallPointsScoredEvent(destroyedEventArgs.points);
-
-        if (currentEnemyCount <= 0 && timeToSurvives <= 0)
-        {
-            //WavesCleared();
-
-            //Debug.Log("Lanjut waves");
-            ////currentLevel.isClearedOfEnemies = true;
-            //if (GameManager.Instance.gameState == GameState.engagingEnemies)
-            //{
-            //    GameManager.Instance.gameState = GameState.playingLevel;
-            //    GameManager.Instance.previousGameState = GameState.engagingEnemies;
-            //}
-            //else if (GameManager.Instance.gameState == GameState.engagingBoss)
-            //{
-            //    GameManager.Instance.gameState = GameState.bossStage;
-            //    GameManager.Instance.previousGameState = GameState.engagingBoss;
-            //}
-
-            //totalWavesDefeated++;
-            //if(totalWavesDefeated < currentLevel.totalWaves)
-            //{
-            //    GameManager.Instance.currentLevelWavesIndex++;
-            //    EnemySpawns(GameManager.Instance.GetCurrentLevel());
-            //}
-            //else
-            //{
-            //    StaticEventHandler.CallLevelWon(1);
-            //}
-        }
     }
 
     private void WavesCleared()
