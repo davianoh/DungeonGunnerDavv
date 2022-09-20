@@ -22,7 +22,16 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
 
     private void Start()
     {
+        if (PlayerPrefs.HasKey("musicVolume"))
+        {
+            musicVolume = PlayerPrefs.GetInt("musicVolume");
+        }
         SetMusicVolume(musicVolume);
+    }
+
+    private void OnDisable()
+    {
+        PlayerPrefs.SetInt("musicVolume", musicVolume);
     }
 
     public void PlayMusic(MusicTrackSO musicTrack, float fadeOutTime = Settings.musicFadeOutTime, float fadeInTime = Settings.musicFadeInTime)

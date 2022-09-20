@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuUI : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class PauseMenuUI : MonoBehaviour
     private void OnDisable()
     {
         Time.timeScale = 1f;
+    }
+
+    public void LoadMainMapMenu()
+    {
+        SceneManager.LoadScene("MainMapScene");
     }
 
     private IEnumerator InitialiseUI()

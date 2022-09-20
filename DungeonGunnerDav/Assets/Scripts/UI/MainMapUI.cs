@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMapUI : MonoBehaviour
 {
+    private void Start()
+    {
+        MusicManager.Instance.PlayMusic(GameResources.Instance.mainMapMusic, 0f, 2f);
+    }
+
     public void PlayLevel()
     {
         SceneManager.LoadScene("MainGameScene");
