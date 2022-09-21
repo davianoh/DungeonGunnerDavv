@@ -29,6 +29,12 @@ public class GameResources : MonoBehaviour
     #endregion
     public RoomNodeTypeListSO roomNodeTypeList;
 
+    #region Header Player Selection
+    [Space(10)]
+    [Header("PLAYER SELECTION")]
+    #endregion
+    public GameObject playerSelectionPrefab;
+
     #region Header Player
     [Space(10)]
     [Header("PLAYER")]
@@ -37,6 +43,7 @@ public class GameResources : MonoBehaviour
     [Tooltip("The current player SO, this is used to reference the current player between scenes")]
     #endregion
     public CurrentPlayerSO currentPlayer;
+    public List<PlayerDetailsSO> playerDetailsList;
 
     #region Header Music
     [Space(10)]
