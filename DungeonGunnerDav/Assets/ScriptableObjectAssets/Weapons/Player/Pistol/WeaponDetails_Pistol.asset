@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: WeaponDetails_Pistol
   m_EditorClassIdentifier: 
   weaponName: Pistol
+  weaponDescription: Normal trusted pistol, always there in every situation
   weaponSprite: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
   weaponShootPosition: {x: 1.115, y: 0.277, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 35481d6af424f3c4aa5c08d7cdd47cf4, type: 2}

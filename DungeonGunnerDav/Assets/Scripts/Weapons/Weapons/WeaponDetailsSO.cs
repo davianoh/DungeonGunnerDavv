@@ -14,6 +14,8 @@ public class WeaponDetailsSO : ScriptableObject
     #endregion
     public string weaponName;
 
+    public string weaponDescription;
+
     #region Tooltip
     [Tooltip("The sprite for the weapon - the sprite should have the 'generate physics shape' option selected")]
     #endregion
