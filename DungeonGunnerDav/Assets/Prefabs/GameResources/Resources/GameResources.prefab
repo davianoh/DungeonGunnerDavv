@@ -50,6 +50,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed66de582a883cb4c8d6387dd66a40d4, type: 2}
   - {fileID: 11400000, guid: 2f825fa2d5c97984aaf61ccc92186e82, type: 2}
   - {fileID: 11400000, guid: dd336f7df47a308408234de0da9541a1, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: ec324d40bf027ae479d479ab5a50fb2e, type: 2}
+  - {fileID: 11400000, guid: d91d1407f34c8e8449282c248248b578, type: 2}
+  - {fileID: 11400000, guid: 07e85bbe8813f1d489e6bb1c736e3887, type: 2}
+  - {fileID: 11400000, guid: dfd13ce598cfe344aa3c348923af006c, type: 2}
+  - {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
+  - {fileID: 11400000, guid: 3de62da8ac800bc40a2fa3cc9ae6aca8, type: 2}
+  - {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
+  - {fileID: 11400000, guid: f27c381813a941d4581549043e28d976, type: 2}
+  - {fileID: 11400000, guid: 2f84611934ab49b4a981604b9d56f715, type: 2}
   musicMasterMixerGroup: {fileID: -7206380732494497733, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOnFullSnapshot: {fileID: 24500006, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOnLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}

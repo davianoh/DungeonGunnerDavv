@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: WeaponDetails_Revolver
   m_EditorClassIdentifier: 
   weaponName: Revolver
+  weaponListIndex: 4
+  weaponDescription: 
   weaponSprite: {fileID: 21300000, guid: 29bc0107bc11191468ed7d175994fb5b, type: 3}
   weaponShootPosition: {x: 1.15, y: 0.329, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 174bc61ee05887540a8bb20de2d3c117, type: 2}

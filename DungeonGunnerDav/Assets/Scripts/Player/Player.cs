@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
 
         foreach(int weaponEquipedIndex in GameManager.Instance.weaponEquipedList)
         {
-            WeaponDetailsSO weaponDetails = GameManager.Instance.weaponList[weaponEquipedIndex];
+            WeaponDetailsSO weaponDetails = GameResources.Instance.weaponList[weaponEquipedIndex];
             AddWeaponToPlayer(weaponDetails);
         }
     }
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
 
         weaponList.Add(weapon);
 
-        weapon.weaponListPosition = GameManager.Instance.weaponList.Count;
+        weapon.weaponListPosition = GameResources.Instance.weaponList.Count;
 
         setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
 

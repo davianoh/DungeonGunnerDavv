@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: WeaponDetails_Shotgun
   m_EditorClassIdentifier: 
   weaponName: Shotgun
+  weaponListIndex: 5
+  weaponDescription: 
   weaponSprite: {fileID: 21300000, guid: 957e7c5a4532c7b4fa28cd31bf5aee5d, type: 3}
   weaponShootPosition: {x: 1.376, y: 0.208, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 6c1964f8c5fd523458d0e369dcde74a5, type: 2}

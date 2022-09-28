@@ -13,6 +13,7 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("Weapon Name")]
     #endregion
     public string weaponName;
+    public int weaponListIndex;
 
     public string weaponDescription;
 
