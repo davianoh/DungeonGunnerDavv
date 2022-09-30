@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class MapManager : MonoBehaviour
+public class MapManager : SingletonMonobehaviour<MapManager>
 {
     public int unlockLevelListIndex;
     public int totalCoinsInGame;
-    [SerializeField] private TextMeshProUGUI coinsText;
+    public TextMeshProUGUI coinsText;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         Load();
     }
+
 
     private void Start()
     {

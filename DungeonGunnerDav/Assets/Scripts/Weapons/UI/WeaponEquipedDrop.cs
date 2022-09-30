@@ -4,15 +4,26 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class WeaponEquipedDrop : MonoBehaviour, IDropHandler
+public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandler
 {
     [SerializeField] private Image weaponEquipedImage;
     [SerializeField] private int equipedIndex;
+    [SerializeField] private int cost;
+    [SerializeField] private GameObject costText;
+
+    private void OnEnable()
+    {
+        if(WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex)
+        {
+            gameObject.GetComponent<Image>().color = Color.white;
+            costText.SetActive(false);
+        }
+    }
 
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("Droppedd");
-        if(eventData.pointerDrag != null)
+        if(eventData.pointerDrag != null && WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex)
         {
             weaponEquipedImage.sprite = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponImageChoice.sprite;
             if(equipedIndex == 0)
@@ -31,6 +42,17 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler
             WeaponDetailsSO weaponDetails = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails;
             WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nCharged: " + weaponDetails.weaponPrechargeTime.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
             WeaponMenuUI.Instance.weaponDescription.text = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails.weaponDescription;
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if(MapManager.Instance.totalCoinsInGame >= cost && WeaponMenuUI.Instance.unlockWeaponSlots <= equipedIndex)
+        {
+            MapManager.Instance.totalCoinsInGame -= cost;
+            gameObject.GetComponent<Image>().color = Color.white;
+            costText.SetActive(false);
+            WeaponMenuUI.Instance.unlockWeaponSlots++;
         }
     }
 }

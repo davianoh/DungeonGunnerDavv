@@ -39,6 +39,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public int currentTotalCoinsInGame;
     public List<int> weaponsOwnedList = new List<int>();
     public List<int> weaponEquipedList = new List<int>();
+    public int unlockWeaponSlots;
 
     #region Header Parameters Other
     [Space(10)]
@@ -384,7 +385,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     public void SaveWeapons()
     {
-        SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponsOwnedList, weaponEquipList = weaponEquipedList };
+        SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponsOwnedList, weaponEquipList = weaponEquipedList, unlockSlots = unlockWeaponSlots };
         string json = JsonUtility.ToJson(saveObjectWeapons);
         SaveSystem.SaveWeapons(json);
     }
@@ -397,6 +398,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             SaveObjectWeapons saveObjectWeapons = JsonUtility.FromJson<SaveObjectWeapons>(saveString);
             weaponsOwnedList = saveObjectWeapons.weaponOwnedList;
             weaponEquipedList = saveObjectWeapons.weaponEquipList;
+            unlockWeaponSlots = saveObjectWeapons.unlockSlots;
         }
         else
         {

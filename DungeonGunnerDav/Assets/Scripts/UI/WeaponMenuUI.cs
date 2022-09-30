@@ -15,6 +15,7 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
 
     public List<int> weaponOwnedList;
     public List<int> weaponEquipedList;
+    public int unlockWeaponSlots;
 
     #region Header General References
     [Header("General References")]
@@ -30,17 +31,38 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
     private void OnEnable()
     {
         LoadWeapons();
-        weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
-        weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
-        weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
-        weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
-        weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
-        weaponEquipedImage3.sprite = weaponEquiped3.weaponSprite;
+        if(unlockWeaponSlots == 3)
+        {
+            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
+            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
+            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
+            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
+            weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
+            weaponEquipedImage3.sprite = weaponEquiped3.weaponSprite;
+        }
+        else if (unlockWeaponSlots == 2)
+        {
+            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
+            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
+            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
+            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
+            weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
+        }
+        else
+        {
+            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
+            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
+            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
+            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
+        }
+
     }
 
     public void WeaponMenuUIToggle()
     {
         SaveWeapons();
+        MapManager.Instance.coinsText.text = MapManager.Instance.totalCoinsInGame.ToString();
+        MapManager.Instance.Save();
         this.gameObject.SetActive(false);
     }
 
@@ -50,7 +72,8 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
         weaponNewEquipedList.Add(weaponEquiped1.weaponListIndex);
         weaponNewEquipedList.Add(weaponEquiped2.weaponListIndex);
         weaponNewEquipedList.Add(weaponEquiped3.weaponListIndex);
-        SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponOwnedList, weaponEquipList = weaponNewEquipedList };
+        
+        SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponOwnedList, weaponEquipList = weaponNewEquipedList, unlockSlots = unlockWeaponSlots };
         string json = JsonUtility.ToJson(saveObjectWeapons);
         SaveSystem.SaveWeapons(json);
     }
@@ -63,6 +86,7 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
             SaveObjectWeapons saveObjectWeapons = JsonUtility.FromJson<SaveObjectWeapons>(saveString);
             weaponOwnedList = saveObjectWeapons.weaponOwnedList;
             weaponEquipedList = saveObjectWeapons.weaponEquipList;
+            unlockWeaponSlots = saveObjectWeapons.unlockSlots;
         }
         else
         {

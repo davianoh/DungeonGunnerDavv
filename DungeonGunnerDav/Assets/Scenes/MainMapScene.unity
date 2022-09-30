@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2123935028}
     m_Modifications:
+    - target: {fileID: 342932906374655738, guid: f22db69bd795fa5408e8c4962dad9494, type: 3}
+      propertyPath: m_text
+      value: 200 G
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342997986097930851, guid: f22db69bd795fa5408e8c4962dad9494, type: 3}
+      propertyPath: cost
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3342997986097930851, guid: f22db69bd795fa5408e8c4962dad9494, type: 3}
       propertyPath: equipedIndex
       value: 2
@@ -1187,6 +1195,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
+      propertyPath: weaponDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: f27c381813a941d4581549043e28d976, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (8)
@@ -1968,6 +1980,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
+      propertyPath: weaponDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: d91d1407f34c8e8449282c248248b578, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (5)
@@ -2073,7 +2089,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: d91d1407f34c8e8449282c248248b578, type: 2}
+      objectReference: {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (2)
@@ -2669,7 +2685,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
+      objectReference: {fileID: 11400000, guid: 07e85bbe8813f1d489e6bb1c736e3887, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (6)
@@ -3730,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
+      propertyPath: weaponDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (9)
@@ -7366,6 +7386,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2123935028}
     m_Modifications:
     - target: {fileID: 3342997986097930851, guid: f22db69bd795fa5408e8c4962dad9494, type: 3}
+      propertyPath: cost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342997986097930851, guid: f22db69bd795fa5408e8c4962dad9494, type: 3}
       propertyPath: equipedIndex
       value: 1
       objectReference: {fileID: 0}
@@ -8076,7 +8100,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
+      objectReference: {fileID: 11400000, guid: dfd13ce598cfe344aa3c348923af006c, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (7)
@@ -8960,6 +8984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
+      propertyPath: weaponDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 3de62da8ac800bc40a2fa3cc9ae6aca8, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (3)
@@ -10441,7 +10469,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: dfd13ce598cfe344aa3c348923af006c, type: 2}
+      objectReference: {fileID: 11400000, guid: 2f84611934ab49b4a981604b9d56f715, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (4)
@@ -10787,7 +10815,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.28424072}
+  m_SizeDelta: {x: -0.413208, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4662851938187592275
 GameObject:
@@ -11534,6 +11562,7 @@ MonoBehaviour:
   weaponEquipedImage3: {fileID: 1597977616}
   weaponOwnedList: 
   weaponEquipedList: 
+  unlockWeaponSlots: 0
   canvas: {fileID: 4662851939816039985}
   weaponImage: {fileID: 2042341697}
   weaponStats: {fileID: 1995620722}

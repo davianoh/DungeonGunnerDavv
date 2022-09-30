@@ -13,6 +13,7 @@ public class MainMapUI : MonoBehaviour
 
     public void PlayLevel()
     {
+        MapManager.Instance.Save();
         SceneManager.LoadScene("MainGameScene");
     }
 

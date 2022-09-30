@@ -6,4 +6,5 @@ public class SaveObjectWeapons
 {
     public List<int> weaponOwnedList;
     public List<int> weaponEquipList;
+    public int unlockSlots;
 }
