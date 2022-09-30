@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: MP7
   weaponListIndex: 7
+  weaponCost: 75
   weaponDescription: MP7 is fast fire-rate weapon with big ammo capacity, but the
     damage is not that high and the accuracy can be a little yanky
   weaponSprite: {fileID: 21300000, guid: a735f74a317b5f944929af56be472cb7, type: 3}

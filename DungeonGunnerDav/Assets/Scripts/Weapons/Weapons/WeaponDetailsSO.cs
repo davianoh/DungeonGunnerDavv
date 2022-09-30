@@ -14,6 +14,7 @@ public class WeaponDetailsSO : ScriptableObject
     #endregion
     public string weaponName;
     public int weaponListIndex;
+    public int weaponCost;
 
     public string weaponDescription;
 

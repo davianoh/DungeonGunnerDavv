@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Shotgun
   weaponListIndex: 5
+  weaponCost: 35
   weaponDescription: 
   weaponSprite: {fileID: 21300000, guid: 957e7c5a4532c7b4fa28cd31bf5aee5d, type: 3}
   weaponShootPosition: {x: 1.376, y: 0.208, z: 0}

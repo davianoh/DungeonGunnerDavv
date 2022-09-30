@@ -1,1 +1,1 @@
-{"levelUnlock":1,"coinsEarned":314}
+{"levelUnlock":2,"coinsEarned":29}

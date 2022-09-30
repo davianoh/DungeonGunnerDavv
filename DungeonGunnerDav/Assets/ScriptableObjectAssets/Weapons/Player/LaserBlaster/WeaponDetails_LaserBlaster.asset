@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: LaserBlaster
   weaponListIndex: 3
+  weaponCost: 90
   weaponDescription: Laser Blaster shoots beam light to enemies
   weaponSprite: {fileID: 21300000, guid: e9d1276e0a6b9bf42b04b5470c7073fb, type: 3}
   weaponShootPosition: {x: 1.323, y: 0.294, z: 0}

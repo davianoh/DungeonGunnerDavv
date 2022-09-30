@@ -14,6 +14,9 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private Vector3 originPosition;
     private CanvasGroup canvasGroup;
 
+    [SerializeField] private GameObject costWeaponText;
+    private bool buying = false;
+
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -21,30 +24,61 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         weaponImageChoice.sprite = weaponDetails.weaponSprite;
     }
 
+    private void OnEnable()
+    {
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        {
+            gameObject.GetComponent<Image>().color = Color.white;
+            costWeaponText.SetActive(false);
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin drag");
-        canvasGroup.alpha = 0.6f;
-        canvasGroup.blocksRaycasts = false;
-        isDraged = true;
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        {
+            Debug.Log("Begin drag");
+            canvasGroup.alpha = 0.6f;
+            canvasGroup.blocksRaycasts = false;
+            isDraged = true;
+        }
+        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / WeaponMenuUI.Instance.canvas.scaleFactor;
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        {
+            rectTransform.anchoredPosition += eventData.delta / WeaponMenuUI.Instance.canvas.scaleFactor;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End drag");
-        canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        {
+            Debug.Log("End drag");
+            canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = true;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        isDraged = false;
-        originPosition = rectTransform.anchoredPosition;
+        if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        {
+            buying = true;
+            MapManager.Instance.totalCoinsInGame -= weaponDetails.weaponCost;
+            WeaponMenuUI.Instance.weaponOwnedList.Add(weaponDetails.weaponListIndex);
+            gameObject.GetComponent<Image>().color = Color.white;
+            costWeaponText.SetActive(false);
+        }
+        else if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        {
+            isDraged = false;
+            originPosition = rectTransform.anchoredPosition;
+        }
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -59,7 +93,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!isDraged)
+        if (!isDraged && WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
         {
             WeaponMenuUI.Instance.weaponImage.sprite = weaponDetails.weaponSprite;
             WeaponMenuUI.Instance.weaponDescription.text = weaponDetails.weaponDescription;
@@ -67,10 +101,11 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         }
         else
         {
-            if (true)
+            if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
             {
                 rectTransform.anchoredPosition = originPosition;
             }
         }
+        buying = false;
     }
 }
