@@ -53,6 +53,8 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
             gameObject.GetComponent<Image>().color = Color.white;
             costText.SetActive(false);
             WeaponMenuUI.Instance.unlockWeaponSlots++;
+
+            MapManager.Instance.itemBuyed = true;
         }
     }
 }

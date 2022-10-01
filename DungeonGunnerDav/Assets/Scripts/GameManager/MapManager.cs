@@ -8,6 +8,9 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     public int unlockLevelListIndex;
     public int totalCoinsInGame;
     public TextMeshProUGUI coinsText;
+    public TextMeshProUGUI coinsTextWeapon;
+    public TextMeshProUGUI coinsTextPlayer;
+    public bool itemBuyed = false;
 
     protected override void Awake()
     {
@@ -20,6 +23,17 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     private void Start()
     {
         coinsText.text = totalCoinsInGame.ToString();
+    }
+
+    private void Update()
+    {
+        if (itemBuyed)
+        {
+            coinsText.text = totalCoinsInGame.ToString();
+            coinsTextPlayer.text = totalCoinsInGame.ToString();
+            coinsTextWeapon.text = totalCoinsInGame.ToString();
+            itemBuyed = false;
+        }
     }
 
     public void Save()

@@ -52,4 +52,23 @@ public static class SaveSystem
             return null;
         }
     }
+
+    // Buat save player dan stats
+    public static void SavePlayer(string saveString)
+    {
+        File.WriteAllText(SAVE_FOLDER + "savePlayer.txt", saveString);
+    }
+
+    public static string LoadPlayer()
+    {
+        if (File.Exists(SAVE_FOLDER + "savePlayer.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "savePlayer.txt");
+            return saveString;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

@@ -13,7 +13,7 @@ public class CharacterSelectorUI : MonoBehaviour
     private CurrentPlayerSO currentPlayer;
     private List<GameObject> playerCharacterGameObjectList = new List<GameObject>();
     private Coroutine coroutine;
-    private int selectedPlayerIndex = 0;
+    public int selectedPlayerIndex = 0;
     private float offset = 4f;
 
     private void Awake()
@@ -34,7 +34,10 @@ public class CharacterSelectorUI : MonoBehaviour
         }
 
         playerNameInput.text = currentPlayer.playerName;
+        selectedPlayerIndex = CharacterMenuUI.Instance.selectedPlayerIndex;
         currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
+
+        MoveToSelectedCharacter(selectedPlayerIndex);
     }
 
     private void PopulatePlayerDetails(PlayerSelectionUI playerSelection, PlayerDetailsSO playerDetails)
@@ -51,6 +54,8 @@ public class CharacterSelectorUI : MonoBehaviour
         selectedPlayerIndex++;
         currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
         MoveToSelectedCharacter(selectedPlayerIndex);
+
+        CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
     }
 
     public void BackCharacter()
@@ -59,6 +64,8 @@ public class CharacterSelectorUI : MonoBehaviour
         selectedPlayerIndex--;
         currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
         MoveToSelectedCharacter(selectedPlayerIndex);
+
+        CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
     }
 
     private void MoveToSelectedCharacter(int index)

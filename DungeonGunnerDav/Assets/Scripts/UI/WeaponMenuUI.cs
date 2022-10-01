@@ -13,6 +13,10 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
     public Image weaponEquipedImage2;
     public Image weaponEquipedImage3;
 
+    #region Header SaveFiles References
+    [Header("SAFE FILE REFERENCES")]
+    [Space(10)]
+    #endregion
     public List<int> weaponOwnedList;
     public List<int> weaponEquipedList;
     public int unlockWeaponSlots;
@@ -55,13 +59,14 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
             weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
             weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
         }
+        MapManager.Instance.itemBuyed = true;
 
     }
 
     public void WeaponMenuUIToggle()
     {
         SaveWeapons();
-        MapManager.Instance.coinsText.text = MapManager.Instance.totalCoinsInGame.ToString();
+        //MapManager.Instance.coinsText.text = MapManager.Instance.totalCoinsInGame.ToString();
         MapManager.Instance.Save();
         this.gameObject.SetActive(false);
     }
