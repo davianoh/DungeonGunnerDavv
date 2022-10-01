@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e77f3901d6bd94db75c6620f2fd132, type: 3}
+  m_Name: UpgradeStats_Attack
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1319433871019804051, guid: e3f71dec4a552d640a1b9f0d3aaa364c, type: 3}
+  upgradeName: Attack
+  upgradeValue: 1
+  upgradeCost: 60

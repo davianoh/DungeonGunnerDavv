@@ -13,6 +13,10 @@ public class PlayerDetailsSO : ScriptableObject
     [Tooltip("Player character name")]
     #endregion
     public string playerCharacterName;
+    public string playerDescription;
+    public MovementDetailsSO playerMovementDetails;
+    public int playerBonusAttack;
+    public int playerBonusCoins;
 
     #region Tooltip
     [Tooltip("Prefab gameObject for the player")]

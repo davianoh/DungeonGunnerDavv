@@ -10,7 +10,6 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     public TextMeshProUGUI coinsText;
     public TextMeshProUGUI coinsTextWeapon;
     public TextMeshProUGUI coinsTextPlayer;
-    public bool itemBuyed = false;
 
     protected override void Awake()
     {
@@ -25,15 +24,12 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         coinsText.text = totalCoinsInGame.ToString();
     }
 
-    private void Update()
+
+    public void ItemBuyed()
     {
-        if (itemBuyed)
-        {
-            coinsText.text = totalCoinsInGame.ToString();
-            coinsTextPlayer.text = totalCoinsInGame.ToString();
-            coinsTextWeapon.text = totalCoinsInGame.ToString();
-            itemBuyed = false;
-        }
+        coinsText.text = totalCoinsInGame.ToString();
+        coinsTextPlayer.text = totalCoinsInGame.ToString();
+        coinsTextWeapon.text = totalCoinsInGame.ToString();
     }
 
     public void Save()

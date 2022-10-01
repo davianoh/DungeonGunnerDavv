@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: PlayerDetails_TheGeneral
   m_EditorClassIdentifier: 
   playerCharacterName: The General
+  playerDescription: This general is the best at his time of service
+  playerMovementDetails: {fileID: 11400000, guid: 0415a78f32af00940a0787b1e6330183, type: 2}
+  playerBonusAttack: 2
+  playerBonusCoins: 0
   playerPrefabs: {fileID: 6778172777465543290, guid: 5db1b47030cddec409e90c5e2f1d61b3, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
   playerHealthAmmount: 200

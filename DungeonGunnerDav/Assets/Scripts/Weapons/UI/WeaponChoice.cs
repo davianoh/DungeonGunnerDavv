@@ -73,7 +73,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             gameObject.GetComponent<Image>().color = Color.white;
             costWeaponText.SetActive(false);
 
-            MapManager.Instance.itemBuyed = true;
+            MapManager.Instance.ItemBuyed();
         }
         else if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
         {

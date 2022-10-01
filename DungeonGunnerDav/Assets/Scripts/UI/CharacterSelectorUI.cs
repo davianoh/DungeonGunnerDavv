@@ -37,6 +37,7 @@ public class CharacterSelectorUI : MonoBehaviour
         selectedPlayerIndex = CharacterMenuUI.Instance.selectedPlayerIndex;
         currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
 
+        CharacterMenuUI.Instance.CharacterSelectedChange();
         MoveToSelectedCharacter(selectedPlayerIndex);
     }
 
@@ -56,6 +57,7 @@ public class CharacterSelectorUI : MonoBehaviour
         MoveToSelectedCharacter(selectedPlayerIndex);
 
         CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
+        CharacterMenuUI.Instance.CharacterSelectedChange();
     }
 
     public void BackCharacter()
@@ -66,6 +68,7 @@ public class CharacterSelectorUI : MonoBehaviour
         MoveToSelectedCharacter(selectedPlayerIndex);
 
         CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
+        CharacterMenuUI.Instance.CharacterSelectedChange();
     }
 
     private void MoveToSelectedCharacter(int index)

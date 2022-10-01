@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
 {
@@ -14,13 +15,34 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
     public int speedUpgrade;
     public int coinsUpgrade;
 
+
+    [SerializeField] private TextMeshProUGUI playerName;
+    [SerializeField] private TextMeshProUGUI playerDescription;
+    [SerializeField] private TextMeshProUGUI playerStats;
+
     protected override void Awake()
     {
         base.Awake();
 
         LoadPlayer();
-        MapManager.Instance.itemBuyed = true;
     }
+
+    private void OnEnable()
+    {
+        MapManager.Instance.ItemBuyed();
+    }
+
+    public void CharacterSelectedChange()
+    {
+        PlayerDetailsSO currentPlayerDetails = GameResources.Instance.playerDetailsList[selectedPlayerIndex];
+        playerName.text = currentPlayerDetails.playerCharacterName;
+        playerDescription.text = currentPlayerDetails.playerDescription;
+        playerStats.text = "Health: " + currentPlayerDetails.playerHealthAmmount.ToString() + " + " + healthUpgrade + "x10\n" +
+            "Bonus Attack: " + currentPlayerDetails.playerBonusAttack.ToString() + " + " + attackUpgrade + "x10\n" +
+            "Speed: " + currentPlayerDetails.playerMovementDetails.maxMoveSpeed.ToString() + " + " + speedUpgrade + "x10\n" +
+            "Bonus Coins: " + currentPlayerDetails.playerBonusCoins.ToString() + " + " + coinsUpgrade + "x10";
+    }
+
 
     public void ExitCharacterMenuUI()
     {

@@ -59,7 +59,7 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
             weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
             weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
         }
-        MapManager.Instance.itemBuyed = true;
+        MapManager.Instance.ItemBuyed();
 
     }
 

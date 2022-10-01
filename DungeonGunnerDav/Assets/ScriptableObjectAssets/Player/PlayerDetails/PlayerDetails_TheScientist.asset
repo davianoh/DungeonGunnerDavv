@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: PlayerDetails_TheScientist
   m_EditorClassIdentifier: 
   playerCharacterName: The Scientist
+  playerDescription: This Scientist is a killer for SCIENCE!!
+  playerMovementDetails: {fileID: 11400000, guid: 0415a78f32af00940a0787b1e6330183, type: 2}
+  playerBonusAttack: 1
+  playerBonusCoins: 1
   playerPrefabs: {fileID: 7713373435068079420, guid: 0116f38377243474ea7082ece715d088, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: e52ed9234b488b0449570da9e57ce474, type: 2}
   playerHealthAmmount: 90

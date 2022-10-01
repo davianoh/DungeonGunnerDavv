@@ -54,7 +54,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
             costText.SetActive(false);
             WeaponMenuUI.Instance.unlockWeaponSlots++;
 
-            MapManager.Instance.itemBuyed = true;
+            MapManager.Instance.ItemBuyed();
         }
     }
 }

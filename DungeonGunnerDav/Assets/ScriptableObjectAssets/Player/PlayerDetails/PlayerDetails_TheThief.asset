@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: PlayerDetails_TheThief
   m_EditorClassIdentifier: 
   playerCharacterName: The Thief
+  playerDescription: This Thief can steal your money easily
+  playerMovementDetails: {fileID: 11400000, guid: 12c0731652b1ac047aeb15b719eb17e7, type: 2}
+  playerBonusAttack: 0
+  playerBonusCoins: 3
   playerPrefabs: {fileID: 2042323681550804598, guid: 929c6f0bd7eb2534c9d2aeaf3620508d, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 93c8b4031cee5bf499bea87ef2607135, type: 2}
   playerHealthAmmount: 80
