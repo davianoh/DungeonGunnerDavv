@@ -115,11 +115,15 @@ public class Player : MonoBehaviour
     private void CreatePlayerStartingWeapon()
     {
         //weaponList.Clear();
-
+        int weaponSlot = GameManager.Instance.unlockWeaponSlots;
         foreach(int weaponEquipedIndex in GameManager.Instance.weaponEquipedList)
         {
-            WeaponDetailsSO weaponDetails = GameResources.Instance.weaponList[weaponEquipedIndex];
-            AddWeaponToPlayer(weaponDetails);
+            if(weaponSlot > 0)
+            {
+                WeaponDetailsSO weaponDetails = GameResources.Instance.weaponList[weaponEquipedIndex];
+                AddWeaponToPlayer(weaponDetails);
+                weaponSlot--;
+            }
         }
     }
 

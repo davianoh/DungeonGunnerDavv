@@ -56,7 +56,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     // For Now.. !!!
     public Room currentRoom;
-    // List of all available weapons in the game. Order is important
 
     // ROOM == SO
     protected override void Awake()

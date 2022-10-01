@@ -11,9 +11,10 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
     [SerializeField] private int cost;
     [SerializeField] private GameObject costText;
 
-    private void OnEnable()
+
+    private void Start()
     {
-        if(WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex)
+        if (WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex)
         {
             gameObject.GetComponent<Image>().color = Color.white;
             costText.SetActive(false);

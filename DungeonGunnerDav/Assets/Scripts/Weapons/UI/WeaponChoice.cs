@@ -24,7 +24,8 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         weaponImageChoice.sprite = weaponDetails.weaponSprite;
     }
 
-    private void OnEnable()
+
+    private void Start()
     {
         if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
         {

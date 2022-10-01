@@ -12,6 +12,25 @@ public static class SaveSystem
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
+
+            SaveObject saveObject = new SaveObject() { levelUnlock = 0, coinsEarned = 1000 };
+            string json = JsonUtility.ToJson(saveObject);
+            SaveSystem.Save(json);
+
+            SaveObjectPlayer saveObjectPlayer = new SaveObjectPlayer() { playerSelectIndex = 0, healthUpgrade = 0, attackUpgrade = 0, speedUpgrade = 0, coinsUpgrade = 0 };
+            string jsonPlayer = JsonUtility.ToJson(saveObjectPlayer);
+            SaveSystem.SavePlayer(jsonPlayer);
+
+            List<int> weaponNewEquipedList = new List<int>();
+            weaponNewEquipedList.Add(0);
+            weaponNewEquipedList.Add(0);
+            weaponNewEquipedList.Add(0);
+            List<int> weaponOwnedList = new List<int>();
+            weaponOwnedList.Add(0);
+
+            SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponOwnedList, weaponEquipList = weaponNewEquipedList, unlockSlots = 1 };
+            string jsonWeapon = JsonUtility.ToJson(saveObjectWeapons);
+            SaveSystem.SaveWeapons(jsonWeapon);
         }
     }
 

@@ -32,42 +32,30 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
 
     public int currentActiveWeaponSlot;
 
-    private void OnEnable()
+    protected override void Awake()
     {
+        base.Awake();
         LoadWeapons();
-        if(unlockWeaponSlots == 3)
-        {
-            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
-            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
-            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
-            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
-            weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
-            weaponEquipedImage3.sprite = weaponEquiped3.weaponSprite;
-        }
-        else if (unlockWeaponSlots == 2)
-        {
-            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
-            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
-            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
-            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
-            weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
-        }
-        else
-        {
-            weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
-            weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
-            weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
-            weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
-        }
-        MapManager.Instance.ItemBuyed();
-
     }
+
+    private void Start()
+    {
+        weaponEquiped1 = GameResources.Instance.weaponList[weaponEquipedList[0]];
+        weaponEquiped2 = GameResources.Instance.weaponList[weaponEquipedList[1]];
+        weaponEquiped3 = GameResources.Instance.weaponList[weaponEquipedList[2]];
+        weaponEquipedImage1.sprite = weaponEquiped1.weaponSprite;
+        weaponEquipedImage2.sprite = weaponEquiped2.weaponSprite;
+        weaponEquipedImage3.sprite = weaponEquiped3.weaponSprite;
+
+        MapManager.Instance.ItemBuyed();
+    }
+
 
     public void WeaponMenuUIToggle()
     {
         SaveWeapons();
-        //MapManager.Instance.coinsText.text = MapManager.Instance.totalCoinsInGame.ToString();
         MapManager.Instance.Save();
+
         this.gameObject.SetActive(false);
     }
 
