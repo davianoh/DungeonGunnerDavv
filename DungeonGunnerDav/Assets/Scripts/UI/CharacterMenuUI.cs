@@ -10,6 +10,8 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
     [Space(10)]
     #endregion
     public int selectedPlayerIndex;
+    public int selectedPlayerIndexView;
+    public List<int> characterOwnedList;
     public int healthUpgrade;
     public int attackUpgrade;
     public int speedUpgrade;
@@ -18,7 +20,7 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
 
     [SerializeField] private TextMeshProUGUI playerName;
     [SerializeField] private TextMeshProUGUI playerDescription;
-    [SerializeField] private TextMeshProUGUI playerStats;
+    [SerializeField] private TextMeshProUGUI playerStats; 
 
     protected override void Awake()
     {
@@ -32,9 +34,10 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
         MapManager.Instance.ItemBuyed();
     }
 
-    public void CharacterSelectedChange()
+    public void CharacterSelectedChange(int selectedPlayerIndexView)
     {
-        PlayerDetailsSO currentPlayerDetails = GameResources.Instance.playerDetailsList[selectedPlayerIndex];
+        this.selectedPlayerIndexView = selectedPlayerIndexView;
+        PlayerDetailsSO currentPlayerDetails = GameResources.Instance.playerDetailsList[selectedPlayerIndexView];
         playerName.text = currentPlayerDetails.playerCharacterName;
         playerDescription.text = currentPlayerDetails.playerDescription;
         playerStats.text = "Health: " + currentPlayerDetails.playerHealthAmmount.ToString() + " + " + healthUpgrade + "x10\n" +
@@ -53,7 +56,7 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
 
     public void SavePlayer()
     {
-        SaveObjectPlayer saveObjectPlayer = new SaveObjectPlayer() { playerSelectIndex = selectedPlayerIndex, healthUpgrade = healthUpgrade, attackUpgrade = attackUpgrade, speedUpgrade = speedUpgrade, coinsUpgrade = coinsUpgrade };
+        SaveObjectPlayer saveObjectPlayer = new SaveObjectPlayer() { playerSelectIndex = selectedPlayerIndex, characterOwnedList = characterOwnedList, healthUpgrade = healthUpgrade, attackUpgrade = attackUpgrade, speedUpgrade = speedUpgrade, coinsUpgrade = coinsUpgrade };
         string json = JsonUtility.ToJson(saveObjectPlayer);
         SaveSystem.SavePlayer(json);
     }
@@ -65,6 +68,7 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
         {
             SaveObjectPlayer saveObjectPlayer = JsonUtility.FromJson<SaveObjectPlayer>(saveString);
             selectedPlayerIndex = saveObjectPlayer.playerSelectIndex;
+            characterOwnedList = saveObjectPlayer.characterOwnedList;
             healthUpgrade = saveObjectPlayer.healthUpgrade;
             attackUpgrade = saveObjectPlayer.attackUpgrade;
             speedUpgrade = saveObjectPlayer.speedUpgrade;

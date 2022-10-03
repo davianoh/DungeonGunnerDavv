@@ -5,6 +5,7 @@ using UnityEngine;
 public class SaveObjectPlayer
 {
     public int playerSelectIndex;
+    public List<int> characterOwnedList;
     public int healthUpgrade;
     public int attackUpgrade;
     public int speedUpgrade;

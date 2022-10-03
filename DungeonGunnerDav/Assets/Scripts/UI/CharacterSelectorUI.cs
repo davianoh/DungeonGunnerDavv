@@ -16,6 +16,8 @@ public class CharacterSelectorUI : MonoBehaviour
     public int selectedPlayerIndex = 0;
     private float offset = 4f;
 
+    public List<int> characterOwnedList;
+
     private void Awake()
     {
         playerSelectionPrefab = GameResources.Instance.playerSelectionPrefab;
@@ -32,12 +34,13 @@ public class CharacterSelectorUI : MonoBehaviour
             playerSelectionObject.transform.localPosition = new Vector3((offset * i), 0f, 0f);
             PopulatePlayerDetails(playerSelectionObject.GetComponent<PlayerSelectionUI>(), playerDetailsList[i]);
         }
+        characterOwnedList = CharacterMenuUI.Instance.characterOwnedList;
 
         playerNameInput.text = currentPlayer.playerName;
         selectedPlayerIndex = CharacterMenuUI.Instance.selectedPlayerIndex;
         currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
 
-        CharacterMenuUI.Instance.CharacterSelectedChange();
+        CharacterMenuUI.Instance.CharacterSelectedChange(CharacterMenuUI.Instance.selectedPlayerIndex);
         MoveToSelectedCharacter(selectedPlayerIndex);
     }
 
@@ -53,22 +56,39 @@ public class CharacterSelectorUI : MonoBehaviour
     {
         if (selectedPlayerIndex >= playerDetailsList.Count - 1) return;
         selectedPlayerIndex++;
-        currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
+        //currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
         MoveToSelectedCharacter(selectedPlayerIndex);
 
-        CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
-        CharacterMenuUI.Instance.CharacterSelectedChange();
+        //CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
+        CharacterMenuUI.Instance.CharacterSelectedChange(selectedPlayerIndex);
     }
 
     public void BackCharacter()
     {
         if (selectedPlayerIndex == 0) return;
         selectedPlayerIndex--;
-        currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
+        //currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
         MoveToSelectedCharacter(selectedPlayerIndex);
 
-        CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
-        CharacterMenuUI.Instance.CharacterSelectedChange();
+        //CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
+        CharacterMenuUI.Instance.CharacterSelectedChange(selectedPlayerIndex);
+    }
+
+    public void SelectCharacter()
+    {
+        if (characterOwnedList.Contains(playerDetailsList[selectedPlayerIndex].playerID))
+        {
+            currentPlayer.playerDetails = playerDetailsList[selectedPlayerIndex];
+            CharacterMenuUI.Instance.selectedPlayerIndex = selectedPlayerIndex;
+        }
+        else if (MapManager.Instance.totalCoinsInGame >= playerDetailsList[selectedPlayerIndex].playerUnlockCost && !characterOwnedList.Contains(playerDetailsList[selectedPlayerIndex].playerID))
+        {
+            MapManager.Instance.totalCoinsInGame -= playerDetailsList[selectedPlayerIndex].playerUnlockCost;
+            MapManager.Instance.ItemBuyed();
+            CharacterMenuUI.Instance.characterOwnedList.Add(playerDetailsList[selectedPlayerIndex].playerID);
+        }
+
+        
     }
 
     private void MoveToSelectedCharacter(int index)

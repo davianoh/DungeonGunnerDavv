@@ -17,7 +17,9 @@ public static class SaveSystem
             string json = JsonUtility.ToJson(saveObject);
             SaveSystem.Save(json);
 
-            SaveObjectPlayer saveObjectPlayer = new SaveObjectPlayer() { playerSelectIndex = 0, healthUpgrade = 0, attackUpgrade = 0, speedUpgrade = 0, coinsUpgrade = 0 };
+            List<int> characterNewOwnedList = new List<int>();
+            characterNewOwnedList.Add(0);
+            SaveObjectPlayer saveObjectPlayer = new SaveObjectPlayer() { playerSelectIndex = 0, characterOwnedList = characterNewOwnedList, healthUpgrade = 0, attackUpgrade = 0, speedUpgrade = 0, coinsUpgrade = 0 };
             string jsonPlayer = JsonUtility.ToJson(saveObjectPlayer);
             SaveSystem.SavePlayer(jsonPlayer);
 

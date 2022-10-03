@@ -17,6 +17,8 @@ public class PlayerDetailsSO : ScriptableObject
     public MovementDetailsSO playerMovementDetails;
     public int playerBonusAttack;
     public int playerBonusCoins;
+    public int playerID;
+    public int playerUnlockCost;
 
     #region Tooltip
     [Tooltip("Prefab gameObject for the player")]

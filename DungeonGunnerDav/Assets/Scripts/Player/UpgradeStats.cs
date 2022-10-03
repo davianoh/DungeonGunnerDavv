@@ -46,7 +46,7 @@ public class UpgradeStats : MonoBehaviour
             upgradedValue++;
             MapManager.Instance.ItemBuyed();
             UpgradeBarUpdate();
-            CharacterMenuUI.Instance.CharacterSelectedChange();
+            CharacterMenuUI.Instance.CharacterSelectedChange(CharacterMenuUI.Instance.selectedPlayerIndexView);
         }
     }
 
