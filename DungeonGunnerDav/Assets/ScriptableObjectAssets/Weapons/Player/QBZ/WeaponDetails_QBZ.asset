@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: QBZ
   weaponListIndex: 1
   weaponCost: 65
-  weaponDescription: 
+  weaponDescription: knock-off MP7 but cheaper !!
   weaponSprite: {fileID: 21300000, guid: dff74299f2cf7674eb05930ed6b07f8e, type: 3}
   weaponShootPosition: {x: 1.284, y: 0.342, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: bc80a550b9e5ecd48a58ec20743cd805, type: 2}

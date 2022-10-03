@@ -134,7 +134,15 @@ public class Ammo : MonoBehaviour, IFireable
         {
             isCollided = true;
 
-            health.TakeDamage(ammoDetails.ammoDamage);
+            if (ammoDetails.isPlayerAmmo)
+            {
+                health.TakeDamage(ammoDetails.ammoDamage + GameResources.Instance.attackBonus * Settings.attackUpgradeMultiplier);
+            }
+            else
+            {
+                health.TakeDamage(ammoDetails.ammoDamage);
+            }
+            
 
             if(health.enemy != null)
             {

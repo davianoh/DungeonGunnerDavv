@@ -33,6 +33,6 @@ public class MovementByVelocity : MonoBehaviour
 
     private void MoveRigidBody(Vector2 moveDirection, float moveSpeed)
     {
-        rigidBody2D.velocity = moveDirection * moveSpeed;
+        rigidBody2D.velocity = moveDirection * (moveSpeed + GameResources.Instance.speedBonus * Settings.speedUpgradeMultiplier);
     }
 }

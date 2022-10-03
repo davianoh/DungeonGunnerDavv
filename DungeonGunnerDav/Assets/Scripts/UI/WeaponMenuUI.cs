@@ -30,7 +30,7 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
     public TextMeshProUGUI weaponStats;
     public TextMeshProUGUI weaponDescription;
 
-    public int currentActiveWeaponSlot;
+    public int currentActiveWeaponChoice = 99;
 
     protected override void Awake()
     {

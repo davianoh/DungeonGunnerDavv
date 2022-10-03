@@ -77,4 +77,11 @@ public static class Settings
     #region Contact Damage Parameters
     public const float contactDamageCollisionResetDelay = 0.5f;
     #endregion
+
+    #region Upgrade Stats Player Parameters
+    public const int healthUpgradeMultiplier = 10;
+    public const int attackUpgradeMultiplier = 2;
+    public const int speedUpgradeMultiplier = 1;
+    public const int coinsUpgradeMultiplier = 3;
+    #endregion
 }

@@ -109,7 +109,7 @@ public class Player : MonoBehaviour
 
     private void SetPlayerHealth()
     {
-        health.SetStartingHealth(playerDetails.playerHealthAmmount);
+        health.SetStartingHealth(playerDetails.playerHealthAmmount + GameResources.Instance.healthBonus * Settings.healthUpgradeMultiplier);
     }
 
     private void CreatePlayerStartingWeapon()

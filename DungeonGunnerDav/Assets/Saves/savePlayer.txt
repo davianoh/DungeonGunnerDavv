@@ -1,1 +1,1 @@
-{"playerSelectIndex":2,"healthUpgrade":3,"attackUpgrade":2,"speedUpgrade":2,"coinsUpgrade":3}
+{"playerSelectIndex":1,"healthUpgrade":0,"attackUpgrade":0,"speedUpgrade":0,"coinsUpgrade":0}

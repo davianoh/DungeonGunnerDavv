@@ -38,15 +38,16 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
         playerName.text = currentPlayerDetails.playerCharacterName;
         playerDescription.text = currentPlayerDetails.playerDescription;
         playerStats.text = "Health: " + currentPlayerDetails.playerHealthAmmount.ToString() + " + " + healthUpgrade + "x10\n" +
-            "Bonus Attack: " + currentPlayerDetails.playerBonusAttack.ToString() + " + " + attackUpgrade + "x10\n" +
-            "Speed: " + currentPlayerDetails.playerMovementDetails.maxMoveSpeed.ToString() + " + " + speedUpgrade + "x10\n" +
-            "Bonus Coins: " + currentPlayerDetails.playerBonusCoins.ToString() + " + " + coinsUpgrade + "x10";
+            "Bonus Attack: " + currentPlayerDetails.playerBonusAttack.ToString() + " + " + attackUpgrade + "x2\n" +
+            "Speed: " + currentPlayerDetails.playerMovementDetails.maxMoveSpeed.ToString() + " + " + speedUpgrade + "x1\n" +
+            "Bonus Coins: " + currentPlayerDetails.playerBonusCoins.ToString() + " + " + coinsUpgrade + "x3";
     }
 
 
     public void ExitCharacterMenuUI()
     {
         SavePlayer();
+        PassingUpgradeStats();
         this.gameObject.SetActive(false);
     }
 
@@ -73,5 +74,13 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
         {
             Debug.Log("No Save");
         }
+    }
+
+    private void PassingUpgradeStats()
+    {
+        GameResources.Instance.healthBonus = healthUpgrade;
+        GameResources.Instance.attackBonus = attackUpgrade;
+        GameResources.Instance.speedBonus = speedUpgrade;
+        GameResources.Instance.coinsBonus = coinsUpgrade;
     }
 }

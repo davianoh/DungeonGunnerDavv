@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: RocketLauncher
   weaponListIndex: 6
   weaponCost: 90
-  weaponDescription: 
+  weaponDescription: Rocket launcher launchs rocket go BOOM!!
   weaponSprite: {fileID: 21300000, guid: f4a1e113145591f45bfacfc7d7bf80c5, type: 3}
   weaponShootPosition: {x: 1.547, y: 0.306, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: d894fe999615a7b4f905394c2f7b6e5b, type: 2}

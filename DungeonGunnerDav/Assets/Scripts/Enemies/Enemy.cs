@@ -94,7 +94,7 @@ public class Enemy : MonoBehaviour
     private void EnemyDestroyed()
     {
         DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
-        destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmount);
+        destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmount + GameResources.Instance.coinsBonus * Settings.coinsUpgradeMultiplier);
     }
 
     public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, LevelsSO dungeonLevel)

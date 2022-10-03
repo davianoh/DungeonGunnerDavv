@@ -46,6 +46,10 @@ public class GameResources : MonoBehaviour
     public List<PlayerDetailsSO> playerDetailsList;
     // List of all available weapons in the game. Order is important
     public List<WeaponDetailsSO> weaponList = new List<WeaponDetailsSO>();
+    public int healthBonus;
+    public int attackBonus;
+    public int speedBonus;
+    public int coinsBonus;
 
     #region Header Music
     [Space(10)]

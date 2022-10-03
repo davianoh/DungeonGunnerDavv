@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: PlasmaBlaster
   weaponListIndex: 8
   weaponCost: 40
-  weaponDescription: 
+  weaponDescription: Plasma Blaster blast away ur problem ;)
   weaponSprite: {fileID: 21300000, guid: a9d9372b640a67a4dae1cdbb59e3b919, type: 3}
   weaponShootPosition: {x: 1.245, y: 0.277, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: af3ec9b359b30e14fb312ca178524e1a, type: 2}

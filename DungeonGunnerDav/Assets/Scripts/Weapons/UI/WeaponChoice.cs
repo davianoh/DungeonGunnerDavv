@@ -15,6 +15,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private CanvasGroup canvasGroup;
 
     [SerializeField] private GameObject costWeaponText;
+    [SerializeField] private GameObject buyWeaponText;
     private bool buying = false;
 
     private void Awake()
@@ -31,6 +32,23 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             gameObject.GetComponent<Image>().color = Color.white;
             costWeaponText.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        if (!WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        {
+            if(WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails.weaponListIndex)
+            {
+                costWeaponText.SetActive(false);
+                buyWeaponText.SetActive(true);
+            }
+            else
+            {
+                costWeaponText.SetActive(true);
+                buyWeaponText.SetActive(false);
+            }
         }
     }
 
@@ -66,13 +84,14 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails.weaponListIndex)
         {
             buying = true;
             MapManager.Instance.totalCoinsInGame -= weaponDetails.weaponCost;
             WeaponMenuUI.Instance.weaponOwnedList.Add(weaponDetails.weaponListIndex);
             gameObject.GetComponent<Image>().color = Color.white;
             costWeaponText.SetActive(false);
+            buyWeaponText.SetActive(false);
 
             MapManager.Instance.ItemBuyed();
         }
@@ -81,7 +100,8 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             isDraged = false;
             originPosition = rectTransform.anchoredPosition;
         }
-        
+        WeaponMenuUI.Instance.currentActiveWeaponChoice = weaponDetails.weaponListIndex;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -96,19 +116,14 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (!isDraged && WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
+        if(isDraged && WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
         {
-            WeaponMenuUI.Instance.weaponImage.sprite = weaponDetails.weaponSprite;
-            WeaponMenuUI.Instance.weaponDescription.text = weaponDetails.weaponDescription;
-            WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nCharged: " + weaponDetails.weaponPrechargeTime.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
+            rectTransform.anchoredPosition = originPosition;
         }
-        else
-        {
-            if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
-            {
-                rectTransform.anchoredPosition = originPosition;
-            }
-        }
+        WeaponMenuUI.Instance.weaponImage.sprite = weaponDetails.weaponSprite;
+        WeaponMenuUI.Instance.weaponDescription.text = weaponDetails.weaponDescription;
+        WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nCharged: " + weaponDetails.weaponPrechargeTime.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
+
         buying = false;
     }
 }

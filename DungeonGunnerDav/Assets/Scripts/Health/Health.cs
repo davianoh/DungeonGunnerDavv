@@ -6,7 +6,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Health : MonoBehaviour
 {
-    private int startingHealth;
+    public int startingHealth;
     private int currentHealth;
     private HealthEvent healthEvent;
     [HideInInspector] public bool isDamageable = true;

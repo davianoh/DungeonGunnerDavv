@@ -153,6 +153,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         scoreMultiplier = 1;
 
         StartCoroutine(Fade(0f, 1f, 0f, Color.black));
+        Debug.Log(GameResources.Instance.healthBonus + " and " + GameResources.Instance.attackBonus);
     }
 
     private IEnumerator Fade(float startFadeAlpha, float targetFadeAlpha, float fadeSeconds, Color backgroundColor)
