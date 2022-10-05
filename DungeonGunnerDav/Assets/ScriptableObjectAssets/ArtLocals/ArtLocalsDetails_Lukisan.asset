@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b350f75d6270b144959bb2bc153353f, type: 3}
+  m_Name: ArtLocalsDetails_Lukisan
+  m_EditorClassIdentifier: 
+  obtainInLevel: 1
+  artImage: {fileID: -8023197995696302144, guid: a53e0a6238da01b4a9189f65aeb58998, type: 3}
+  nama: Hedusa Lukisan
+  location: Sidoarjo
+  year: 2021
+  artist: Wahyu
+  artHistory: Hedusa Lukisan is the best lukisan in the existence of the hedusa itself
+  artistHistory: Wahyu was the best artist according to himself

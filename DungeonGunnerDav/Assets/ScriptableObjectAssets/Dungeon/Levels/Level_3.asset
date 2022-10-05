@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b64a140a8157d0469720a9d0b924fb6, type: 3}
+  m_Name: Level_3
+  m_EditorClassIdentifier: 
+  id: 3
+  levelName: Tiga
+  backgroundMusic: {fileID: 11400000, guid: 77d09e6c5f5a499498ebbc8e7baee7e7, type: 2}
+  totalWaves: 3
+  wavesEnemySpawnTypes:
+  - spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: a94220ac17617e64eac59ec3e1247344, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: 82b3617630a502647b483aa5739f3ed4, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: 8d9bbb3224fafeb4ab3f5f91e408c201, type: 2}
+      ratio: 1
+  - spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 44f60eff625fca449a661abf8dde05e3, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: e2b46e1687fbc624d990b4f3799081c2, type: 2}
+      ratio: 1
+    - dungeonObject: {fileID: 11400000, guid: f21f96455cd496e4fb82b8db2f5e6011, type: 2}
+      ratio: 1
+  - spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 6cfaf0199fc37254dbc999bff8ee50f0, type: 2}
+      ratio: 2
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
+      ratio: 1
+  wavesEnemySpawnParameters:
+  - maxTotalEnemiesToSpawn: 10
+    maxConcurrentEnemies: 10
+    minSpawnInterval: 2
+    maxSpawnInterval: 2
+    wavesSurviveTimeInSeconds: 30
+  - maxTotalEnemiesToSpawn: 15
+    maxConcurrentEnemies: 15
+    minSpawnInterval: 1
+    maxSpawnInterval: 2
+    wavesSurviveTimeInSeconds: 40
+  - maxTotalEnemiesToSpawn: 15
+    maxConcurrentEnemies: 10
+    minSpawnInterval: 2
+    maxSpawnInterval: 2
+    wavesSurviveTimeInSeconds: 45
+  isClearedOfEnemies: 0
