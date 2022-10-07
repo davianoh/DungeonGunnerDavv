@@ -179,19 +179,11 @@ public static class HelperUtilities
     {
         AimDirection aimDirection;
 
-        if(angleDegrees >= 22f && angleDegrees <= 67f)
-        {
-            aimDirection = AimDirection.UpRight;
-        }
-        else if(angleDegrees > 67f && angleDegrees <= 112f)
+        if(angleDegrees > 45f && angleDegrees <= 135f)
         {
             aimDirection = AimDirection.Up;
         }
-        else if(angleDegrees > 112f && angleDegrees <= 158f)
-        {
-            aimDirection = AimDirection.UpLeft;
-        }
-        else if((angleDegrees > 158f && angleDegrees <= 180f) || (angleDegrees > -180f && angleDegrees <= -135f))
+        else if((angleDegrees > 135 && angleDegrees <= 180f) || (angleDegrees > -180f && angleDegrees <= -135f))
         {
             aimDirection = AimDirection.Left;
         }
@@ -199,7 +191,7 @@ public static class HelperUtilities
         {
             aimDirection = AimDirection.Down;
         }
-        else if((angleDegrees > -45f && angleDegrees <= 0f) || (angleDegrees > 0f && angleDegrees < 22f))
+        else if((angleDegrees > -45f && angleDegrees <= 0f) || (angleDegrees > 0f && angleDegrees <= 45f))
         {
             aimDirection = AimDirection.Right;
         }
