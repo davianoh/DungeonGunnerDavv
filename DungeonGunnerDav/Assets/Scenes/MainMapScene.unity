@@ -1371,7 +1371,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: ec324d40bf027ae479d479ab5a50fb2e, type: 2}
+      objectReference: {fileID: 11400000, guid: 79175247e4ec9a0479d700630cc1dc59, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (1)
@@ -2069,7 +2069,7 @@ PrefabInstance:
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
+      objectReference: {fileID: 11400000, guid: e1d5516a7c5d7b041b93d5201963c15d, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (2)
@@ -11070,7 +11070,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.18399048, y: 0}
+  m_SizeDelta: {x: 0, y: -0.16741943}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4662851938187592275
 GameObject:
