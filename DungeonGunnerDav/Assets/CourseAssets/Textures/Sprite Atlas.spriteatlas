@@ -824,6 +824,12 @@ SpriteAtlas:
   - {fileID: 1374991863440946228, guid: 60a4f412ead2848419d2fce5ba19c2fb, type: 3}
   - {fileID: -6513371479700069740, guid: 60a4f412ead2848419d2fce5ba19c2fb, type: 3}
   - {fileID: -3045339763402227310, guid: 60a4f412ead2848419d2fce5ba19c2fb, type: 3}
+  - {fileID: -8540584908252580693, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
+  - {fileID: -1001537583166357165, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
+  - {fileID: -5343412825761573837, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
+  - {fileID: 1260243723792049009, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
+  - {fileID: 7254305268933806295, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
+  - {fileID: -8594420221732460547, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
   - {fileID: 5140541665199036877, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
   - {fileID: 585492555750498021, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
   - {fileID: -2707397711903873196, guid: ca9a6422e6651ee45836825651a35e3f, type: 3}
@@ -1868,6 +1874,12 @@ SpriteAtlas:
   - {fileID: 1304933001403679932, guid: 56f2e09628f30e54f97cbcf60de7501e, type: 3}
   - {fileID: 937086240157990318, guid: 56f2e09628f30e54f97cbcf60de7501e, type: 3}
   - {fileID: -8231038957973421944, guid: 56f2e09628f30e54f97cbcf60de7501e, type: 3}
+  - {fileID: -218502023604192660, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
+  - {fileID: 947169367724953819, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
+  - {fileID: 149988267759591230, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
+  - {fileID: -6600665851746742522, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
+  - {fileID: 5150701737627503121, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
+  - {fileID: 5029782724407590559, guid: 8917f596c45c18440bb8a39a0568b1af, type: 3}
   - {fileID: -548279488009883550, guid: 2ef2569678632db449ffcf5fad18b0ee, type: 3}
   - {fileID: 7990153382602451497, guid: 2ef2569678632db449ffcf5fad18b0ee, type: 3}
   - {fileID: -3200172528877779081, guid: 2ef2569678632db449ffcf5fad18b0ee, type: 3}
@@ -4159,6 +4171,12 @@ SpriteAtlas:
   - {fileID: 4775553399280574322, guid: 43ed172d758d8d345897c97010046d3a, type: 3}
   - {fileID: 2934186655757209998, guid: 43ed172d758d8d345897c97010046d3a, type: 3}
   - {fileID: -2080385730028950667, guid: 43ed172d758d8d345897c97010046d3a, type: 3}
+  - {fileID: -3179302795591883618, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
+  - {fileID: -1234400705849937637, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
+  - {fileID: 444336233045286056, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
+  - {fileID: -7275115376153492036, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
+  - {fileID: -5855126301716744412, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
+  - {fileID: -1422766276133929009, guid: 31b8092d14b1f2c45806592a434c58f0, type: 3}
   - {fileID: 3727492390337193509, guid: 43d9b13de8bd65d4a84858701ef91c90, type: 3}
   - {fileID: -1534850109183730934, guid: 43d9b13de8bd65d4a84858701ef91c90, type: 3}
   - {fileID: -4826010235392241171, guid: 43d9b13de8bd65d4a84858701ef91c90, type: 3}
@@ -5719,6 +5737,12 @@ SpriteAtlas:
   - frozen6_1
   - frozen6_2
   - frozen6_3
+  - player depan-min_0
+  - player depan-min_1
+  - player depan-min_2
+  - player depan-min_3
+  - player depan-min_4
+  - player depan-min_5
   - statue_cerebov_3
   - statue_cerebov_2
   - statue_cerebov_1
@@ -6763,6 +6787,12 @@ SpriteAtlas:
   - statue_orb_guardian_1
   - statue_orb_guardian_2
   - statue_orb_guardian_3
+  - player belakang-min_1
+  - player belakang-min_0
+  - player belakang-min_3
+  - player belakang-min_2
+  - player belakang-min_5
+  - player belakang-min_4
   - pedestal_e_1
   - pedestal_e_2
   - pedestal_e_3
@@ -9054,6 +9084,12 @@ SpriteAtlas:
   - mosaic10_0
   - mosaic10_3
   - mosaic10_2
+  - player kiri kanan(1)-min_4
+  - player kiri kanan(1)-min_5
+  - player kiri kanan(1)-min_0
+  - player kiri kanan(1)-min_1
+  - player kiri kanan(1)-min_2
+  - player kiri kanan(1)-min_3
   - pedestal_sw_3
   - pedestal_sw_2
   - pedestal_sw_1
