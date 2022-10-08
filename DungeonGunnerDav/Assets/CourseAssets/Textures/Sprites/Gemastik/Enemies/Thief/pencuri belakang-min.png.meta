@@ -1,12 +1,30 @@
 fileFormatVersion: 2
 guid: 73d35a50f5b30544ea88b61e57cfc45f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5627334528301726200
+    second: pencuri belakang-min_0
+  - first:
+      213: 7191462236226432710
+    second: pencuri belakang-min_1
+  - first:
+      213: 1687854612078889499
+    second: pencuri belakang-min_2
+  - first:
+      213: 3453180174807485510
+    second: pencuri belakang-min_3
+  - first:
+      213: -5085194989907257449
+    second: pencuri belakang-min_4
+  - first:
+      213: -106143864636982470
+    second: pencuri belakang-min_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -32,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +59,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,10 +83,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,10 +95,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +107,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pencuri belakang-min_0
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 792
+        width: 497
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9f6b740fe481e40800000000000000
+      internalID: 5627334528301726200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri belakang-min_1
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 494
+        width: 110
+        height: 218
+      alignment: 9
+      pivot: {x: 0.10365101, y: 0.87019897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cea9e54dc43dc360800000000000000
+      internalID: 7191462236226432710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri belakang-min_2
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 494
+        width: 111
+        height: 217
+      alignment: 9
+      pivot: {x: 0.8844214, y: 0.88045436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a8779b3d67c6710800000000000000
+      internalID: 1687854612078889499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri belakang-min_3
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 152
+        width: 263
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c42d0c2192cef20800000000000000
+      internalID: 3453180174807485510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri belakang-min_4
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 194
+        width: 120
+        height: 153
+      alignment: 9
+      pivot: {x: 0.500001, y: 0.8942929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7975bf46912cd69b0800000000000000
+      internalID: -5085194989907257449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri belakang-min_5
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 194
+        width: 119
+        height: 155
+      alignment: 9
+      pivot: {x: 0.5038878, y: 0.8848587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bb93da7b6e68ef0800000000000000
+      internalID: -106143864636982470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

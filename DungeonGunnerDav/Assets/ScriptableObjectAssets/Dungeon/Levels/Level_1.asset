@@ -18,12 +18,12 @@ MonoBehaviour:
   totalWaves: 2
   wavesEnemySpawnTypes:
   - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: 5d91139cb36a86347999495fc33f453d, type: 2}
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
       ratio: 1
     - dungeonObject: {fileID: 11400000, guid: e2b46e1687fbc624d990b4f3799081c2, type: 2}
       ratio: 1
   - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: 6cfaf0199fc37254dbc999bff8ee50f0, type: 2}
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
       ratio: 1
     - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
       ratio: 1

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: WeaponDetails_Pistol_Enemy
   m_EditorClassIdentifier: 
   weaponName: Pistol Enemy
-  weaponSprite: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
-  weaponShootPosition: {x: 1.115, y: 0.277, z: 0}
+  weaponListIndex: 0
+  weaponCost: 0
+  weaponDescription: 
+  weaponSprite: {fileID: 21300000, guid: 6a1c7f22822c2124cb8b30bb781d5028, type: 3}
+  weaponShootPosition: {x: 3.51, y: 0.7, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 202155f0d5b95524a9903a5a427ddeb2, type: 2}
   weaponShootEffect: {fileID: 11400000, guid: 3263bf2f6256e244481b21615efc2537, type: 2}
   weaponFiringSoundEffect: {fileID: 11400000, guid: 07da2914c8a42e94db91f32d02ad2489, type: 2}
@@ -23,6 +26,6 @@ MonoBehaviour:
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 10
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.25
+  weaponFireRate: 0.6
   weaponPrechargeTime: 0
   weaponReloadTime: 1

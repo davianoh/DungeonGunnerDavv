@@ -1,12 +1,30 @@
 fileFormatVersion: 2
 guid: ad3d2c6276a083d4e9798928b9d1f4fc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 6567407417305461536
+    second: pencuri-min_0
+  - first:
+      213: 8846253477212262815
+    second: pencuri-min_1
+  - first:
+      213: -1400783575994279545
+    second: pencuri-min_2
+  - first:
+      213: -3687173244170995506
+    second: pencuri-min_3
+  - first:
+      213: -4178198174461746748
+    second: pencuri-min_4
+  - first:
+      213: -66529204272465641
+    second: pencuri-min_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -32,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +59,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,10 +83,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,10 +95,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +107,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pencuri-min_0
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 823
+        width: 496
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023f1cb104e142b50800000000000000
+      internalID: 6567407417305461536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri-min_1
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 464
+        width: 110
+        height: 218
+      alignment: 9
+      pivot: {x: 0.12468816, y: 0.87875336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f911d460ba434ca70800000000000000
+      internalID: 8846253477212262815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri-min_2
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 464
+        width: 109
+        height: 218
+      alignment: 9
+      pivot: {x: 0.876018, y: 0.8813902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789d8a162ca6f8ce0800000000000000
+      internalID: -1400783575994279545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri-min_3
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 125
+        width: 262
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8fcdb487784dcc0800000000000000
+      internalID: -3687173244170995506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri-min_4
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 120
+        width: 121
+        height: 154
+      alignment: 9
+      pivot: {x: 0.49492803, y: 0.91099447}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1a50ab5ee0406c0800000000000000
+      internalID: -4178198174461746748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pencuri-min_5
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 121
+        width: 121
+        height: 154
+      alignment: 9
+      pivot: {x: 0.5033948, y: 0.91318184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719762c8a04a31ff0800000000000000
+      internalID: -66529204272465641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

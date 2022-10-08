@@ -37,7 +37,7 @@ public static class Settings
     public static float baseSpeedPlayerAnimation = 8f;
 
     // Animator parameters - Enemies
-    public static float baseSpeedEnemyAnimation = 3f;
+    public static float baseSpeedEnemyAnimation = 8f;
 
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");

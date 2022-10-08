@@ -226,7 +226,12 @@ SpriteAtlas:
   - {fileID: 8730723002211687173, guid: 7c7bfa40a3f24114b9b4a4224647a937, type: 3}
   - {fileID: 5554664115643891341, guid: 7c7bfa40a3f24114b9b4a4224647a937, type: 3}
   - {fileID: 21300000, guid: 2ffd2f40da8787b45984539160028a57, type: 3}
-  - {fileID: 21300000, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: 5627334528301726200, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: 7191462236226432710, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: 1687854612078889499, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: 3453180174807485510, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: -5085194989907257449, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
+  - {fileID: -106143864636982470, guid: 73d35a50f5b30544ea88b61e57cfc45f, type: 3}
   - {fileID: 1667161783932814124, guid: aa912e507da8d3344a6ea1dc69e8de86, type: 3}
   - {fileID: -1671178219313776625, guid: aa912e507da8d3344a6ea1dc69e8de86, type: 3}
   - {fileID: 2219607057928067888, guid: aa912e507da8d3344a6ea1dc69e8de86, type: 3}
@@ -920,7 +925,12 @@ SpriteAtlas:
   - {fileID: 5941247088502274884, guid: 7d9c5a628bda4254ca5befbacc50469b, type: 3}
   - {fileID: 21300000, guid: eb3eea626cbae9f4f90410ba42764af4, type: 3}
   - {fileID: 21300000, guid: 59dcbb620037ee3469819f3b9fbee9b9, type: 3}
-  - {fileID: 21300000, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: -66529204272465641, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: -4178198174461746748, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: 8846253477212262815, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: 6567407417305461536, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: -3687173244170995506, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+  - {fileID: -1400783575994279545, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
   - {fileID: -7454202864920846041, guid: 44369d62ee8c7d6458a07f68f60fcafc, type: 3}
   - {fileID: -4172688071322153551, guid: 44369d62ee8c7d6458a07f68f60fcafc, type: 3}
   - {fileID: 8630973280729720855, guid: 44369d62ee8c7d6458a07f68f60fcafc, type: 3}
@@ -1949,7 +1959,10 @@ SpriteAtlas:
   - {fileID: -7053555137332909077, guid: 042315564c2960c40aeb55524ec98919, type: 3}
   - {fileID: 4346625796166053976, guid: 042315564c2960c40aeb55524ec98919, type: 3}
   - {fileID: -4240454087358813365, guid: 042315564c2960c40aeb55524ec98919, type: 3}
-  - {fileID: 21300000, guid: 5287b556bff393643aeb3e999a1696cd, type: 3}
+  - {fileID: 343551759011906005, guid: 5287b556bff393643aeb3e999a1696cd, type: 3}
+  - {fileID: 762860219936267917, guid: 5287b556bff393643aeb3e999a1696cd, type: 3}
+  - {fileID: 3781761816261094472, guid: 5287b556bff393643aeb3e999a1696cd, type: 3}
+  - {fileID: 6526829261024703296, guid: 5287b556bff393643aeb3e999a1696cd, type: 3}
   - {fileID: 3589588719171036738, guid: bb4a685630d07e449b42748fa077eaf1, type: 3}
   - {fileID: 581197051434270721, guid: bb4a685630d07e449b42748fa077eaf1, type: 3}
   - {fileID: 2128713026156772679, guid: bb4a685630d07e449b42748fa077eaf1, type: 3}
@@ -5395,7 +5408,12 @@ SpriteAtlas:
   - SlimeBlockKingIdleDown_Blue_1
   - SlimeBlockKingIdleDown_Blue_0
   - 44
-  - pencuri belakang-min
+  - pencuri belakang-min_0
+  - pencuri belakang-min_1
+  - pencuri belakang-min_2
+  - pencuri belakang-min_3
+  - pencuri belakang-min_4
+  - pencuri belakang-min_5
   - TheScientistMoveUpRight_5
   - TheScientistMoveUpRight_4
   - TheScientistMoveUpRight_1
@@ -6089,7 +6107,12 @@ SpriteAtlas:
   - blood_red21_0
   - panel_Example4
   - Orange
-  - pencuri-min
+  - pencuri-min_5
+  - pencuri-min_4
+  - pencuri-min_1
+  - pencuri-min_0
+  - pencuri-min_3
+  - pencuri-min_2
   - SlizzardIdleUpRight_4
   - SlizzardIdleUpRight_2
   - SlizzardIdleUpRight_3
@@ -7118,7 +7141,10 @@ SpriteAtlas:
   - floor_vines6_1
   - floor_vines6_2
   - floor_vines6_3
-  - pencuri kiri kanan-min
+  - pencuri kiri kanan-min_3
+  - pencuri kiri kanan-min_2
+  - pencuri kiri kanan-min_1
+  - pencuri kiri kanan-min_0
   - orc3_3
   - orc3_2
   - orc3_1

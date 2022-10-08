@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7710e13224de304cb350840744f839d, type: 3}
-  m_Name: EnemyDetails_GrimonkBrown
+  m_Name: EnemyDetails_Thief
   m_EditorClassIdentifier: 
-  enemyName: Grimonk
-  enemyPrefab: {fileID: 968163792347498260, guid: 53ec87bcc9c5c1b44a17c1fe8bd692d4, type: 3}
+  enemyName: Thief
+  enemyPrefab: {fileID: 968163792347498260, guid: 37268b1cc5f474d4d860c8cc3d9e8cb7, type: 3}
   chaseDistance: 50
   enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   enemyMaterializeTime: 2.5
   enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
   enemyMaterializeColor: {r: 0.84298223, g: 8.47419, b: 0, a: 1}
-  enemyWeapon: {fileID: 11400000, guid: f275d34792aaaaa498fd5b94b5d5e32a, type: 2}
+  enemyWeapon: {fileID: 11400000, guid: 2a5926b5bc0aa2040bd6dc4251825ab2, type: 2}
   firingIntervalMin: 0.8
   firingIntervalMax: 1.5
   firingDurationMin: 5
@@ -40,5 +40,5 @@ MonoBehaviour:
     enemyHealthAmount: 69
   isImmuneAfterHit: 0
   hitImmunityTime: 0
-  isHealthBarDisplayed: 0
+  isHealthBarDisplayed: 1
   coinsDropAmount: 2
