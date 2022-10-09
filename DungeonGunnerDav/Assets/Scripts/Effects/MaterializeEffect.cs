@@ -27,4 +27,29 @@ public class MaterializeEffect : MonoBehaviour
             spriteRenderer.material = normalMaterial;
         }
     }
+
+    public IEnumerator WarningSpawnRoutine(SpriteRenderer warningIcon, float warningTime, float warningInterval, SpriteRenderer[] spriteRendererArray, Material normalMaterial)
+    {
+        foreach (SpriteRenderer spriteRenderer in spriteRendererArray)
+        {
+            spriteRenderer.enabled = false;
+        }
+
+        while (warningTime > 0)
+        {
+            warningIcon.enabled = true;
+            warningTime -= warningInterval;
+            yield return new WaitForSeconds(warningInterval);
+            warningIcon.enabled = false;
+            warningTime -= warningInterval;
+            yield return new WaitForSeconds(warningInterval);
+        }
+
+        foreach (SpriteRenderer spriteRenderer in spriteRendererArray)
+        {
+            spriteRenderer.enabled = true;
+            spriteRenderer.material = normalMaterial;
+        }
+        warningIcon.enabled = false;
+    }
 }

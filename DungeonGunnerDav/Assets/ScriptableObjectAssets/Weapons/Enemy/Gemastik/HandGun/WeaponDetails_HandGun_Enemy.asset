@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cdff975ad084741a653a7ac8c08fad, type: 3}
+  m_Name: WeaponDetails_HandGun_Enemy
+  m_EditorClassIdentifier: 
+  weaponName: HandGun Enemy
+  weaponListIndex: 0
+  weaponCost: 0
+  weaponDescription: 
+  weaponSprite: {fileID: 21300000, guid: e86cee3a8746de94faee30e490ab20af, type: 3}
+  weaponShootPosition: {x: 2.05, y: 0.72, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: cac76893613962f48b87e38a829c5968, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: 2ae6cc09b39163b44969d694ea8a0ac6, type: 2}
+  weaponFiringSoundEffect: {fileID: 11400000, guid: 7f8d6fe7b0c7a404dbc6216ea419ca02, type: 2}
+  weaponReloadingSoundEffect: {fileID: 11400000, guid: a0cdb7406bd23524386e170a0fa1c78a, type: 2}
+  hasInfiniteAmmo: 1
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 10
+  weaponAmmoCapacity: 0
+  weaponFireRate: 0.6
+  weaponPrechargeTime: 0
+  weaponReloadTime: 1

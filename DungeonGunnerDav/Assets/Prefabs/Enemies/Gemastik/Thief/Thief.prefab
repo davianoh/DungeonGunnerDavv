@@ -253,6 +253,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   movementToPositionEvent: {fileID: 0}
   idleEvent: {fileID: 0}
+  warningIconSprite: {fileID: 1577270903312448647}
 --- !u!210 &7373984307329155570
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -305,7 +306,7 @@ SpriteRenderer:
   m_SortingLayerID: -653709415
   m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: bb7ccf2391a6a544ab96e81e36b6a0ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24e25588f9796174d94589abf925f75a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -370,7 +371,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.0625, y: 0.0625}
+    oldSize: {x: 2.08, y: 2.13}
     newSize: {x: 1.5, y: 1.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

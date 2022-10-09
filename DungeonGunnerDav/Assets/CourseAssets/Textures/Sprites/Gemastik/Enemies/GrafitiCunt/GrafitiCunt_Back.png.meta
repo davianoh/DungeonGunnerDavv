@@ -1,12 +1,30 @@
 fileFormatVersion: 2
 guid: 875d1e3b24af9644796537d3e0f96cb3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6710697469205924913
+    second: GrafitiCunt_Back_0
+  - first:
+      213: -6071973611837879716
+    second: GrafitiCunt_Back_1
+  - first:
+      213: -8775612093084646730
+    second: GrafitiCunt_Back_2
+  - first:
+      213: 5456057724411128153
+    second: GrafitiCunt_Back_3
+  - first:
+      213: -3727161399016049902
+    second: GrafitiCunt_Back_4
+  - first:
+      213: 728457663281429298
+    second: GrafitiCunt_Back_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -32,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 2
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +59,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,10 +83,22 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +107,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_0
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 472
+        width: 508
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc33ed0e430ded2a0800000000000000
+      internalID: -6710697469205924913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_1
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 240
+        width: 109
+        height: 217
+      alignment: 9
+      pivot: {x: 0.094498664, y: 0.8712957}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a8bd4bb240cbba0800000000000000
+      internalID: -6071973611837879716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_2
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 239
+        width: 109
+        height: 217
+      alignment: 9
+      pivot: {x: 0.917789, y: 0.8776507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b24119eb43c63680800000000000000
+      internalID: -8775612093084646730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 182
+        width: 266
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9592d89c79fc7bb40800000000000000
+      internalID: 5456057724411128153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_4
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 41
+        width: 119
+        height: 153
+      alignment: 9
+      pivot: {x: 0.49533054, y: 0.83129257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213b9177476764cc0800000000000000
+      internalID: -3727161399016049902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrafitiCunt_Back_5
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 44
+        width: 119
+        height: 152
+      alignment: 9
+      pivot: {x: 0.50541264, y: 0.8305579}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bfccd92600c1a00800000000000000
+      internalID: 728457663281429298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

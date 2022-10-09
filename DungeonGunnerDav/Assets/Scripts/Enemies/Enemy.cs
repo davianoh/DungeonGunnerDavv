@@ -54,6 +54,7 @@ public class Enemy : MonoBehaviour
 
     private HealthEvent healthEvent;
     private Health health;
+    public SpriteRenderer warningIconSprite;
 
     private void Awake()
     {
@@ -149,7 +150,8 @@ public class Enemy : MonoBehaviour
     private IEnumerator MaterializeEnemy()
     {
         EnemyEnable(false);
-        yield return StartCoroutine(materializeEffect.MaterializeRoutine(enemyDetails.enemyMaterializeShader, enemyDetails.enemyMaterializeColor, enemyDetails.enemyMaterializeTime, spriteRendererArray, enemyDetails.enemyStandardMaterial));
+        //yield return StartCoroutine(materializeEffect.MaterializeRoutine(enemyDetails.enemyMaterializeShader, enemyDetails.enemyMaterializeColor, enemyDetails.enemyMaterializeTime, spriteRendererArray, enemyDetails.enemyStandardMaterial));
+        yield return StartCoroutine(materializeEffect.WarningSpawnRoutine(warningIconSprite, Settings.enemyWarningSpawnTime, Settings.enemyWarningSpawnInterval, spriteRendererArray, enemyDetails.enemyStandardMaterial));
         EnemyEnable(true);
     }
 

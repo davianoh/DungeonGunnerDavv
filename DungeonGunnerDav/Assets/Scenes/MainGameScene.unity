@@ -2742,8 +2742,8 @@ MonoBehaviour:
   m_MaximumDistance: 5000
   m_MinimumFOV: 3
   m_MaximumFOV: 60
-  m_MinimumOrthoSize: 13
-  m_MaximumOrthoSize: 13
+  m_MinimumOrthoSize: 15
+  m_MaximumOrthoSize: 15
 --- !u!114 &1664521043
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3308,14 +3308,14 @@ MonoBehaviour:
   m_Follow: {fileID: 1416354085}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 13
+    OrthographicSize: 15
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769231, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3553,7 +3553,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

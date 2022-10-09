@@ -35,6 +35,8 @@ public static class Settings
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollRight = Animator.StringToHash("rollRight");
     public static float baseSpeedPlayerAnimation = 8f;
+    public static float enemyWarningSpawnTime = 3f;
+    public static float enemyWarningSpawnInterval = 0.2f;
 
     // Animator parameters - Enemies
     public static float baseSpeedEnemyAnimation = 8f;

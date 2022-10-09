@@ -41,4 +41,4 @@ MonoBehaviour:
   isImmuneAfterHit: 0
   hitImmunityTime: 0
   isHealthBarDisplayed: 1
-  coinsDropAmount: 2
+  coinsDropAmount: 5
