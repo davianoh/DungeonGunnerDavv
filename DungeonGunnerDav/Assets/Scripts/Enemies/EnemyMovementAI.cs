@@ -17,6 +17,8 @@ public class EnemyMovementAI : MonoBehaviour
     private bool chasePlayer = false;
     [HideInInspector] public int updateFrameNumber = 1;
 
+    private bool targetArt = false;
+
     private void Awake()
     {
         enemy = GetComponent<Enemy>();
@@ -37,20 +39,21 @@ public class EnemyMovementAI : MonoBehaviour
     private void MoveEnemy()
     {
         currentEnemyPathRebuildCooldown -= Time.deltaTime;
-        if(!chasePlayer && Vector3.Distance(transform.position, GameManager.Instance.GetPlayer().GetPlayerPosition()) < enemy.enemyDetails.chaseDistance)
+        if (!chasePlayer && Vector3.Distance(transform.position, GameManager.Instance.GetPlayer().GetPlayerPosition()) < enemy.enemyDetails.chaseDistance)
         {
             chasePlayer = true;
+            targetArt = false;
         }
 
         if (!chasePlayer)
         {
-            return;
+            targetArt = true;
         }
 
         // Only process AStar pathfinding when certain frame in each enemies, to spread the load cpu
         if (Time.frameCount % Settings.targetFrameRateToSpreadPathfindingOver != updateFrameNumber) return;
 
-        if(currentEnemyPathRebuildCooldown <= 0f || Vector3.Distance(playerReferencePosition, GameManager.Instance.GetPlayer().GetPlayerPosition()) > Settings.playerMoveDistanceToRebuildPath)
+        if (currentEnemyPathRebuildCooldown <= 0f || Vector3.Distance(playerReferencePosition, GameManager.Instance.GetPlayer().GetPlayerPosition()) > Settings.playerMoveDistanceToRebuildPath)
         {
             // Reseting the parameters
             currentEnemyPathRebuildCooldown = Settings.enemyPathRebuildCooldown;
@@ -59,9 +62,9 @@ public class EnemyMovementAI : MonoBehaviour
             // Creating AStarPath
             CreatePath();
 
-            if(movementSteps != null)
+            if (movementSteps != null)
             {
-                if(moveEnemyRoutine != null)
+                if (moveEnemyRoutine != null)
                 {
                     enemy.idleEvent.CallIdleEvent();
                     StopCoroutine(moveEnemyRoutine);
@@ -74,11 +77,11 @@ public class EnemyMovementAI : MonoBehaviour
 
     private IEnumerator MoveEnemyRoutine(Stack<Vector3> movementSteps)
     {
-        while(movementSteps.Count > 0)
+        while (movementSteps.Count > 0)
         {
             Vector3 nextPosition = movementSteps.Pop();
 
-            while(Vector3.Distance(nextPosition, transform.position) > 0.2f)
+            while (Vector3.Distance(nextPosition, transform.position) > 0.2f)
             {
                 enemy.movementToPositionEvent.CallMovementToPositionEvent(nextPosition, transform.position, moveSpeed, (nextPosition - transform.position).normalized);
 
@@ -96,11 +99,19 @@ public class EnemyMovementAI : MonoBehaviour
 
         Grid grid = currentRoom.instantiatedRoom.grid;
         Vector3Int enemyGridPosition = grid.WorldToCell(transform.position);
-        Vector3Int playerGridPosition = GetNearestNonObstaclesPlayerPosition(currentRoom);
+        Vector3Int playerGridPosition = new Vector3Int();
+        if (!targetArt)
+        {
+            playerGridPosition = GetNearestNonObstaclesPlayerPosition(currentRoom, GameManager.Instance.GetPlayer().GetPlayerPosition());
+        }
+        else
+        {
+            playerGridPosition = GetNearestNonObstaclesPlayerPosition(currentRoom, currentRoom.artLocalPosition.position);
+        }
 
         movementSteps = AStar.BuildPath(currentRoom, enemyGridPosition, playerGridPosition);
 
-        if(movementSteps != null)
+        if (movementSteps != null)
         {
             movementSteps.Pop();
         }
@@ -115,9 +126,8 @@ public class EnemyMovementAI : MonoBehaviour
         this.updateFrameNumber = updateFrameNumber;
     }
 
-    private Vector3Int GetNearestNonObstaclesPlayerPosition(Room currentRoom)
+    private Vector3Int GetNearestNonObstaclesPlayerPosition(Room currentRoom, Vector3 playerPosition)
     {
-        Vector3 playerPosition = GameManager.Instance.GetPlayer().GetPlayerPosition();
         Vector3Int playerCellPosition = currentRoom.instantiatedRoom.grid.WorldToCell(playerPosition);
 
         Vector2Int adjustedPlayerCellPosition = new Vector2Int(playerCellPosition.x - currentRoom.templateLowerBounds.x, playerCellPosition.y - currentRoom.templateLowerBounds.y);
@@ -125,22 +135,22 @@ public class EnemyMovementAI : MonoBehaviour
         //Debug.Log(currentRoom.instantiatedRoom.aStarMovementPenalty[adjustedPlayerCellPosition.x, adjustedPlayerCellPosition.y]);
         int obstacle = currentRoom.transform.GetComponent<InstantiatedRoom>().aStarMovementPenalty[adjustedPlayerCellPosition.x, adjustedPlayerCellPosition.y];
 
-        if(obstacle != 0)
+        if (obstacle != 0)
         {
             return playerCellPosition;
         }
         else
         {
-            for(int i = -1; i <= 1; i++)
+            for (int i = -1; i <= 1; i++)
             {
-                for(int j = -1; j <= 1; j++)
+                for (int j = -1; j <= 1; j++)
                 {
                     if (i == 0 && j == 0) continue;
 
                     try
                     {
                         obstacle = currentRoom.instantiatedRoom.aStarMovementPenalty[adjustedPlayerCellPosition.x + i, adjustedPlayerCellPosition.y + j];
-                        if(obstacle != 0)
+                        if (obstacle != 0)
                         {
                             return new Vector3Int(playerCellPosition.x + i, playerCellPosition.y + j, 0);
                         }

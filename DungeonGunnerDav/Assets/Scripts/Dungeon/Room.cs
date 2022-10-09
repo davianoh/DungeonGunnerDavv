@@ -12,6 +12,7 @@ public class Room : MonoBehaviour
     public Vector2Int templateUpperBounds;
     public Vector2Int[] spawnPositionArray;
     public Vector2Int spawnPositionPlayer;
+    public Transform artLocalPosition;
     public InstantiatedRoom instantiatedRoom;
     public bool isLit = false;
     public bool isPreviouslyVisited = false;

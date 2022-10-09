@@ -78,6 +78,8 @@ public static class Settings
 
     #region Contact Damage Parameters
     public const float contactDamageCollisionResetDelay = 0.5f;
+    public const float artLocalDamageResetDelay = 2f;
+    public const int artLocalContactDamage = 10;
     #endregion
 
     #region Upgrade Stats Player Parameters

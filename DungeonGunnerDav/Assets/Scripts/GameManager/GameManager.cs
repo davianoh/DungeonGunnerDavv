@@ -235,6 +235,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
+        
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
@@ -247,6 +248,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private IEnumerator GameLost()
     {
         previousGameState = GameState.gameLost;
+        currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
+        Save();
+        SaveWeapons();
+
         GetPlayer().playerControl.DisablePlayer();
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
@@ -256,9 +261,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             enemy.gameObject.SetActive(false);
         }
 
-        yield return StartCoroutine(DisplayMessageRoutine("BAD LUCKz " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE FAIL TO THIS DUNGEON", Color.white, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("MY DISSAPOINMENT IS UNMEASURREABLE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE FAIL THE NIGHT", Color.white, 2f));
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED : " + gameScore.ToString("###,###0"), Color.white, 4f));
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO GO BACK", Color.white, 0f));
 
         gameState = GameState.restartGame;
     }
