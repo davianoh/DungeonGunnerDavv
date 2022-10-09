@@ -142,6 +142,14 @@ public static class HelperUtilities
         return nearestSpawnPosition;
     }
 
+    public static Vector3 GetSpawnWorldPositionPlayer(Vector2Int playerPosition)
+    {
+        Room currentRoom = GameManager.Instance.GetCurrentRoom();
+        Grid grid = currentRoom.instantiatedRoom.grid;
+        Vector3 spawnPositionWorld = grid.CellToWorld((Vector3Int)playerPosition);
+        return spawnPositionWorld;
+    }
+
     public static Vector3 GetMouseWorldPosition()
     {
         if(mainCamera == null)

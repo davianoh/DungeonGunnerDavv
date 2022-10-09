@@ -863,7 +863,11 @@ SpriteAtlas:
   - {fileID: 4015420909375649719, guid: 25c94a02b36a7f74ea93268468e11053, type: 3}
   - {fileID: 49398333738050948, guid: 25c94a02b36a7f74ea93268468e11053, type: 3}
   - {fileID: 484633907607475580, guid: 25c94a02b36a7f74ea93268468e11053, type: 3}
-  - {fileID: 21300000, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
+  - {fileID: 6078363520756049643, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
+  - {fileID: -7863230903878717072, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
+  - {fileID: 6886259189800564401, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
+  - {fileID: -1358913144781862864, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
+  - {fileID: -4766845697863512488, guid: cb6a20126e0c3474b8a8bf3e5cb41589, type: 3}
   - {fileID: 21300000, guid: 7c4ee4121304bd543b9a1a926c382c61, type: 3}
   - {fileID: 9033214776087184085, guid: 60a4f412ead2848419d2fce5ba19c2fb, type: 3}
   - {fileID: 1374991863440946228, guid: 60a4f412ead2848419d2fce5ba19c2fb, type: 3}
@@ -1467,7 +1471,11 @@ SpriteAtlas:
   - {fileID: 7066134178324908030, guid: b6fe7c05c782874449c8d8d5404bfdc7, type: 3}
   - {fileID: 21300000, guid: e40de01522bc86e419bd592a44aee0e5, type: 3}
   - {fileID: 21300000, guid: 11c2c71523cabff49aa0c19cff99f68a, type: 3}
-  - {fileID: 21300000, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
+  - {fileID: 7208230776012088556, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
+  - {fileID: -316161281671518929, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
+  - {fileID: 248687575736425489, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
+  - {fileID: 3119026359265706963, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
+  - {fileID: 2801585728839681017, guid: 78bd581509459b54d8166e2cba30d1ad, type: 3}
   - {fileID: 7161228215103422107, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
   - {fileID: 4509479014178218856, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
   - {fileID: 68913248926244373, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
@@ -3793,7 +3801,11 @@ SpriteAtlas:
   - {fileID: 7554145612434543233, guid: 80b4c01cabd619b479ac98df5b309809, type: 3}
   - {fileID: -7251853326056449554, guid: 80b4c01cabd619b479ac98df5b309809, type: 3}
   - {fileID: 21300000, guid: bed41c1cbc0b07f4983e5839276f1dd2, type: 3}
-  - {fileID: 21300000, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
+  - {fileID: 675076115972096162, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
+  - {fileID: 3483858477140727711, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
+  - {fileID: 1899161515654846458, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
+  - {fileID: -7435126856359126727, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
+  - {fileID: -7334744844646509018, guid: 6dd88c1c277289f4599e37608ff75eb5, type: 3}
   - {fileID: 8510213563075684452, guid: a7cd4e1c99ea0604483742d5b61b7d4d, type: 3}
   - {fileID: 7558914882617556782, guid: a7cd4e1c99ea0604483742d5b61b7d4d, type: 3}
   - {fileID: -8299273093366841800, guid: a7cd4e1c99ea0604483742d5b61b7d4d, type: 3}
@@ -4853,7 +4865,6 @@ SpriteAtlas:
   - {fileID: 7838765521545906987, guid: a717437f909c01346b07800b36b72191, type: 3}
   - {fileID: 1149130699541368649, guid: a717437f909c01346b07800b36b72191, type: 3}
   - {fileID: 5917896288630381422, guid: a717437f909c01346b07800b36b72191, type: 3}
-  - {fileID: 21300000, guid: 9012c57f744514d49bf3715714ac730a, type: 3}
   - {fileID: -2253286637864486496, guid: 9a93187f08419c741b2e66627c6149ef, type: 3}
   - {fileID: 5520192464786408999, guid: 9a93187f08419c741b2e66627c6149ef, type: 3}
   - {fileID: 2811247039800232173, guid: 9a93187f08419c741b2e66627c6149ef, type: 3}
@@ -6070,7 +6081,11 @@ SpriteAtlas:
   - infernal14_1
   - infernal14_2
   - infernal14_3
-  - Bird_Front
+  - Bird_Front_3
+  - Bird_Front_2
+  - Bird_Front_1
+  - Bird_Front_0
+  - Bird_Front_4
   - Wall Jump (32x32)
   - frozen6_0
   - frozen6_1
@@ -6674,7 +6689,11 @@ SpriteAtlas:
   - MudrockMoveUp_2
   - smg2
   - Gun collection FREE version
-  - Bird_Right
+  - Bird_Right_4
+  - Bird_Right_0
+  - Bird_Right_1
+  - Bird_Right_2
+  - Bird_Right_3
   - frozen1_3
   - frozen1_2
   - frozen1_1
@@ -9000,7 +9019,11 @@ SpriteAtlas:
   - crypt11_0
   - crypt11_1
   - Rocket3
-  - Bird_Back
+  - Bird_Back_4
+  - Bird_Back_1
+  - Bird_Back_0
+  - Bird_Back_3
+  - Bird_Back_2
   - dirt_full_1
   - dirt_full_0
   - dirt_full_3
@@ -10060,7 +10083,6 @@ SpriteAtlas:
   - volcanic_floor4_1
   - volcanic_floor4_2
   - volcanic_floor4_3
-  - Bird_Left
   - TheGeneralIdleUp_4
   - TheGeneralIdleUp_0
   - TheGeneralIdleUp_1

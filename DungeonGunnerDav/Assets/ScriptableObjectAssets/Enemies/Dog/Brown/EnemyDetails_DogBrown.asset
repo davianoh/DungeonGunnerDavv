@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Dog Brown
   enemyPrefab: {fileID: 3304942511536613284, guid: 635a5ab5dc2807845b3819b60bb4cf72, type: 3}
-  chaseDistance: 50
+  chaseDistance: 60
   enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   enemyMaterializeTime: 2.5
   enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}
@@ -27,13 +27,13 @@ MonoBehaviour:
   firingLineOfSightRequired: 0
   enemyHealthDetailsArray:
   - dungeonLevel: {fileID: 11400000, guid: bae11383663896c449b881c492701e51, type: 2}
-    enemyHealthAmount: 30
+    enemyHealthAmount: 25
   - dungeonLevel: {fileID: 11400000, guid: d43c4d11b8e78314396f8abe9024e484, type: 2}
-    enemyHealthAmount: 40
+    enemyHealthAmount: 25
   - dungeonLevel: {fileID: 11400000, guid: d15cbed75342a1b43aeeb8d510cff87b, type: 2}
-    enemyHealthAmount: 50
+    enemyHealthAmount: 30
   - dungeonLevel: {fileID: 11400000, guid: 7c52eb064efd84543afc643490007710, type: 2}
-    enemyHealthAmount: 65
+    enemyHealthAmount: 35
   - dungeonLevel: {fileID: 0}
     enemyHealthAmount: 70
   - dungeonLevel: {fileID: 0}
