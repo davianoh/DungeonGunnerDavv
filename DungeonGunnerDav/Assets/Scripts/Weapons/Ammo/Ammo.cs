@@ -71,8 +71,9 @@ public class Ammo : MonoBehaviour, IFireable
         SetFireDirection(ammoDetails, aimAngle, weaponAimAngle, weaponAimDirectionVector);
 
         spriteRenderer.sprite = ammoDetails.ammoSprite;
+        this.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
-        if(ammoDetails.ammoChargeTime > 0f)
+        if (ammoDetails.ammoChargeTime > 0f)
         {
             ammoChargeTimer = ammoDetails.ammoChargeTime;
             SetAmmoMaterial(ammoDetails.ammoChargeMaterial);
