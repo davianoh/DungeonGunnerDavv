@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2772949919279523195, guid: 37268b1cc5f474d4d860c8cc3d9e8cb7, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: af1a3064d75f6744087bf7a2c756efe9, type: 2}
     - target: {fileID: 3011621954745552065, guid: 37268b1cc5f474d4d860c8cc3d9e8cb7, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -1350,7 +1350,11 @@ SpriteAtlas:
   - {fileID: 4381903569039974676, guid: 68d405748f5f5444eb3fa663ff95045d, type: 3}
   - {fileID: -8305513443893212134, guid: 68d405748f5f5444eb3fa663ff95045d, type: 3}
   - {fileID: 8692578424379934663, guid: 68d405748f5f5444eb3fa663ff95045d, type: 3}
-  - {fileID: 21300000, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
+  - {fileID: 4894516153452179956, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
+  - {fileID: 636662651258280186, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
+  - {fileID: -2005017898706045630, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
+  - {fileID: -6596177731842359650, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
+  - {fileID: 7028805279700449947, guid: bff5a574172a98c498e74bbe80ec350b, type: 3}
   - {fileID: 6355239540195522238, guid: ee87ba749228c7d4f9cfb86eebe1f968, type: 3}
   - {fileID: -6497911552053089570, guid: ee87ba749228c7d4f9cfb86eebe1f968, type: 3}
   - {fileID: 3875906493569482782, guid: ee87ba749228c7d4f9cfb86eebe1f968, type: 3}
@@ -1500,7 +1504,6 @@ SpriteAtlas:
   - {fileID: -1198392422965531553, guid: 860b7455f08a5594596ad676217a33f1, type: 3}
   - {fileID: 545367680131803981, guid: 860b7455f08a5594596ad676217a33f1, type: 3}
   - {fileID: 21300000, guid: cc7c8855cfb728d4e96014152a569e82, type: 3}
-  - {fileID: 21300000, guid: dfe5db5507917d348a68e338253f0b98, type: 3}
   - {fileID: 21300000, guid: 0daf52652b0b71e4a9ef0c47f41c3965, type: 3}
   - {fileID: 21300000, guid: 1e100c655539c4940865adc0c42af0ee, type: 3}
   - {fileID: 699784820957134063, guid: 1215cd65b956f024cbdc450abfca077f, type: 3}
@@ -4289,7 +4292,11 @@ SpriteAtlas:
   - {fileID: 4042238684926209022, guid: 3c4966bcec954c348a1097ee7a7da9e6, type: 3}
   - {fileID: 6949863841751325836, guid: 3c4966bcec954c348a1097ee7a7da9e6, type: 3}
   - {fileID: 5499593843308125861, guid: 3c4966bcec954c348a1097ee7a7da9e6, type: 3}
-  - {fileID: 21300000, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
+  - {fileID: 7628859558959598165, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
+  - {fileID: -6804298745893684562, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
+  - {fileID: 6534489319855875598, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
+  - {fileID: -3821091007833999733, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
+  - {fileID: 8356488019390412699, guid: 168a66bc1adf35c4ebffe59d7a3fbad2, type: 3}
   - {fileID: 6085378443300166772, guid: e19958bce5815954fb0a0cda77c7b276, type: 3}
   - {fileID: 6621199040379205935, guid: e19958bce5815954fb0a0cda77c7b276, type: 3}
   - {fileID: -4215589523860392873, guid: e19958bce5815954fb0a0cda77c7b276, type: 3}
@@ -4349,7 +4356,10 @@ SpriteAtlas:
   - {fileID: -3566103076128552648, guid: 675cd8fc13a23724e9f5f8384f50c40b, type: 3}
   - {fileID: -7523151592351101336, guid: 675cd8fc13a23724e9f5f8384f50c40b, type: 3}
   - {fileID: 21300000, guid: 80734cfcaf1f11c45bae7ceba3d8392f, type: 3}
-  - {fileID: 21300000, guid: 06f30ffccd7644143921c164e5ab19fe, type: 3}
+  - {fileID: -6008206430974927175, guid: 06f30ffccd7644143921c164e5ab19fe, type: 3}
+  - {fileID: -7410256529775066854, guid: 06f30ffccd7644143921c164e5ab19fe, type: 3}
+  - {fileID: -3377598526236313899, guid: 06f30ffccd7644143921c164e5ab19fe, type: 3}
+  - {fileID: -9083680027263245250, guid: 06f30ffccd7644143921c164e5ab19fe, type: 3}
   - {fileID: -8236551097942277068, guid: 3454760dd13340b4783c5ea8333039e7, type: 3}
   - {fileID: -2652138618197243649, guid: 3454760dd13340b4783c5ea8333039e7, type: 3}
   - {fileID: 8601729037526228124, guid: 3454760dd13340b4783c5ea8333039e7, type: 3}
@@ -6547,7 +6557,11 @@ SpriteAtlas:
   - sand7_0
   - sand7_3
   - sand7_2
-  - Dog_Back
+  - Dog_Back_2
+  - Dog_Back_3
+  - Dog_Back_0
+  - Dog_Back_1
+  - Dog_Back_4
   - wall_old_blood02_3
   - wall_old_blood02_2
   - wall_old_blood02_1
@@ -6697,7 +6711,6 @@ SpriteAtlas:
   - buckler2_0
   - buckler2_1
   - Jump (32x32)
-  - Dog_Left
   - Brown Off
   - EnemyPreferredPathTile
   - WoodenTableVerticalFlipRight_4
@@ -9486,7 +9499,11 @@ SpriteAtlas:
   - pebble_brown0_2
   - pebble_brown0_1
   - pebble_brown0_0
-  - Dog_Right
+  - Dog_Right_4
+  - Dog_Right_1
+  - Dog_Right_0
+  - Dog_Right_3
+  - Dog_Right_2
   - statue_naga_0
   - statue_naga_1
   - statue_naga_2
@@ -9546,7 +9563,10 @@ SpriteAtlas:
   - crypt_domino_4b_2
   - crypt_domino_4b_3
   - large_bullet2
-  - Dog_Front
+  - Dog_Front_2
+  - Dog_Front_3
+  - Dog_Front_0
+  - Dog_Front_1
   - Dungeon 1 Just Walls 1 _25
   - Dungeon 1 Just Walls 1 _24
   - Dungeon 1 Just Walls 1 _23
