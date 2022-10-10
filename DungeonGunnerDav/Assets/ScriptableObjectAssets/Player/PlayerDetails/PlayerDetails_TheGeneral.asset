@@ -21,7 +21,7 @@ MonoBehaviour:
   playerUnlockCost: 50
   playerPrefabs: {fileID: 6778172777465543290, guid: 5db1b47030cddec409e90c5e2f1d61b3, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
-  playerHealthAmmount: 80
+  playerHealthAmmount: 100
   isImmuneAfterHit: 1
   hitImmunityTime: 2.5
   startingWeapon: {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
