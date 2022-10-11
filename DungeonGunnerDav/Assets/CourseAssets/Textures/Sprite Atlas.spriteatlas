@@ -2284,6 +2284,7 @@ SpriteAtlas:
   - {fileID: -5080292771192261166, guid: c3234d379d2814f4f92bf2fa684291b5, type: 3}
   - {fileID: 5217677922433510204, guid: c3234d379d2814f4f92bf2fa684291b5, type: 3}
   - {fileID: 108332315924983517, guid: c3234d379d2814f4f92bf2fa684291b5, type: 3}
+  - {fileID: 21300000, guid: 1caeb047722c0fd4f92e049f01a01152, type: 3}
   - {fileID: 5014805148277347873, guid: 19e415472d0471e4db49b57c83c370d3, type: 3}
   - {fileID: 7977314794671490082, guid: 19e415472d0471e4db49b57c83c370d3, type: 3}
   - {fileID: -3806208878876558938, guid: 19e415472d0471e4db49b57c83c370d3, type: 3}
@@ -2686,6 +2687,7 @@ SpriteAtlas:
   - {fileID: 7538089565127648711, guid: 06f8485947f269042ad6d0051a85e6af, type: 3}
   - {fileID: 21300000, guid: 782f8a59f2e74a54fad348ddf1515c5d, type: 3}
   - {fileID: 21300000, guid: 494fed599abc6d14190505919d25eaad, type: 3}
+  - {fileID: 21300000, guid: 9eb0cf59f2c8e374ea02309398b58717, type: 3}
   - {fileID: 6869396636809610529, guid: a8656369a18034244b64a0e94d781de5, type: 3}
   - {fileID: -4962105368696266709, guid: a8656369a18034244b64a0e94d781de5, type: 3}
   - {fileID: 1128779394107748796, guid: a8656369a18034244b64a0e94d781de5, type: 3}
@@ -7530,6 +7532,7 @@ SpriteAtlas:
   - pedestal_s_3
   - pedestal_s_0
   - pedestal_s_1
+  - mod1 21X21
   - blood_red15_2
   - blood_red15_3
   - blood_red15_0
@@ -7932,6 +7935,7 @@ SpriteAtlas:
   - sigil_straight_NE_SW_1
   - Fountain
   - panel_Example2
+  - mod2 21X21
   - SlizzardIdleDown_1
   - SlizzardIdleDown_0
   - SlizzardIdleDown_3
