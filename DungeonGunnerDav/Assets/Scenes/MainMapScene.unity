@@ -1803,12 +1803,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 75 G
+      value: 300 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: f27c381813a941d4581549043e28d976, type: 2}
+      objectReference: {fileID: 11400000, guid: f9208c833126c344e8ea787848c0b716, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (8)
@@ -2863,7 +2863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 65 G
+      value: 200 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
@@ -3306,7 +3306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 20 G
+      value: 50 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
@@ -3758,7 +3758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 50 G
+      value: 250 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
@@ -4855,12 +4855,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 90 G
+      value: 400 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
+      objectReference: {fileID: 11400000, guid: ac210d46fe5f855459dd487b6cf9bb27, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (9)
@@ -11581,12 +11581,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 90 G
+      value: 350 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
-      objectReference: {fileID: 11400000, guid: dfd13ce598cfe344aa3c348923af006c, type: 2}
+      objectReference: {fileID: 11400000, guid: 981428fe2d91df1438e05db978910ec7, type: 2}
     - target: {fileID: 7424933885297546295, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_Name
       value: WeaponChoice (7)
@@ -13150,7 +13150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 35 G
+      value: 100 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
@@ -14191,7 +14191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686513070605786720, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: m_text
-      value: 40 G
+      value: 150 G
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
@@ -14889,7 +14889,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -9.181274}
+  m_SizeDelta: {x: 0, y: -0.059051514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4662851938187592275
 GameObject:

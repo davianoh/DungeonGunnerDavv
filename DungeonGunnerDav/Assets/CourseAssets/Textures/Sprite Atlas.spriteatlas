@@ -1397,6 +1397,7 @@ SpriteAtlas:
   - {fileID: 8071446888360254281, guid: 57da2b8418e6c8842b07b2f4b3007ccc, type: 3}
   - {fileID: -2589005410416894962, guid: 57da2b8418e6c8842b07b2f4b3007ccc, type: 3}
   - {fileID: -2819513241652632347, guid: 57da2b8418e6c8842b07b2f4b3007ccc, type: 3}
+  - {fileID: 3822987836532364447, guid: 68e6ad8480263a746b0b352b49218b2c, type: 3}
   - {fileID: 21300000, guid: edd2ed84a51314f489d44a053ce27c96, type: 3}
   - {fileID: 21300000, guid: 3ce8c094849be214eab718f3445898c1, type: 3}
   - {fileID: 21300000, guid: 67f1f694efbbb454aaf8a422325b73c4, type: 3}
@@ -2021,6 +2022,7 @@ SpriteAtlas:
   - {fileID: -9150623814928865088, guid: c267ea667947e3446bc94dd73421717e, type: 3}
   - {fileID: 1437181449659502431, guid: c267ea667947e3446bc94dd73421717e, type: 3}
   - {fileID: 21300000, guid: 5af97076ffff5da4492788a33af47adb, type: 3}
+  - {fileID: -4716231594828627499, guid: c5d65176cb720214fa4cb3b51102511b, type: 3}
   - {fileID: -4222209187553852110, guid: 58e2fc76a41128e448a3f8f36ef528b6, type: 3}
   - {fileID: -8154616497043780193, guid: 58e2fc76a41128e448a3f8f36ef528b6, type: 3}
   - {fileID: -8769213507677855227, guid: 58e2fc76a41128e448a3f8f36ef528b6, type: 3}
@@ -4753,6 +4755,7 @@ SpriteAtlas:
   - {fileID: -6940449557370506318, guid: 0a7a189e97ec1b344870a45fcae7c90a, type: 3}
   - {fileID: 21300000, guid: cdee8c9e624d9e1499315d7727036bfd, type: 3}
   - {fileID: 21300000, guid: 7fc0d4ae8c4add34daef63166678ae89, type: 3}
+  - {fileID: -8420261436455976340, guid: 3a6005aea2e24b94199ac88379af7975, type: 3}
   - {fileID: 21300000, guid: daabc6ae20154244f8ef8dd7e5973c4f, type: 3}
   - {fileID: 4761932427048454267, guid: d80aecae538e258409db040fede96598, type: 3}
   - {fileID: -4830006367900054204, guid: d80aecae538e258409db040fede96598, type: 3}
@@ -6642,6 +6645,7 @@ SpriteAtlas:
   - cage2_3
   - cage2_0
   - cage2_1
+  - (Yellow) dumb_0
   - Brown
   - magazine3
   - HitSide (22x22)
@@ -7266,6 +7270,7 @@ SpriteAtlas:
   - volcanic_floor6_0
   - volcanic_floor6_1
   - MudrockHand
+  - (Yellow) grr_0
   - mosaic12_3
   - mosaic12_2
   - mosaic12_1
@@ -9998,6 +10003,7 @@ SpriteAtlas:
   - SkullFaceIdleRight_4
   - Break
   - Play
+  - (Yellow) baa_0
   - Skull
   - green_bones05_0
   - green_bones05_1

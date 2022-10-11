@@ -756,7 +756,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d43c4d11b8e78314396f8abe9024e484, type: 2}
   - {fileID: 11400000, guid: d15cbed75342a1b43aeeb8d510cff87b, type: 2}
   - {fileID: 11400000, guid: 7c52eb064efd84543afc643490007710, type: 2}
-  currentLevelListIndex: 0
+  currentLevelUnlockedIndex: 0
+  currentLevelIndex: 0
   currentLevelWavesIndex: 0
   currentTotalCoinsInGame: 0
   weaponsOwnedList: 
@@ -764,7 +765,7 @@ MonoBehaviour:
   unlockWeaponSlots: 0
   gameState: 0
   previousGameState: 0
-  currentRoom: {fileID: 5208824948241200847, guid: 100503d0d0380d54199672bfe83f94fe, type: 3}
+  currentRoom: {fileID: 5208824948241200847, guid: d62b425852c2c054b96d7c9c4b28975a, type: 3}
 --- !u!4 &529591309
 Transform:
   m_ObjectHideFlags: 0
@@ -3328,7 +3329,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2602634, y: 1}
+    m_SensorSize: {x: 1.7797619, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11cdff975ad084741a653a7ac8c08fad, type: 3}
-  m_Name: WeaponDetails_Megaphone!!
+  m_Name: WeaponDetails_MegaphoneBaa
   m_EditorClassIdentifier: 
   weaponName: Megaphone
-  weaponListIndex: 5
-  weaponCost: 250
+  weaponListIndex: 6
+  weaponCost: 300
   weaponDescription: Normal trusted pistol, always there in every situation
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
-  weaponCurrentAmmo: {fileID: 11400000, guid: c6bbf00f92d9fff4b8a137681712b622, type: 2}
-  weaponShootEffect: {fileID: 11400000, guid: 93ff951a9fc171b4aa016a664d87df7e, type: 2}
-  weaponFiringSoundEffect: {fileID: 11400000, guid: daa39a007522ce64ca5dcea2ab47cedd, type: 2}
-  weaponReloadingSoundEffect: {fileID: 11400000, guid: cdaa15a64751a9a49ae238d231c7d693, type: 2}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 90f57faa6c69c00439c4b33a94648524, type: 2}
+  weaponShootEffect: {fileID: 11400000, guid: f306e95e8ba82e44183b4331ef7c9697, type: 2}
+  weaponFiringSoundEffect: {fileID: 11400000, guid: c70b7312797108e46ab5a522181ca072, type: 2}
+  weaponReloadingSoundEffect: {fileID: 11400000, guid: 45a215693e94d4545ad90d91afa596da, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 10
