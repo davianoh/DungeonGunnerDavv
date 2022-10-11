@@ -34,7 +34,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #region Tooltip
     [Tooltip("Populate w/ the starting dungeon level for testing, first level = 0")]
     #endregion
-    public int currentLevelListIndex = 0;
+    public int currentLevelUnlockedIndex = 0;
+    public int currentLevelIndex = 0;
     public int currentLevelWavesIndex = 0;
     public int currentTotalCoinsInGame;
     public List<int> weaponsOwnedList = new List<int>();
@@ -83,7 +84,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private void InstantiateLevel(Room room)
     {
         var generatedRoom = Instantiate(room.prefabs, mainMapParent);
-        room.level = levelList[currentLevelListIndex];
+        room.level = levelList[GameResources.Instance.selectedLevelIndex];
         currentRoom = generatedRoom.GetComponent<Room>(); //!!!
     }
 
@@ -187,7 +188,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         switch (gameState)
         {
             case GameState.gameStarted:
-                PlayDungeonLevel(currentLevelListIndex);
+                PlayDungeonLevel(GameResources.Instance.selectedLevelIndex);
                 gameState = GameState.playingLevel;
                 break;
 
@@ -231,7 +232,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         previousGameState = GameState.levelCompleted;
 
-        currentLevelListIndex++;
+        if(currentLevelUnlockedIndex == GameResources.Instance.selectedLevelIndex)
+        {
+            currentLevelUnlockedIndex++;
+        }
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
@@ -314,7 +318,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         StartCoroutine(Fade(0f, 1f, 0f, Color.black));
         GetPlayer().playerControl.DisablePlayer();
 
-        string messageText = "LEVEL " + (currentLevelListIndex + 1).ToString() + "\n\n" + levelList[currentLevelListIndex].levelName.ToUpper();
+        string messageText = "LEVEL " + (GameResources.Instance.selectedLevelIndex + 1).ToString() + "\n\n" + levelList[GameResources.Instance.selectedLevelIndex].levelName.ToUpper();
         yield return StartCoroutine(DisplayMessageRoutine(messageText, Color.white, 2f));
 
         GetPlayer().playerControl.EnablePlayer();
@@ -360,7 +364,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     public LevelsSO GetCurrentLevel()
     {
-        return levelList[currentLevelListIndex];
+        return levelList[GameResources.Instance.selectedLevelIndex];
     }
 
     public Room GetCurrentRoom()
@@ -370,7 +374,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     public void Save()
     {
-        SaveObject saveObject = new SaveObject() { levelUnlock = currentLevelListIndex, coinsEarned = currentTotalCoinsInGame };
+        SaveObject saveObject = new SaveObject() { levelUnlock = currentLevelUnlockedIndex, coinsEarned = currentTotalCoinsInGame };
         string json = JsonUtility.ToJson(saveObject);
         SaveSystem.Save(json);
     }
@@ -381,7 +385,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         if (saveString != null)
         {
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
-            currentLevelListIndex = saveObject.levelUnlock;
+            currentLevelUnlockedIndex = saveObject.levelUnlock;
             currentTotalCoinsInGame = saveObject.coinsEarned;
         }
         else

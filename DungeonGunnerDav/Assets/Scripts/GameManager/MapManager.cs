@@ -11,6 +11,8 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     public TextMeshProUGUI coinsTextWeapon;
     public TextMeshProUGUI coinsTextPlayer;
 
+    public List<GameObject> levelButtonsLocked;
+
     protected override void Awake()
     {
         base.Awake();
@@ -22,6 +24,10 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     private void Start()
     {
         coinsText.text = totalCoinsInGame.ToString();
+        for(int i = 0; i <= unlockLevelListIndex; i++)
+        {
+            levelButtonsLocked[i].SetActive(false);
+        }
     }
 
 

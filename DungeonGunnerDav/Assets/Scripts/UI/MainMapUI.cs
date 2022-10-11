@@ -11,8 +11,9 @@ public class MainMapUI : MonoBehaviour
         //SceneManager.LoadScene("CharacterSelectorScene", LoadSceneMode.Additive);
     }
 
-    public void PlayLevel()
+    public void PlayLevel(int levelIndex)
     {
+        GameResources.Instance.selectedLevelIndex = levelIndex;
         MapManager.Instance.Save();
         SceneManager.LoadScene("MainGameScene");
     }

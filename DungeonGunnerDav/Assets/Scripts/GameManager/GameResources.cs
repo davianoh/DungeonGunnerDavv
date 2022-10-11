@@ -50,6 +50,7 @@ public class GameResources : MonoBehaviour
     public int attackBonus;
     public int speedBonus;
     public int coinsBonus;
+    public int selectedLevelIndex;
 
     #region Header Music
     [Space(10)]

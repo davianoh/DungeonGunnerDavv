@@ -15,39 +15,17 @@ MonoBehaviour:
   id: 4
   levelName: Empat
   backgroundMusic: {fileID: 11400000, guid: 77d09e6c5f5a499498ebbc8e7baee7e7, type: 2}
-  totalWaves: 3
+  totalWaves: 1
   wavesEnemySpawnTypes:
   - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: af5064cdaa861fc48b0b992d0148ecd6, type: 2}
-      ratio: 1
-    - dungeonObject: {fileID: 11400000, guid: e2b46e1687fbc624d990b4f3799081c2, type: 2}
-      ratio: 4
-  - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: cef87fd5cb67b0a42baee233f00de036, type: 2}
-      ratio: 1
-    - dungeonObject: {fileID: 11400000, guid: 5d91139cb36a86347999495fc33f453d, type: 2}
-      ratio: 4
-  - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: 3f7a691d63f4bb8499fb8237d790e5fe, type: 2}
+    - dungeonObject: {fileID: 11400000, guid: 2f6cec5cb2051614eb7987ee2c9923cc, type: 2}
       ratio: 1
     - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
-      ratio: 3
-    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
-      ratio: 3
+      ratio: 1
   wavesEnemySpawnParameters:
   - maxTotalEnemiesToSpawn: 10
     maxConcurrentEnemies: 10
     minSpawnInterval: 3
     maxSpawnInterval: 3
     wavesSurviveTimeInSeconds: 40
-  - maxTotalEnemiesToSpawn: 10
-    maxConcurrentEnemies: 10
-    minSpawnInterval: 3
-    maxSpawnInterval: 3
-    wavesSurviveTimeInSeconds: 50
-  - maxTotalEnemiesToSpawn: 12
-    maxConcurrentEnemies: 10
-    minSpawnInterval: 4
-    maxSpawnInterval: 4
-    wavesSurviveTimeInSeconds: 55
   isClearedOfEnemies: 0
