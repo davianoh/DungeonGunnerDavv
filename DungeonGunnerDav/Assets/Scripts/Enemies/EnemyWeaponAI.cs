@@ -13,6 +13,8 @@ public class EnemyWeaponAI : MonoBehaviour
     private float firingIntervalTimer;
     private float firingDurationTimer;
 
+    private EnemyMovementAI enemyMovementAI;
+
     private void Awake()
     {
         enemy = GetComponent<Enemy>();
@@ -23,6 +25,7 @@ public class EnemyWeaponAI : MonoBehaviour
         enemyDetails = enemy.enemyDetails;
         firingIntervalTimer = WeaponShootInterval();
         firingDurationTimer = WeaponShootDuration();
+        enemyMovementAI = GetComponent<EnemyMovementAI>();
     }
 
     private float WeaponShootDuration()
@@ -58,14 +61,25 @@ public class EnemyWeaponAI : MonoBehaviour
     {
         Vector3 playerDirectionVector = GameManager.Instance.GetPlayer().GetPlayerPosition() - transform.position;
         Vector3 weaponDirection = (GameManager.Instance.GetPlayer().GetPlayerPosition() - weaponShootPosition.position);
+        Vector3 artDirection = (GameManager.Instance.GetCurrentRoom().artLocalPosition.position - weaponShootPosition.position);
 
         float weaponAngleDegrees = HelperUtilities.GetAngleFromVector(weaponDirection);
         float enemyAngleDegrees = HelperUtilities.GetAngleFromVector(playerDirectionVector);
+        float artAngleDegrees = HelperUtilities.GetAngleFromVector(artDirection);
 
-        AimDirection enemyAimDirection = HelperUtilities.GetAimDirection(enemyAngleDegrees);
-        enemy.aimWeaponEvent.CallAimWeaponEvent(enemyAimDirection, enemyAngleDegrees, weaponAngleDegrees, weaponDirection);
+        AimDirection enemyAimDirection = new AimDirection();
+        if (enemyMovementAI.targetArt)
+        {
+            AimDirection enemyDirection = HelperUtilities.GetAimDirection(artAngleDegrees);
+            enemy.aimWeaponEvent.CallAimWeaponEvent(enemyDirection, enemyAngleDegrees, weaponAngleDegrees, weaponDirection);
+        }
+        else
+        {
+            enemyAimDirection = HelperUtilities.GetAimDirection(enemyAngleDegrees);
+            enemy.aimWeaponEvent.CallAimWeaponEvent(enemyAimDirection, enemyAngleDegrees, weaponAngleDegrees, weaponDirection);
+        }
 
-        if(enemyDetails.enemyWeapon != null)
+        if(enemyDetails.enemyWeapon != null && !enemyMovementAI.targetArt)
         {
             float enemyAmmoRange = enemyDetails.enemyWeapon.weaponCurrentAmmo.ammoRange;
 

@@ -13,29 +13,25 @@ MonoBehaviour:
   m_Name: Level_2
   m_EditorClassIdentifier: 
   id: 2
-  levelName: Duaa
+  levelName: Dua
   backgroundMusic: {fileID: 11400000, guid: 77d09e6c5f5a499498ebbc8e7baee7e7, type: 2}
   totalWaves: 2
   wavesEnemySpawnTypes:
   - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
-      ratio: 1
-    - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
       ratio: 1
   - spawnableObjectRatioList:
-    - dungeonObject: {fileID: 11400000, guid: 2f6cec5cb2051614eb7987ee2c9923cc, type: 2}
-      ratio: 1
-    - dungeonObject: {fileID: 11400000, guid: 2f6cec5cb2051614eb7987ee2c9923cc, type: 2}
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
       ratio: 1
   wavesEnemySpawnParameters:
-  - maxTotalEnemiesToSpawn: 8
-    maxConcurrentEnemies: 6
+  - maxTotalEnemiesToSpawn: 9
+    maxConcurrentEnemies: 9
     minSpawnInterval: 2
     maxSpawnInterval: 2
-    wavesSurviveTimeInSeconds: 20
-  - maxTotalEnemiesToSpawn: 6
-    maxConcurrentEnemies: 4
-    minSpawnInterval: 3
-    maxSpawnInterval: 3
-    wavesSurviveTimeInSeconds: 25
+    wavesSurviveTimeInSeconds: 30
+  - maxTotalEnemiesToSpawn: 9
+    maxConcurrentEnemies: 9
+    minSpawnInterval: 1
+    maxSpawnInterval: 1
+    wavesSurviveTimeInSeconds: 40
   isClearedOfEnemies: 0

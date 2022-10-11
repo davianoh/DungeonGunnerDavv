@@ -17,7 +17,7 @@ public class EnemyMovementAI : MonoBehaviour
     private bool chasePlayer = false;
     [HideInInspector] public int updateFrameNumber = 1;
 
-    private bool targetArt = false;
+    public bool targetArt = false;
 
     private void Awake()
     {

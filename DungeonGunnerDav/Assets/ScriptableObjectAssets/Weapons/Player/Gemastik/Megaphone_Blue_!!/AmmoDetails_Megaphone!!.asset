@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa9639c04e1fb8746a6e6756def51663, type: 3}
-  m_Name: AmmoDetails_Megaphone
+  m_Name: AmmoDetails_Megaphone!!
   m_EditorClassIdentifier: 
   ammoName: Megaphone Ammo
   isPlayerAmmo: 1
-  ammoSprite: {fileID: 21300000, guid: b6e5070ea2d287441a08295413dddca7, type: 3}
+  ammoSprite: {fileID: 2026260920865552420, guid: fa400092dc67e2c4f90358d0c8afab9b, type: 3}
   ammoPrefabArray:
   - {fileID: 1128523482035338945, guid: 99792ad3ed8e5504dbcc2be02516cfcf, type: 3}
   ammoMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   ammoChargeTime: 0
   ammoChargeMaterial: {fileID: 0}
-  ammoHitEffect: {fileID: 11400000, guid: 740fcd97f7e88324c8baa1651d38017b, type: 2}
+  ammoHitEffect: {fileID: 11400000, guid: e6de97639426f89428932a70195622a3, type: 2}
   ammoDamage: 10
   ammoSpeedMin: 22
   ammoSpeedMax: 22

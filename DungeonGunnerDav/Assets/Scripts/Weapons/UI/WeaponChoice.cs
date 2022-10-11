@@ -22,7 +22,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
-        weaponImageChoice.sprite = weaponDetails.weaponSprite;
+        weaponImageChoice.sprite = weaponDetails.weaponCurrentAmmo.ammoSprite;
     }
 
 

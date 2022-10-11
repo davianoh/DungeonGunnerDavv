@@ -51,12 +51,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f825fa2d5c97984aaf61ccc92186e82, type: 2}
   - {fileID: 11400000, guid: dd336f7df47a308408234de0da9541a1, type: 2}
   weaponList:
-  - {fileID: 11400000, guid: 79175247e4ec9a0479d700630cc1dc59, type: 2}
-  - {fileID: 11400000, guid: e1d5516a7c5d7b041b93d5201963c15d, type: 2}
   - {fileID: 11400000, guid: 3fd52a675a68edb44992f0a4c698668b, type: 2}
-  - {fileID: 11400000, guid: dfd13ce598cfe344aa3c348923af006c, type: 2}
-  - {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
-  - {fileID: 11400000, guid: 3de62da8ac800bc40a2fa3cc9ae6aca8, type: 2}
+  - {fileID: 11400000, guid: 405388ebbf506d9468cae7f119f170c2, type: 2}
+  - {fileID: 11400000, guid: 22f0a69a91642b845b5cd65fd4266596, type: 2}
+  - {fileID: 11400000, guid: 57d2d663c97967945a44089523b07e90, type: 2}
+  - {fileID: 11400000, guid: 4c4bbc9b2c1b84c4ba946bfbf42c9456, type: 2}
+  - {fileID: 11400000, guid: 1f8f93445590a0f43a5fd5bd5bb644d9, type: 2}
   - {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
   - {fileID: 11400000, guid: f27c381813a941d4581549043e28d976, type: 2}
   - {fileID: 11400000, guid: 2f84611934ab49b4a981604b9d56f715, type: 2}
@@ -64,6 +64,7 @@ MonoBehaviour:
   attackBonus: 0
   speedBonus: 0
   coinsBonus: 0
+  selectedLevelIndex: 0
   musicMasterMixerGroup: {fileID: -7206380732494497733, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOnFullSnapshot: {fileID: 24500006, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOnLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
