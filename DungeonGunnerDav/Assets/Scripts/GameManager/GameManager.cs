@@ -69,6 +69,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         LoadWeapons();
 
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
+        currentRoom = GameResources.Instance.roomList[GameResources.Instance.selectedLevelIndex];
         InstantiatePlayer();
         InstantiateLevel(currentRoom); 
     }

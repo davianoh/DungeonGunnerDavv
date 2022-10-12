@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNodeTypeList: {fileID: 11400000, guid: aaaf673c151de6f4aac805beaabfc8ee, type: 2}
+  roomList:
+  - {fileID: 5208824948241200847, guid: 100503d0d0380d54199672bfe83f94fe, type: 3}
+  - {fileID: 5208824948241200847, guid: d62b425852c2c054b96d7c9c4b28975a, type: 3}
+  - {fileID: 5208824948241200847, guid: a3eeb9d8cfc82244082f128108f377dc, type: 3}
+  - {fileID: 5208824948241200847, guid: 257a060e60e84314da8816ad7dd065e0, type: 3}
+  - {fileID: 5208824948241200847, guid: c7e56704155daac4c98eed81d9786c45, type: 3}
   playerSelectionPrefab: {fileID: 5262077089820183234, guid: 57ad73f7ba85e3c4180090f4920eeb19, type: 3}
   currentPlayer: {fileID: 11400000, guid: a1245dbb7417f9a4cb4e432d26c40b1d, type: 2}
   playerDetailsList:

@@ -756,6 +756,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d43c4d11b8e78314396f8abe9024e484, type: 2}
   - {fileID: 11400000, guid: d15cbed75342a1b43aeeb8d510cff87b, type: 2}
   - {fileID: 11400000, guid: 7c52eb064efd84543afc643490007710, type: 2}
+  - {fileID: 11400000, guid: f73cde3270a61a0479c66b3963bc29a8, type: 2}
   currentLevelUnlockedIndex: 0
   currentLevelIndex: 0
   currentLevelWavesIndex: 0
@@ -3332,7 +3333,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786982, y: 1}
+    m_SensorSize: {x: 1.7781065, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

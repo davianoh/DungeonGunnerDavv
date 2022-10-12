@@ -28,6 +28,7 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate w/ the dungeon RoomNodeTypeListSO")]
     #endregion
     public RoomNodeTypeListSO roomNodeTypeList;
+    public List<Room> roomList;
 
     #region Header Player Selection
     [Space(10)]
