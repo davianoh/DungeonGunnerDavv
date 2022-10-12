@@ -21,11 +21,13 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
         public string componentType;
     }
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
+
         objectPoolTransform = GetComponent<Transform>();
 
-        for(int i = 0; i < poolArray.Length; i++)
+        for (int i = 0; i < poolArray.Length; i++)
         {
             CreatePool(poolArray[i].prefab, poolArray[i].poolSize, poolArray[i].componentType);
         }
@@ -61,7 +63,6 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
         if (poolDictionary.ContainsKey(poolKey))
         {
             Component componentToReuse = GetComponentFromPool(poolKey);
-
             ResetObject(position, rotation, componentToReuse, prefab);
 
             return componentToReuse;

@@ -135,7 +135,7 @@ public class WeaponStatusUI : MonoBehaviour
 
     private void UpdateActiveWeaponImage(WeaponDetailsSO weaponDetails)
     {
-        weaponImage.sprite = weaponDetails.weaponSprite;
+        weaponImage.sprite = weaponDetails.weaponCurrentAmmo.ammoSprite;
     }
 
     private void UpdateActiveWeaponName(Weapon weapon)

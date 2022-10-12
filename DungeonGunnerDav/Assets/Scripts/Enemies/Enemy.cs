@@ -98,13 +98,16 @@ public class Enemy : MonoBehaviour
         destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmount + GameResources.Instance.coinsBonus * Settings.coinsUpgradeMultiplier);
     }
 
+    public void EnemyHealthInit(LevelsSO dungeonLevel)
+    {
+        SetEnemyStartingHealth(dungeonLevel);
+    }
+
     public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, LevelsSO dungeonLevel)
     {
         this.enemyDetails = enemyDetails;
 
         SetEnemyMovementUpdateFrame(enemySpawnNumber);
-
-        SetEnemyStartingHealth(dungeonLevel);
 
         SetEnemyStartingWeapon();
 

@@ -124,10 +124,17 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         currentEnemyCount++;
 
         LevelsSO dungeonLevel = GameManager.Instance.GetCurrentLevel();
-        GameObject enemy = Instantiate(enemyDetails.enemyPrefab, position, Quaternion.identity, transform);
-        enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
-        enemy.GetComponent<DestroyedEvent>().OnDestroyed += Enemy_OnDestroyed;
+        //GameObject enemy = Instantiate(enemyDetails.enemyPrefab, position, Quaternion.identity, transform);
+        //enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
+
+        Enemy enemy = (Enemy)PoolManager.Instance.ReuseComponent(enemyDetails.enemyPrefab, position, Quaternion.identity);
+        enemy.EnemyHealthInit(dungeonLevel);
+        enemy.gameObject.SetActive(true);
+        enemy.EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
+        
+
+        enemy.gameObject.GetComponent<DestroyedEvent>().OnDestroyed += Enemy_OnDestroyed;
     }
 
     private void Enemy_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)

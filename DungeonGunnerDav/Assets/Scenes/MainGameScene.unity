@@ -765,7 +765,7 @@ MonoBehaviour:
   unlockWeaponSlots: 0
   gameState: 0
   previousGameState: 0
-  currentRoom: {fileID: 5208824948241200847, guid: d62b425852c2c054b96d7c9c4b28975a, type: 3}
+  currentRoom: {fileID: 5208824948241200847, guid: a3eeb9d8cfc82244082f128108f377dc, type: 3}
 --- !u!4 &529591309
 Transform:
   m_ObjectHideFlags: 0
@@ -3094,39 +3094,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolArray:
-  - poolSize: 30
-    prefab: {fileID: 1128523482035338945, guid: d37290b2e3fd5aa40975e4a16975dcea, type: 3}
-    componentType: IFireable
-  - poolSize: 30
-    prefab: {fileID: 1128523482035338945, guid: acd5cd8c0fb48cf4e87c1cb490c082c6, type: 3}
-    componentType: IFireable
-  - poolSize: 30
+  - poolSize: 25
     prefab: {fileID: 1128523482035338945, guid: 99792ad3ed8e5504dbcc2be02516cfcf, type: 3}
     componentType: IFireable
-  - poolSize: 10
-    prefab: {fileID: 1128523482035338945, guid: 783ee06c971e5704c9a981ffd6c87731, type: 3}
-    componentType: IFireable
-  - poolSize: 40
+  - poolSize: 50
     prefab: {fileID: 6957611040664099785, guid: 452f84e8a30340442880e818236c66f4, type: 3}
     componentType: SoundEffect
-  - poolSize: 20
+  - poolSize: 30
     prefab: {fileID: 1138324496564506103, guid: c9f9d1f9adfd9db4995559646756ff46, type: 3}
     componentType: WeaponShootEffect
-  - poolSize: 20
+  - poolSize: 30
     prefab: {fileID: 4734240306976175443, guid: ba28bc11134cf6f4d9eb68d8c28cbffb, type: 3}
     componentType: WeaponShootEffect
-  - poolSize: 20
+  - poolSize: 30
     prefab: {fileID: 522101189839092508, guid: 550f561c4f0e5c64391b6b57fa5ca655, type: 3}
     componentType: WeaponShootEffect
-  - poolSize: 20
+  - poolSize: 30
     prefab: {fileID: 4734240306976175443, guid: e2ad164e65c558f4caa4490bd10551f6, type: 3}
     componentType: AmmoHitEffect
-  - poolSize: 200
+  - poolSize: 150
     prefab: {fileID: 1128523482035338945, guid: 295e03e37be9b0b49b405d1134f29f05, type: 3}
     componentType: IFireable
-  - poolSize: 50
+  - poolSize: 60
     prefab: {fileID: 4077656237430602957, guid: 4cb3a8d65e724594e884fa5c036c1962, type: 3}
     componentType: ICollectible
+  - poolSize: 30
+    prefab: {fileID: 968163792347498260, guid: 37268b1cc5f474d4d860c8cc3d9e8cb7, type: 3}
+    componentType: Enemy
+  - poolSize: 30
+    prefab: {fileID: 7154869256948650983, guid: 05fb91a289ad2214d81ef4297b3aab93, type: 3}
+    componentType: Enemy
+  - poolSize: 40
+    prefab: {fileID: 3304942511536613284, guid: 635a5ab5dc2807845b3819b60bb4cf72, type: 3}
+    componentType: Enemy
+  - poolSize: 40
+    prefab: {fileID: 1687453101684499643, guid: 1e30ab217ab368449b6a4b009afba840, type: 3}
+    componentType: Enemy
 --- !u!4 &1860808526
 Transform:
   m_ObjectHideFlags: 0
@@ -3329,7 +3332,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7797619, y: 1}
+    m_SensorSize: {x: 1.7786982, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
