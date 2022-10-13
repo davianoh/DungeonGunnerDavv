@@ -10,6 +10,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
     [SerializeField] private int equipedIndex;
     [SerializeField] private int cost;
     [SerializeField] private GameObject costText;
+    [SerializeField] private GameObject blocker;
 
 
     private void Start()
@@ -18,6 +19,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
         {
             gameObject.GetComponent<Image>().color = Color.white;
             costText.SetActive(false);
+            blocker.SetActive(false);
         }
     }
 
@@ -48,11 +50,12 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(MapManager.Instance.totalCoinsInGame >= cost && WeaponMenuUI.Instance.unlockWeaponSlots <= equipedIndex)
+        if(MapManager.Instance.totalCoinsInGame >= cost && WeaponMenuUI.Instance.unlockWeaponSlots == equipedIndex)
         {
             MapManager.Instance.totalCoinsInGame -= cost;
             gameObject.GetComponent<Image>().color = Color.white;
             costText.SetActive(false);
+            blocker.SetActive(false);
             WeaponMenuUI.Instance.unlockWeaponSlots++;
 
             MapManager.Instance.ItemBuyed();

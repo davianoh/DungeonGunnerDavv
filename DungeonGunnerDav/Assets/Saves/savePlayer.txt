@@ -1,1 +1,1 @@
-{"playerSelectIndex":1,"characterOwnedList":[0,1,2],"healthUpgrade":3,"attackUpgrade":1,"speedUpgrade":0,"coinsUpgrade":0}
+{"playerSelectIndex":0,"characterOwnedList":[0,1,2],"healthUpgrade":3,"attackUpgrade":2,"speedUpgrade":1,"coinsUpgrade":1}
