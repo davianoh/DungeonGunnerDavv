@@ -15,7 +15,8 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 2
   weaponCost: 100
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: Kata WOII merupakan bahasa gaul yang memiliki makna untuk memanggil
+    seseorang, pemakaian kata ini mirip dengan kata HEY namun kata ini lebih keras
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 6a123dbcd28c7384bb65818001045f97, type: 2}

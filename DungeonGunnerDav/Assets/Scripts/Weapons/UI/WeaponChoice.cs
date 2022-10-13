@@ -120,9 +120,9 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             rectTransform.anchoredPosition = originPosition;
         }
-        WeaponMenuUI.Instance.weaponImage.sprite = weaponDetails.weaponSprite;
+        WeaponMenuUI.Instance.weaponImage.sprite = weaponDetails.weaponCurrentAmmo.ammoSprite;
         WeaponMenuUI.Instance.weaponDescription.text = weaponDetails.weaponDescription;
-        WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nCharged: " + weaponDetails.weaponPrechargeTime.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
+        WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
 
         buying = false;
     }

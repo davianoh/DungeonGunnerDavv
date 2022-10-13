@@ -24,10 +24,10 @@ MonoBehaviour:
   ammoDamage: 10
   ammoSpeedMin: 22
   ammoSpeedMax: 22
-  ammoRange: 40
+  ammoRange: 50
   ammoRotationSpeed: 1
   ammoSpreadMin: 2
-  ammoSpreadMax: 3
+  ammoSpreadMax: 2
   ammoSpawnAmountMin: 1
   ammoSpawnAmountMax: 1
   ammoSpawnIntervalMin: 0

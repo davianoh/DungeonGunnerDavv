@@ -15,7 +15,9 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 4
   weaponCost: 200
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: Berteriak BAD akan selalu ampuh untuk menjatuhkan mental seseorang.
+    Kata ini juga sering dipakai untuk memberitahu hewan bahwa perlakuan mereka salah.
+    BAD memiliki arti yaitu NAKAL/JELEK
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 0902a1eb2c5dc654bbcfd75fbd85fda9, type: 2}

@@ -15,7 +15,9 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 0
   weaponCost: 0
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: Teriakan HEY selalu ampuh untuk menakuti siapapun. Kata ini
+    biasanya dipakai dalam keseharian untuk memanggil seseorang, namun dapat digunakan
+    untuk menakuti juga apabila digunakan dengan nada kencang
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: d728634dc264340459fd9c16567254d3, type: 2}
@@ -24,8 +26,8 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: 302fe24d53dafeb458591daa2e24ef55, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 10
+  weaponClipAmmoCapacity: 15
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.5
+  weaponFireRate: 0.3
   weaponPrechargeTime: 0
   weaponReloadTime: 1

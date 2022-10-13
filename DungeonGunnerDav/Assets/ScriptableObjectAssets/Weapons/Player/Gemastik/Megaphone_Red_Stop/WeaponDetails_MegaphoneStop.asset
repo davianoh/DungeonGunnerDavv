@@ -15,7 +15,8 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 1
   weaponCost: 50
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: 'STOPP!!, siapapun pasti ujungnya akan berhenti bila diteriaki
+    kata ini. Kata ini dalam bahasa Indonesia berarti BERHENTI. '
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 195fa4b56426113409ab5001733f7dd1, type: 2}

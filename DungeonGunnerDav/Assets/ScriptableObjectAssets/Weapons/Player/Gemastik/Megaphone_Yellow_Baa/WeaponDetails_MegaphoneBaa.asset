@@ -15,7 +15,9 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 6
   weaponCost: 300
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: Saat menakut-nakuti seseorang, kata yang paling umum dan sering
+    digunakan adalah BAA. Siapapun pasti akan terkaget bila tiba-tiba diteriaki kata
+    ini dengan kencang
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 90f57faa6c69c00439c4b33a94648524, type: 2}

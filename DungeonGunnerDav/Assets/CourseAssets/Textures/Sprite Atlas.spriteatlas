@@ -3409,6 +3409,7 @@ SpriteAtlas:
   - {fileID: -2149373084711453155, guid: e8e3e2da74556054ba00b8e2f91e406e, type: 3}
   - {fileID: 1426773689772309455, guid: e8e3e2da74556054ba00b8e2f91e406e, type: 3}
   - {fileID: -668626502285967612, guid: e8e3e2da74556054ba00b8e2f91e406e, type: 3}
+  - {fileID: 21300000, guid: c60be2da5b2024a4bbaaf01f65ebbc41, type: 3}
   - {fileID: 5413833208864097711, guid: 7b947adad87db3a45ab5621ad46cb533, type: 3}
   - {fileID: 2721539245987929508, guid: 7b947adad87db3a45ab5621ad46cb533, type: 3}
   - {fileID: -8633211793948490322, guid: 7b947adad87db3a45ab5621ad46cb533, type: 3}
@@ -8794,6 +8795,7 @@ SpriteAtlas:
   - black_cobalt07_1
   - black_cobalt07_2
   - black_cobalt07_3
+  - obj1 1
   - OrcMoveRight_3
   - OrcMoveRight_2
   - OrcMoveRight_1

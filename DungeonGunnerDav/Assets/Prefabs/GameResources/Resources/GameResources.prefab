@@ -50,6 +50,11 @@ MonoBehaviour:
   - {fileID: 5208824948241200847, guid: a3eeb9d8cfc82244082f128108f377dc, type: 3}
   - {fileID: 5208824948241200847, guid: 257a060e60e84314da8816ad7dd065e0, type: 3}
   - {fileID: 5208824948241200847, guid: c7e56704155daac4c98eed81d9786c45, type: 3}
+  - {fileID: 5208824948241200847, guid: 1d9d3e80b8b74c84b98ae2a1a3a778ec, type: 3}
+  - {fileID: 5208824948241200847, guid: 076b065193cc09c4aa822685fa9d8aec, type: 3}
+  - {fileID: 5208824948241200847, guid: 369ed0530a0288a43b868a6c4ec88a3e, type: 3}
+  - {fileID: 5208824948241200847, guid: 9b36ed02bd03c434e9a6fdf2ac18ea38, type: 3}
+  - {fileID: 5208824948241200847, guid: 75164575a60465a43bbd4cdd6ce43f5a, type: 3}
   playerSelectionPrefab: {fileID: 5262077089820183234, guid: 57ad73f7ba85e3c4180090f4920eeb19, type: 3}
   currentPlayer: {fileID: 11400000, guid: a1245dbb7417f9a4cb4e432d26c40b1d, type: 2}
   playerDetailsList:

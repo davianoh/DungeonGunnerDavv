@@ -15,7 +15,8 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 7
   weaponCost: 350
-  weaponDescription: Normal trusted pistol, always there in every situation
+  weaponDescription: Jleb.. siapapun yang diteriaki kata ini pasti akan langsung
+    tertusuk hatinya. DUMB!! yang dalam bahasa Indonesia yaitu BODOH
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: c58ef58bc2d47924a99546e7d3a15731, type: 2}

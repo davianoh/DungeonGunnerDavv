@@ -15,7 +15,9 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 8
   weaponCost: 400
-  weaponDescription: GRR, Effective to all enemies.. sounds of the sigmas
+  weaponDescription: Belakangan muncul kata baru yang membawa makna kaut dan dominansi.
+    GRRR.. merupakan kata yang dapat membuat siapapun takut, baik itu manusia maupun
+    hewan. Kata ini meniru suara raungan yang biasa berasal dari hewan liar
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 7b01d4a9c47bbe3409a9b6549bcc95ca, type: 2}

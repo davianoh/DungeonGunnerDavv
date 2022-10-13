@@ -7,7 +7,7 @@ public class RoomEnemySpawnParameters
 {
     public int maxTotalEnemiesToSpawn;
     public int maxConcurrentEnemies;
-    public int minSpawnInterval;
-    public int maxSpawnInterval;
+    public float minSpawnInterval;
+    public float maxSpawnInterval;
     public int wavesSurviveTimeInSeconds;
 }
