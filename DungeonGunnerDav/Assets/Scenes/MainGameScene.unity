@@ -3130,10 +3130,10 @@ MonoBehaviour:
   - poolSize: 50
     prefab: {fileID: 7154869256948650983, guid: 05fb91a289ad2214d81ef4297b3aab93, type: 3}
     componentType: Enemy
-  - poolSize: 50
+  - poolSize: 100
     prefab: {fileID: 3304942511536613284, guid: 635a5ab5dc2807845b3819b60bb4cf72, type: 3}
     componentType: Enemy
-  - poolSize: 50
+  - poolSize: 100
     prefab: {fileID: 1687453101684499643, guid: 1e30ab217ab368449b6a4b009afba840, type: 3}
     componentType: Enemy
 --- !u!4 &1860808526
