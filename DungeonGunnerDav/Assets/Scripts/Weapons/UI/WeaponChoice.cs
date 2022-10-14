@@ -16,6 +16,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     [SerializeField] private GameObject costWeaponText;
     [SerializeField] private GameObject buyWeaponText;
+    [SerializeField] private GameObject blocker;
     private bool buying = false;
 
     private void Awake()
@@ -32,6 +33,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             gameObject.GetComponent<Image>().color = Color.white;
             costWeaponText.SetActive(false);
+            blocker.SetActive(false);
         }
     }
 
@@ -92,6 +94,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             gameObject.GetComponent<Image>().color = Color.white;
             costWeaponText.SetActive(false);
             buyWeaponText.SetActive(false);
+            blocker.SetActive(false);
 
             MapManager.Instance.ItemBuyed();
         }
