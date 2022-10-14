@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomNodeTypeList: {fileID: 11400000, guid: aaaf673c151de6f4aac805beaabfc8ee, type: 2}
   roomList:
-  - {fileID: 5208824948241200847, guid: 100503d0d0380d54199672bfe83f94fe, type: 3}
-  - {fileID: 5208824948241200847, guid: d62b425852c2c054b96d7c9c4b28975a, type: 3}
+  - {fileID: 5208824948241200847, guid: 8ce551f0310c86341a06443a9d1b11ab, type: 3}
+  - {fileID: 5208824948241200847, guid: 4b5f101cae8d52c409b43e6c5fc6bbd8, type: 3}
   - {fileID: 5208824948241200847, guid: a3eeb9d8cfc82244082f128108f377dc, type: 3}
   - {fileID: 5208824948241200847, guid: 257a060e60e84314da8816ad7dd065e0, type: 3}
   - {fileID: 5208824948241200847, guid: c7e56704155daac4c98eed81d9786c45, type: 3}
