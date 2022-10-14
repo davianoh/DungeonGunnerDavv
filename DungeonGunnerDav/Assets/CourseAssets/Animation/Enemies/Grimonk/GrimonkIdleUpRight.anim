@@ -161,27 +161,50 @@ AnimationClip:
       m_RotationOrder: 4
     path: Body/Head
   m_ScaleCurves: []
-  m_FloatCurves:
+  m_FloatCurves: []
+  m_PPtrCurves:
   - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 2
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SortingOrder
-    path: Body/WeaponAnchorPosition_Hand/WeaponRotationPoint/Weapon
+    - time: 0
+      value: {fileID: -3687173244170995506, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: Body
     classID: 212
     script: {fileID: 0}
-  m_PPtrCurves: []
+  - curve:
+    - time: 0
+      value: {fileID: -1400783575994279545, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: Body/HandNoWeapon
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 6567407417305461536, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: Body/Head
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 8846253477212262815, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: Body/WeaponAnchorPosition_Hand
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: -66529204272465641, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: LeftLeg
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: -4178198174461746748, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    attribute: m_Sprite
+    path: RightLeg
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -218,13 +241,54 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2179625066
-      attribute: 3762991556
+      path: 2073732236
+      attribute: 0
       script: {fileID: 0}
       typeID: 212
-      customType: 26
-      isPPtrCurve: 0
-    pptrCurveMapping: []
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 409706315
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 694585260
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 1734016472
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 101577729
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 2252147196
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: -3687173244170995506, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    - {fileID: -1400783575994279545, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    - {fileID: 6567407417305461536, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    - {fileID: 8846253477212262815, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    - {fileID: -66529204272465641, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
+    - {fileID: -4178198174461746748, guid: ad3d2c6276a083d4e9798928b9d1f4fc, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -716,25 +780,6 @@ AnimationClip:
     attribute: localEulerAnglesRaw.z
     path: Body/WeaponAnchorPosition_Hand
     classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 2
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_SortingOrder
-    path: Body/WeaponAnchorPosition_Hand/WeaponRotationPoint/Weapon
-    classID: 212
     script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:

@@ -66,6 +66,11 @@ public class AnimateEnemy : MonoBehaviour
         enemy.animator.SetBool(Settings.isIdle, true);
     }
 
+    public void SetArtLocalAnimationParameters(bool artLocal)
+    {
+        enemy.animator.SetBool(Settings.isArtLocal, artLocal);
+    }
+
     private void SetAimWeaponAnimationParameters(AimDirection aimDirection)
     {
         switch (aimDirection)

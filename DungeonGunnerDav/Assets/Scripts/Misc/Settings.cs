@@ -34,6 +34,7 @@ public static class Settings
     public static int rollDown = Animator.StringToHash("rollDown");
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollRight = Animator.StringToHash("rollRight");
+    public static int isArtLocal = Animator.StringToHash("isArtLocal");
     public static float baseSpeedPlayerAnimation = 8f;
     public static float enemyWarningSpawnTime = 3f;
     public static float enemyWarningSpawnInterval = 0.2f;

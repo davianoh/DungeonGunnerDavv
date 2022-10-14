@@ -34,6 +34,14 @@ public class EnemyMovementAI : MonoBehaviour
     private void Update()
     {
         MoveEnemy();
+        if(Vector3.Distance(transform.position, GameManager.Instance.GetCurrentRoom().artLocalPosition.position) <= 2f && targetArt)
+        {
+            GetComponent<AnimateEnemy>().SetArtLocalAnimationParameters(true);
+        }
+        else if (!targetArt)
+        {
+            GetComponent<AnimateEnemy>().SetArtLocalAnimationParameters(false);
+        }
     }
 
     private void MoveEnemy()
