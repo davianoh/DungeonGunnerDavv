@@ -8,44 +8,55 @@ public class ArtLocals : MonoBehaviour
     private int health;
     [SerializeField] private HealthBar healthBar;
     private bool isColliding = false;
-    private bool isGameOver = false;
+    private float resetCooldownTime;
+    private bool justCollided = true;
 
     private void Start()
     {
         health = startingHealth;
+        resetCooldownTime = Settings.artLocalDamageResetDelay;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (isColliding) return;
-        ContactDamage(collision);
+        if(health <= 0f)
+        {
+            GameManager.Instance.gameState = GameState.gameLost;
+            healthBar.gameObject.SetActive(false);
+        }
+
+        if (justCollided && isColliding)
+        {
+            StartCoroutine(ReceiveDamageRoutine());
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (isColliding) return;
-        ContactDamage(collision);
-    }
-
-    private void ContactDamage(Collider2D collision)
-    {
         if (collision.gameObject.GetComponent<Enemy>() != null)
         {
             isColliding = true;
-            Invoke("ResetContactCollision", Settings.artLocalDamageResetDelay);
-            health -= Settings.artLocalContactDamage;
-            healthBar.SetHealthBarValue((float)health / (float)startingHealth);
-        }
-        if(health <= 0)
-        {
-            isGameOver = true;
-            GameManager.Instance.gameState = GameState.gameLost;
         }
     }
 
-    private void ResetContactCollision()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isGameOver) return;
-        isColliding = false;
+        if (collision.gameObject.GetComponent<Enemy>() != null)
+        {
+            isColliding = false;
+        }
     }
+
+    private IEnumerator ReceiveDamageRoutine()
+    {
+        justCollided = false;
+        while (isColliding)
+        {
+            health -= Settings.artLocalContactDamage;
+            healthBar.SetHealthBarValue((float)health / (float)startingHealth);
+            yield return new WaitForSeconds(resetCooldownTime);
+        }
+        justCollided = true;
+    }
+
 }

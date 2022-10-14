@@ -1030,7 +1030,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.01}
   serializedVersion: 2
-  m_Radius: 0.01
+  m_Radius: 0.02
 --- !u!60 &6530701859291916837
 PolygonCollider2D:
   m_ObjectHideFlags: 0

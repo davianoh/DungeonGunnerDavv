@@ -250,6 +250,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         gameState = GameState.restartGame;
     }
 
+
     private IEnumerator GameLost()
     {
         previousGameState = GameState.gameLost;
