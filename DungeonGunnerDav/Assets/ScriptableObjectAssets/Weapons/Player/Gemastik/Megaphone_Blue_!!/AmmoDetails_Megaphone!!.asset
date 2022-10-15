@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9639c04e1fb8746a6e6756def51663, type: 3}
   m_Name: AmmoDetails_Megaphone!!
   m_EditorClassIdentifier: 
-  ammoName: Megaphone Ammo
+  ammoName: '!!!!!'
   isPlayerAmmo: 1
   ammoSprite: {fileID: 2026260920865552420, guid: fa400092dc67e2c4f90358d0c8afab9b, type: 3}
   ammoPrefabArray:

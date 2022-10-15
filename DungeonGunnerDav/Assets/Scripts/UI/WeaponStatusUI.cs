@@ -140,7 +140,16 @@ public class WeaponStatusUI : MonoBehaviour
 
     private void UpdateActiveWeaponName(Weapon weapon)
     {
-        weaponNameText.text = "(" + weapon.weaponListPosition + ") " + weapon.weaponDetails.weaponName.ToUpper();
+        int index = 1;
+        foreach(Weapon weaponss in player.weaponList)
+        {
+            if(weaponss == weapon)
+            {
+                weaponNameText.text = "(" + index + ")" + weapon.weaponDetails.weaponCurrentAmmo.ammoName.ToUpper();
+                return;
+            }
+            index++;
+        }
     }
 
     private void UpdateAmmoText(Weapon weapon)

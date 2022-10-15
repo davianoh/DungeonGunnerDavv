@@ -752,7 +752,7 @@ Transform:
   m_GameObject: {fileID: 6778172777863076811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 6778172777997324621}
   m_RootOrder: 0
@@ -824,9 +824,9 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 3.1699998, y: 3.98, z: 4.17, w: 3.8799999}
+    border: {x: 2.4765625, y: 3.109375, z: 3.2578125, w: 3.03125}
     pivot: {x: 0.39698073, y: 0.40968177}
-    oldSize: {x: 10.24, y: 10.24}
+    oldSize: {x: 8, y: 8}
     newSize: {x: 1.125, y: 0.6875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

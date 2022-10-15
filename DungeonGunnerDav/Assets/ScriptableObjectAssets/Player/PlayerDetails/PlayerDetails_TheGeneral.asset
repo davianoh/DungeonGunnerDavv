@@ -15,7 +15,7 @@ MonoBehaviour:
   playerCharacterName: The General
   playerDescription: This general is the best at his time of service
   playerMovementDetails: {fileID: 11400000, guid: 0415a78f32af00940a0787b1e6330183, type: 2}
-  playerBonusAttack: 2
+  playerBonusAttack: 0
   playerBonusCoins: 0
   playerID: 0
   playerUnlockCost: 50
@@ -23,7 +23,7 @@ MonoBehaviour:
   runtimeAnimatorController: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
   playerHealthAmmount: 100
   isImmuneAfterHit: 1
-  hitImmunityTime: 2.5
+  hitImmunityTime: 2
   startingWeapon: {fileID: 11400000, guid: 4eee23fb8fdebf0408d91763f4d491db, type: 2}
   startingWeaponList:
   - {fileID: 11400000, guid: ec324d40bf027ae479d479ab5a50fb2e, type: 2}
@@ -35,5 +35,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d91d1407f34c8e8449282c248248b578, type: 2}
   - {fileID: 11400000, guid: e3ecfe4b43eef4e4e8ca539ea1996295, type: 2}
   - {fileID: 11400000, guid: 3de62da8ac800bc40a2fa3cc9ae6aca8, type: 2}
-  playerMinimapIcon: {fileID: 21300000, guid: 709f49100a0267f419aa33d571fb9d25, type: 3}
+  playerMinimapIcon: {fileID: -8540584908252580693, guid: a42d9f12b1d26ee47941a76868238c0f, type: 3}
   playerHandSprite: {fileID: 21300000, guid: a8c352369ed75924d84743672d1ab512, type: 3}

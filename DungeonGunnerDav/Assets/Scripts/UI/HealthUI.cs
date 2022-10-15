@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [DisallowMultipleComponent]
 public class HealthUI : MonoBehaviour
 {
     private List<GameObject> healthHeartsList = new List<GameObject>();
+    [SerializeField] private TextMeshProUGUI healthValueText;
 
     private void OnEnable()
     {
@@ -19,7 +21,7 @@ public class HealthUI : MonoBehaviour
 
     private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
     {
-        SetHealthBar(healthEventArgs);
+        SetHealthValue(healthEventArgs);
     }
 
     private void SetHealthBar(HealthEventArgs healthEventArgs)
@@ -44,5 +46,14 @@ public class HealthUI : MonoBehaviour
         }
 
         healthHeartsList.Clear();
+    }
+
+    private void SetHealthValue(HealthEventArgs healthEventArgs)
+    {
+        if(healthEventArgs.healthAmount <= 0)
+        {
+            healthValueText.text = "0 / " + GameManager.Instance.GetPlayer().health.startingHealth;
+        }
+        healthValueText.text = healthEventArgs.healthAmount.ToString() + " / " + GameManager.Instance.GetPlayer().health.startingHealth;
     }
 }
