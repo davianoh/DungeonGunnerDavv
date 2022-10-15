@@ -129,7 +129,7 @@ public class PlayerControl : MonoBehaviour
 
         while(Vector3.Distance(player.transform.position, targetPosition) > minDistance)
         {
-            player.movementToPositionEvent.CallMovementToPositionEvent(targetPosition, player.transform.position, movementDetails.rollSpeed, direction, isPlayerRolling);
+            player.movementToPositionEvent.CallMovementToPositionEvent(targetPosition, player.transform.position, movementDetails.rollSpeed + GameResources.Instance.speedBonus * Settings.speedUpgradeMultiplier, direction, isPlayerRolling);
 
             yield return waitForFixedUpdate;
         }

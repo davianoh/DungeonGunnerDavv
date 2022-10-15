@@ -40,10 +40,13 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
         PlayerDetailsSO currentPlayerDetails = GameResources.Instance.playerDetailsList[selectedPlayerIndexView];
         playerName.text = currentPlayerDetails.playerCharacterName;
         playerDescription.text = currentPlayerDetails.playerDescription;
-        playerStats.text = "Health: " + currentPlayerDetails.playerHealthAmmount.ToString() + " + " + healthUpgrade + "x10\n" +
-            "Bonus Attack: " + currentPlayerDetails.playerBonusAttack.ToString() + " + " + attackUpgrade + "x2\n" +
-            "Speed: " + currentPlayerDetails.playerMovementDetails.maxMoveSpeed.ToString() + " + " + speedUpgrade + "x1\n" +
-            "Bonus Coins: " + currentPlayerDetails.playerBonusCoins.ToString() + " + " + coinsUpgrade + "x3";
+        //playerStats.text = "Health: " + currentPlayerDetails.playerHealthAmmount.ToString() + " + " + healthUpgrade + "x10\n" +
+        //    "Bonus Attack: " + currentPlayerDetails.playerBonusAttack.ToString() + " + " + attackUpgrade + "x2\n" +
+        //    "Speed: " + currentPlayerDetails.playerMovementDetails.maxMoveSpeed.ToString() + " + " + speedUpgrade + "x1\n" +
+        //    "Bonus Coins: " + currentPlayerDetails.playerBonusCoins.ToString() + " + " + coinsUpgrade + "x3";
+        playerStats.text = "Health: " + (currentPlayerDetails.playerHealthAmmount + healthUpgrade * Settings.healthUpgradeMultiplier).ToString() + "\n" +
+            "Bonus Attack: " + (currentPlayerDetails.playerBonusAttack + attackUpgrade * Settings.attackUpgradeMultiplier).ToString() + "\n" +
+            "Speed: " + (currentPlayerDetails.playerMovementDetails.maxMoveSpeed + speedUpgrade * Settings.speedUpgradeMultiplier).ToString();
     }
 
 

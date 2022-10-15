@@ -72,7 +72,7 @@ public class UpgradeStats : MonoBehaviour
 
         for (int i = 0; i < upgradedValue; i++)
         {
-            upgradeBarParent.transform.GetChild(i).GetComponent<Image>().color = new Color(0.4874632f, 1f, 0.2113207f, 1f);
+            upgradeBarParent.transform.GetChild(i).GetComponent<Image>().color = new Color(0.19f, 0.95f, 0f, 1f);
         }
     }
 }

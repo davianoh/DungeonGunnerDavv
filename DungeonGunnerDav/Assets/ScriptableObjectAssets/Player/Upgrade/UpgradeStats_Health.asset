@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e77f3901d6bd94db75c6620f2fd132, type: 3}
   m_Name: UpgradeStats_Health
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 93356131eec0f44458223985928ac6e3, type: 3}
+  icon: {fileID: 1827894805620461780, guid: a88aa347e6788a046be92c95e2c7c9bb, type: 3}
   upgradeName: Health
   upgradeValue: 10
   upgradeCost: 50
