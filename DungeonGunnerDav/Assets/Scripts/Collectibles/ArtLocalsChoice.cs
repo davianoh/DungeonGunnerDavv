@@ -8,13 +8,15 @@ public class ArtLocalsChoice : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private ArtLocalsSO artLocalsDetail;
     [SerializeField] private Image artChoiceImage;
+    [SerializeField] private GameObject blocker;
     private bool unlock = false;
 
     private void Start()
     {
         if(artLocalsDetail.obtainInLevel < MapManager.Instance.unlockLevelListIndex)
         {
-            GetComponent<Image>().color = Color.white;
+            artChoiceImage.color = Color.white;
+            blocker.SetActive(false);
             unlock = true;
         }
         artChoiceImage.sprite = artLocalsDetail.artImage;

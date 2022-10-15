@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b350f75d6270b144959bb2bc153353f, type: 3}
-  m_Name: ArtLocalsDetails_Batik
+  m_Name: ArtLocalsDetails_Level5
   m_EditorClassIdentifier: 
-  obtainInLevel: 0
-  artImage: {fileID: 8614703209417225712, guid: 4a49f6d6d5594ae48bafa9d9a279031f, type: 3}
-  nama: Batik Orcs
-  location: Surabaya
-  year: 2022
-  artist: Orc himself
-  artHistory: This is batik in the shape of Orcs the artist
-  artistHistory: The Orc is the best artist among other orcs because he is the only
-    one :)
+  obtainInLevel: 4
+  artImage: {fileID: 21300000, guid: 36ede59b1e7b4e740a7a049df42c0739, type: 3}
+  nama: Alat Musik Tifa
+  location: Gresik
+  year: 2020
+  artist: Simeme
+  artHistory: Patung slime first dicovered in the mud across the street
+  artistHistory: Slimeme is the best name ever
