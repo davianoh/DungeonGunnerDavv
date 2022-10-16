@@ -33,6 +33,15 @@ public static class SaveSystem
             SaveObjectWeapons saveObjectWeapons = new SaveObjectWeapons() { weaponOwnedList = weaponOwnedList, weaponEquipList = weaponNewEquipedList, unlockSlots = 1 };
             string jsonWeapon = JsonUtility.ToJson(saveObjectWeapons);
             SaveSystem.SaveWeapons(jsonWeapon);
+
+            List<long> highScoreList = new List<long>();
+            for(int i = 0; i < 10; i++)
+            {
+                highScoreList.Add(0);
+            }
+            SaveObjectHighScores saveObjectHighScore = new SaveObjectHighScores() { highScoreList = highScoreList };
+            string jsonHighScore = JsonUtility.ToJson(saveObjectHighScore);
+            SaveSystem.SaveHighScore(jsonHighScore);
         }
     }
 
@@ -85,6 +94,25 @@ public static class SaveSystem
         if (File.Exists(SAVE_FOLDER + "savePlayer.txt"))
         {
             string saveString = File.ReadAllText(SAVE_FOLDER + "savePlayer.txt");
+            return saveString;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
+    // Buat save highscore
+    public static void SaveHighScore(string saveString)
+    {
+        File.WriteAllText(SAVE_FOLDER + "saveHighScore.txt", saveString);
+    }
+
+    public static string LoadHighScore()
+    {
+        if (File.Exists(SAVE_FOLDER + "saveHighScore.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "saveHighScore.txt");
             return saveString;
         }
         else

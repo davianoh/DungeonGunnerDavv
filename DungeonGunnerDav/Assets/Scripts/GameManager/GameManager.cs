@@ -42,6 +42,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public List<int> weaponEquipedList = new List<int>();
     public int unlockWeaponSlots;
 
+    public List<long> highScoreList = new List<long>();
+
     #region Header Parameters Other
     [Space(10)]
     [Header("PARAMETERS OTHER")]
@@ -67,6 +69,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         SaveSystem.Init();
         Load();
         LoadWeapons();
+        LoadHighScore();
 
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
         currentRoom = GameResources.Instance.roomList[GameResources.Instance.selectedLevelIndex];
@@ -240,7 +243,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
-        
+        SaveHighScore(gameScore, currentLevelIndex);
+
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
@@ -257,6 +261,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
+        SaveHighScore(gameScore, currentLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
         yield return new WaitForSeconds(1f);
@@ -273,6 +278,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         gameState = GameState.restartGame;
     }
+
 
     private void RestartGame()
     {
@@ -412,6 +418,46 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             weaponsOwnedList = saveObjectWeapons.weaponOwnedList;
             weaponEquipedList = saveObjectWeapons.weaponEquipList;
             unlockWeaponSlots = saveObjectWeapons.unlockSlots;
+        }
+        else
+        {
+            Debug.Log("No Save");
+        }
+    }
+
+    private void SaveHighScore(long highScoress, int levelIndex)
+    {
+        int index = 0;
+        foreach(long score in highScoreList)
+        {
+            if(index == levelIndex)
+            {
+                if(highScoress > highScoreList[index])
+                {
+                    highScoreList[index] = highScoress;
+                    SaveObjectHighScores saveObjectHighScore = new SaveObjectHighScores() { highScoreList = highScoreList };
+                    string json = JsonUtility.ToJson(saveObjectHighScore);
+                    SaveSystem.SaveHighScore(json);
+                    Debug.Log(highScoreList);
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            index++;
+        }
+        
+    }
+
+    private void LoadHighScore()
+    {
+        string saveString = SaveSystem.LoadHighScore();
+        if(saveString != null)
+        {
+            SaveObjectHighScores saveObjectHighScore = JsonUtility.FromJson<SaveObjectHighScores>(saveString);
+            highScoreList = saveObjectHighScore.highScoreList;
         }
         else
         {
