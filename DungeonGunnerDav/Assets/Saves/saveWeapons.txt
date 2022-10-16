@@ -1,1 +1,1 @@
-{"weaponOwnedList":[0,1,3,4,2,8,5,7],"weaponEquipList":[8,4,7],"unlockSlots":3}
+{"weaponOwnedList":[0,1,3,4,2,8,5,7,6],"weaponEquipList":[8,4,7],"unlockSlots":3}
