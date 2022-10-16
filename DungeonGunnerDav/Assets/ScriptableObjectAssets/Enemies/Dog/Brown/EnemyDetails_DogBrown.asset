@@ -37,7 +37,7 @@ MonoBehaviour:
   - dungeonLevel: {fileID: 11400000, guid: f73cde3270a61a0479c66b3963bc29a8, type: 2}
     enemyHealthAmount: 15
   - dungeonLevel: {fileID: 11400000, guid: 0f43054c75fcc914e88d1c42038d6da4, type: 2}
-    enemyHealthAmount: 20
+    enemyHealthAmount: 25
   - dungeonLevel: {fileID: 11400000, guid: d81b4586294eb204593efc6367c21316, type: 2}
     enemyHealthAmount: 25
   - dungeonLevel: {fileID: 11400000, guid: de098a1bfa90cc34dbe55f30a5598bd7, type: 2}

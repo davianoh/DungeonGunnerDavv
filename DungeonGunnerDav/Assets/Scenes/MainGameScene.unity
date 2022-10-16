@@ -488,7 +488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16.699982, y: -52}
+  m_AnchoredPosition: {x: 16.699951, y: -52}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &197403608
@@ -1417,6 +1417,7 @@ MonoBehaviour:
   weaponsOwnedList: 
   weaponEquipedList: 
   unlockWeaponSlots: 0
+  highScoreList: 
   gameState: 0
   previousGameState: 0
   currentRoom: {fileID: 5208824948241200847, guid: a3eeb9d8cfc82244082f128108f377dc, type: 3}
@@ -1700,15 +1701,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 50 / 100
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
-  m_sharedMaterial: {fileID: 813001064474242089, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
+  m_sharedMaterial: {fileID: 813001064474242089, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3172,15 +3173,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: INFINITE AMMO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
-  m_sharedMaterial: {fileID: 813001064474242089, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
+  m_sharedMaterial: {fileID: 813001064474242089, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3311,8 +3312,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: dfe1ba23c638bec49a583843476bb5c9, type: 2}
-  m_sharedMaterial: {fileID: 8120199949304618070, guid: dfe1ba23c638bec49a583843476bb5c9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
+  m_sharedMaterial: {fileID: 8268634858413119108, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5180,7 +5181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 18.6, y: -68.8}
+  m_AnchoredPosition: {x: 18.599976, y: -68.79999}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1756504774
@@ -5351,15 +5352,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: WEAPON EQUIPED 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
-  m_sharedMaterial: {fileID: 813001064474242089, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
+  m_sharedMaterial: {fileID: 813001064474242089, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5828,16 +5829,16 @@ MonoBehaviour:
   - poolSize: 60
     prefab: {fileID: 4077656237430602957, guid: 4cb3a8d65e724594e884fa5c036c1962, type: 3}
     componentType: ICollectible
-  - poolSize: 50
+  - poolSize: 75
     prefab: {fileID: 968163792347498260, guid: 37268b1cc5f474d4d860c8cc3d9e8cb7, type: 3}
     componentType: Enemy
-  - poolSize: 50
+  - poolSize: 75
     prefab: {fileID: 7154869256948650983, guid: 05fb91a289ad2214d81ef4297b3aab93, type: 3}
     componentType: Enemy
-  - poolSize: 100
+  - poolSize: 125
     prefab: {fileID: 3304942511536613284, guid: 635a5ab5dc2807845b3819b60bb4cf72, type: 3}
     componentType: Enemy
-  - poolSize: 100
+  - poolSize: 125
     prefab: {fileID: 1687453101684499643, guid: 1e30ab217ab368449b6a4b009afba840, type: 3}
     componentType: Enemy
 --- !u!4 &1860808526
@@ -6261,15 +6262,15 @@ MonoBehaviour:
 
     MULTIPLIER: x1'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
-  m_sharedMaterial: {fileID: 813001064474242089, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
+  m_sharedMaterial: {fileID: 813001064474242089, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6558,15 +6559,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5234
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
-  m_sharedMaterial: {fileID: 813001064474242089, guid: d896bf4b81a01a24c940225dafb70836, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
+  m_sharedMaterial: {fileID: 813001064474242089, guid: 4dc1da393a4f18d49ae873f847c02b23, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
