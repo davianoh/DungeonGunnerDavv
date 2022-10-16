@@ -24,14 +24,14 @@ MonoBehaviour:
     - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
       ratio: 1
   wavesEnemySpawnParameters:
-  - maxTotalEnemiesToSpawn: 35
-    maxConcurrentEnemies: 25
+  - maxTotalEnemiesToSpawn: 5
+    maxConcurrentEnemies: 5
     minSpawnInterval: 1.75
     maxSpawnInterval: 1.75
-    wavesSurviveTimeInSeconds: 60
-  - maxTotalEnemiesToSpawn: 20
-    maxConcurrentEnemies: 15
+    wavesSurviveTimeInSeconds: 20
+  - maxTotalEnemiesToSpawn: 5
+    maxConcurrentEnemies: 5
     minSpawnInterval: 1
     maxSpawnInterval: 1
-    wavesSurviveTimeInSeconds: 45
+    wavesSurviveTimeInSeconds: 20
   isClearedOfEnemies: 0

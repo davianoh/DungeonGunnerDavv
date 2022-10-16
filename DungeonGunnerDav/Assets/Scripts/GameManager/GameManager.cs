@@ -243,7 +243,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
-        SaveHighScore(gameScore, currentLevelIndex);
+        SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
@@ -261,7 +261,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
         Save();
         SaveWeapons();
-        SaveHighScore(gameScore, currentLevelIndex);
+        SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
         yield return new WaitForSeconds(1f);
@@ -438,7 +438,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                     SaveObjectHighScores saveObjectHighScore = new SaveObjectHighScores() { highScoreList = highScoreList };
                     string json = JsonUtility.ToJson(saveObjectHighScore);
                     SaveSystem.SaveHighScore(json);
-                    Debug.Log(highScoreList);
+                    Debug.Log(index);
                     return;
                 }
                 else

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level_1
   m_EditorClassIdentifier: 
   id: 1
-  levelName: Kebangkitan Kawanan Pencuri Jahat
+  levelName: Kebangkitan Geng Pencuri Jahat
   backgroundMusic: {fileID: 11400000, guid: 6a61f88913a786b49873f77acd8fdc18, type: 2}
   totalWaves: 1
   wavesEnemySpawnTypes:

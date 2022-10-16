@@ -12,12 +12,15 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     public TextMeshProUGUI coinsTextPlayer;
 
     public List<GameObject> levelButtonsLocked;
+    public List<long> highScoreList;
+    public List<TextMeshProUGUI> highScoreTextList;
 
     protected override void Awake()
     {
         base.Awake();
 
         Load();
+        LoadHighScore();
     }
 
 
@@ -27,7 +30,9 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         for(int i = 0; i <= unlockLevelListIndex; i++)
         {
             levelButtonsLocked[i].SetActive(false);
+            highScoreTextList[i].text = highScoreList[i].ToString("###,###0");
         }
+        
     }
 
 
@@ -57,6 +62,16 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         else
         {
             Debug.Log("No Save");
+        }
+    }
+
+    private void LoadHighScore()
+    {
+        string saveString = SaveSystem.LoadHighScore();
+        if(saveString != null)
+        {
+            SaveObjectHighScores saveObjectHighScore = JsonUtility.FromJson<SaveObjectHighScores>(saveString);
+            highScoreList = saveObjectHighScore.highScoreList;
         }
     }
 }

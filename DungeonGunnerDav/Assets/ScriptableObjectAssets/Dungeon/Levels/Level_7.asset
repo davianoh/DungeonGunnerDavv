@@ -21,7 +21,7 @@ MonoBehaviour:
     - dungeonObject: {fileID: 11400000, guid: 2f6cec5cb2051614eb7987ee2c9923cc, type: 2}
       ratio: 3
     - dungeonObject: {fileID: 11400000, guid: 7d4f00a2651a66745908e045514c6f5c, type: 2}
-      ratio: 1
+      ratio: 2
   - spawnableObjectRatioList:
     - dungeonObject: {fileID: 11400000, guid: 2f6cec5cb2051614eb7987ee2c9923cc, type: 2}
       ratio: 1
