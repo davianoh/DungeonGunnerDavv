@@ -60,4 +60,9 @@ public class PauseMenuUI : MonoBehaviour
         SoundEffectManager.Instance.DecreaseSoundsVolume();
         soundsLevelText.SetText(SoundEffectManager.Instance.soundsVolume.ToString());
     }
+
+    public void GameQuit()
+    {
+        Application.Quit();
+    }
 }

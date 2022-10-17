@@ -56,6 +56,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [HideInInspector] public GameState previousGameState;
     private long gameScore;
     private int scoreMultiplier;
+    private bool middleCutScene = false;
 
     // For Now.. !!!
     public Room currentRoom;
@@ -238,6 +239,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         if(currentLevelUnlockedIndex == GameResources.Instance.selectedLevelIndex)
         {
+            if(currentLevelUnlockedIndex == 4)
+            {
+                middleCutScene = true;
+            }
             currentLevelUnlockedIndex++;
         }
         currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
@@ -353,7 +358,17 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             {
                 yield return null;
             }
-            SceneManager.LoadScene("MainMapScene");
+
+            if(middleCutScene)
+            {
+                middleCutScene = false;
+                SceneManager.LoadScene("CutSceneMiddle");
+            }
+            else
+            {
+                SceneManager.LoadScene("MainMapScene");
+            }
+            
         }
 
         yield return null;
