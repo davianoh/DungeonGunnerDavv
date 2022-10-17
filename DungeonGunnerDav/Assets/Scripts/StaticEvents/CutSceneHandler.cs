@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartScreenUI : MonoBehaviour
+public class CutSceneHandler : MonoBehaviour
 {
-    public void StartGame()
+    public void ChangeSceneMainMap()
     {
-        SaveSystem.Init();
+        SceneManager.LoadScene("MainMapScene");
     }
 }

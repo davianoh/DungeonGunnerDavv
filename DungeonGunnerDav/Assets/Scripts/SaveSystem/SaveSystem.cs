@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public static class SaveSystem
 {
@@ -13,7 +14,7 @@ public static class SaveSystem
         {
             Directory.CreateDirectory(SAVE_FOLDER);
 
-            SaveObject saveObject = new SaveObject() { levelUnlock = 0, coinsEarned = 1000 };
+            SaveObject saveObject = new SaveObject() { levelUnlock = 0, coinsEarned = 100 };
             string json = JsonUtility.ToJson(saveObject);
             SaveSystem.Save(json);
 
@@ -42,6 +43,12 @@ public static class SaveSystem
             SaveObjectHighScores saveObjectHighScore = new SaveObjectHighScores() { highScoreList = highScoreList };
             string jsonHighScore = JsonUtility.ToJson(saveObjectHighScore);
             SaveSystem.SaveHighScore(jsonHighScore);
+
+            SceneManager.LoadScene("CutSceneStart");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMapScene");
         }
     }
 
