@@ -67,7 +67,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         // inherated class from's awake method call
         base.Awake();
 
-        SaveSystem.Init();
+        //SaveSystem.Init();
         Load();
         LoadWeapons();
         LoadHighScore();

@@ -14,7 +14,7 @@ public class EnemyMovementAI : MonoBehaviour
     private float currentEnemyPathRebuildCooldown;
     private WaitForFixedUpdate waitForFixedUpdate;
     [HideInInspector] public float moveSpeed;
-    private bool chasePlayer = false;
+    //private bool chasePlayer = false;
     [HideInInspector] public int updateFrameNumber = 1;
 
     public bool targetArt = false;
@@ -47,13 +47,12 @@ public class EnemyMovementAI : MonoBehaviour
     private void MoveEnemy()
     {
         currentEnemyPathRebuildCooldown -= Time.deltaTime;
-        if (!chasePlayer && Vector3.Distance(transform.position, GameManager.Instance.GetPlayer().GetPlayerPosition()) < enemy.enemyDetails.chaseDistance)
+        if (Vector3.Distance(transform.position, GameManager.Instance.GetPlayer().GetPlayerPosition()) < enemy.enemyDetails.chaseDistance)
         {
-            chasePlayer = true;
             targetArt = false;
         }
 
-        if (!chasePlayer)
+        else
         {
             targetArt = true;
         }

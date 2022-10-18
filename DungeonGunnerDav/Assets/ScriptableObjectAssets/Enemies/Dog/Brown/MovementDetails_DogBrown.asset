@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714d11ca23f0a1c4b918013dd451c133, type: 3}
   m_Name: MovementDetails_DogBrown
   m_EditorClassIdentifier: 
-  minMoveSpeed: 11
-  maxMoveSpeed: 11
+  minMoveSpeed: 12
+  maxMoveSpeed: 12
   rollSpeed: 0
   rollDistance: 0
   rollCooldownTime: 0

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: PlayerDetails_TheGeneral
   m_EditorClassIdentifier: 
   playerCharacterName: The General
-  playerDescription: This general is the best at his time of service
+  playerDescription: 'Nuson telah menjadi satpam di museum sejak 20 tahun lalu. Ia
+    selalu serius mengerjakan tugasnya dalam melindungi Artefak Budaya Nusantara
+    dari kerusakan. Pemberani, Jujur, Nasionalis merupakan kata-kata yang mencerminkan
+    Satpam Nuson ini. '
   playerMovementDetails: {fileID: 11400000, guid: 0415a78f32af00940a0787b1e6330183, type: 2}
   playerBonusAttack: 0
   playerBonusCoins: 0
