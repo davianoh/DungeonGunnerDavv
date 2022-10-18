@@ -26,7 +26,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("Droppedd");
-        if(eventData.pointerDrag != null && WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex && WeaponMenuUI.Instance.weaponOwnedList.Contains(eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails.weaponListIndex))
+        if(eventData.pointerDrag != null && WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex && WeaponMenuUI.Instance.weaponOwnedList.Contains(eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails.weaponListIndex) && !eventData.pointerDrag.GetComponent<WeaponChoice>().equiped)
         {
             weaponEquipedImage.sprite = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponImageChoice.sprite;
             if(equipedIndex == 0)

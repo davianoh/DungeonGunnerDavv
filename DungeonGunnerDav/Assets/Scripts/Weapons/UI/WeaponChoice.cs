@@ -17,6 +17,8 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField] private GameObject costWeaponText;
     [SerializeField] private GameObject buyWeaponText;
     [SerializeField] private GameObject blocker;
+    [SerializeField] private GameObject equipedText;
+    public bool equiped = false;
     private bool buying = false;
 
     private void Awake()
@@ -52,11 +54,24 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
                 buyWeaponText.SetActive(false);
             }
         }
+        else
+        {
+            if(WeaponMenuUI.Instance.weaponEquiped1 == weaponDetails || WeaponMenuUI.Instance.weaponEquiped2 == weaponDetails || WeaponMenuUI.Instance.weaponEquiped3 == weaponDetails)
+            {
+                equiped = true;
+                equipedText.SetActive(true);
+            }
+            else
+            {
+                equiped = false;
+                equipedText.SetActive(false);
+            }
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying && !equiped)
         {
             Debug.Log("Begin drag");
             canvasGroup.alpha = 0.6f;
@@ -68,7 +83,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying && !equiped)
         {
             rectTransform.anchoredPosition += eventData.delta / WeaponMenuUI.Instance.canvas.scaleFactor;
         }
@@ -76,7 +91,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying)
+        if (WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && !buying && !equiped)
         {
             Debug.Log("End drag");
             canvasGroup.alpha = 1f;
