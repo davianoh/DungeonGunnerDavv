@@ -89,7 +89,7 @@ public class WeaponStatusUI : MonoBehaviour
     private void WeaponFired(Weapon weapon)
     {
         UpdateAmmoText(weapon);
-        UpdateAmmoLoadedIcons(weapon);
+        //UpdateAmmoLoadedIcons(weapon);
         UpdateReloadText(weapon);
     }
 
@@ -109,7 +109,7 @@ public class WeaponStatusUI : MonoBehaviour
         {
             UpdateReloadText(weapon);
             UpdateAmmoText(weapon);
-            UpdateAmmoLoadedIcons(weapon);
+            //UpdateAmmoLoadedIcons(weapon);
             ResetWeaponReloadBar();
         }
     }
@@ -119,7 +119,7 @@ public class WeaponStatusUI : MonoBehaviour
         UpdateActiveWeaponImage(weapon.weaponDetails);
         UpdateActiveWeaponName(weapon);
         UpdateAmmoText(weapon);
-        UpdateAmmoLoadedIcons(weapon);
+        //UpdateAmmoLoadedIcons(weapon);
 
         if (weapon.isWeaponReloading)
         {
@@ -154,14 +154,16 @@ public class WeaponStatusUI : MonoBehaviour
 
     private void UpdateAmmoText(Weapon weapon)
     {
-        if (weapon.weaponDetails.hasInfiniteAmmo)
-        {
-            ammoRemainingText.text = "INFINITE AMMO";
-        }
-        else
-        {
-            ammoRemainingText.text = weapon.weaponRemainingAmmo.ToString() + " / " + weapon.weaponDetails.weaponAmmoCapacity.ToString();
-        }
+        //if (weapon.weaponDetails.hasInfiniteAmmo)
+        //{
+        //    ammoRemainingText.text = "INFINITE AMMO";
+        //}
+        //else
+        //{
+            
+        //}
+
+        ammoRemainingText.text = weapon.weaponClipRemainingAmmo.ToString() + " / " + weapon.weaponDetails.weaponClipAmmoCapacity.ToString();
     }
 
     private void UpdateAmmoLoadedIcons(Weapon weapon)
