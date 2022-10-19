@@ -81,6 +81,8 @@ MonoBehaviour:
   musicOnLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOffSnapshot: {fileID: -3084740370723268673, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   mainMapMusic: {fileID: 11400000, guid: 6e03c9c99bd5faa45a9f547e0717ccac, type: 2}
+  map1Music: {fileID: 11400000, guid: 3878ad9b99fdb144e8b95111effc7b26, type: 2}
+  map2Music: {fileID: 11400000, guid: 268a14a95582b5e469dddbc2d2066381, type: 2}
   dimmedMaterial: {fileID: 2100000, guid: fd5ae752e16da36428c7ae98c49dc19e, type: 2}
   litMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   variableLitShader: {fileID: -6465566751694194690, guid: 8b92b1316224e8c4da1f74de5d8dc654, type: 3}

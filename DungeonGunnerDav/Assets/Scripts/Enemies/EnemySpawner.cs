@@ -35,8 +35,6 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         roomEnemySpawnParameters = currentLevel.GetRoomEnemySpawnParameters();
         timeToSurvives = currentLevel.GetTimeToSurvivesWavesInSeconds();
 
-        MusicManager.Instance.PlayMusic(currentLevel.backgroundMusic, 0.2f, 2f);
-
         if(enemiesToSpawn == 0)
         {
             currentLevel.isClearedOfEnemies = true;

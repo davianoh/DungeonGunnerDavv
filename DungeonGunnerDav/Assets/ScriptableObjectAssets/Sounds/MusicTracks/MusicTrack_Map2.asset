@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6192409bbc5f10442aa668d716336ed8, type: 3}
-  m_Name: MusicTrack_MainMap
+  m_Name: MusicTrack_Map2
   m_EditorClassIdentifier: 
-  musicName: Main Map
-  musicClip: {fileID: 8300000, guid: a0c663b284793e142b4d6967a5430764, type: 3}
+  musicName: Map2
+  musicClip: {fileID: 8300000, guid: e8b74614305ef844a89555032533902b, type: 3}
   musicVolume: 1

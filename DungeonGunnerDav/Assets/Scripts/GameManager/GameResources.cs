@@ -62,6 +62,8 @@ public class GameResources : MonoBehaviour
     public AudioMixerSnapshot musicOnLowSnapshot;
     public AudioMixerSnapshot musicOffSnapshot;
     public MusicTrackSO mainMapMusic;
+    public MusicTrackSO map1Music;
+    public MusicTrackSO map2Music;
 
     #region Header Materials
     [Space(10)]

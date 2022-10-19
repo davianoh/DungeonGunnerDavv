@@ -160,6 +160,16 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         StartCoroutine(Fade(0f, 1f, 0f, Color.black));
         Debug.Log(GameResources.Instance.healthBonus + " and " + GameResources.Instance.attackBonus);
+
+        if(GameResources.Instance.selectedLevelIndex >= 5)
+        {
+            MusicManager.Instance.PlayMusic(GameResources.Instance.map2Music, 0.2f, 2f);
+        }
+        else
+        {
+            MusicManager.Instance.PlayMusic(GameResources.Instance.map1Music, 0.2f, 2f);
+        }
+        
     }
 
     private IEnumerator Fade(float startFadeAlpha, float targetFadeAlpha, float fadeSeconds, Color backgroundColor)
