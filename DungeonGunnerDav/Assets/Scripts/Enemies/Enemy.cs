@@ -95,17 +95,25 @@ public class Enemy : MonoBehaviour
     private void EnemyDestroyed()
     {
         DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
-        destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmount + GameResources.Instance.coinsBonus * Settings.coinsUpgradeMultiplier);
+        if(GameResources.Instance.selectedLevelIndex >= enemyDetails.levelIndexToLvl2)
+        {
+            destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmountLvl2 + GameResources.Instance.coinsBonus * Settings.coinsUpgradeMultiplier);
+        }
+        else
+        {
+            destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth(), enemyDetails.coinsDropAmount + GameResources.Instance.coinsBonus * Settings.coinsUpgradeMultiplier);
+        }
     }
 
-    public void EnemyHealthInit(LevelsSO dungeonLevel)
+    public void EnemyHealthInit(LevelsSO dungeonLevel, EnemyDetailsSO enemyDetails)
     {
+        this.enemyDetails = enemyDetails;
         SetEnemyStartingHealth(dungeonLevel);
     }
 
-    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, LevelsSO dungeonLevel)
+    public void EnemyInitialization(int enemySpawnNumber, LevelsSO dungeonLevel)
     {
-        this.enemyDetails = enemyDetails;
+        //this.enemyDetails = enemyDetails;
 
         SetEnemyMovementUpdateFrame(enemySpawnNumber);
 

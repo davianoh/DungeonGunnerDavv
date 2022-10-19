@@ -5,9 +5,24 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class DealContactDamage : MonoBehaviour
 {
-    [SerializeField] private int contactDamageAmount;
+    [SerializeField] private int contactDamageLvl1;
+    [SerializeField] private int contactDamageLvl2;
+    private int contactDamageAmount;
+    [SerializeField] private int levelIndexToLevel2;
     [SerializeField] private LayerMask layerMask;
     private bool isColliding = false;
+
+    private void Start()
+    {
+        if(GameResources.Instance.selectedLevelIndex >= levelIndexToLevel2)
+        {
+            contactDamageAmount = contactDamageLvl2;
+        }
+        else
+        {
+            contactDamageAmount = contactDamageLvl1;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

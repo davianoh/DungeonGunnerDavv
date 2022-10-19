@@ -379,14 +379,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.8008076, y: 3.4767537}
-      - {x: 1.5022928, y: 5.1794186}
-      - {x: -1.4196924, y: 5.1417933}
-      - {x: -1.8039364, y: 3.4164581}
-      - {x: -1.0209124, y: 1.9418606}
+    - - {x: 1.1963184, y: 3.3681943}
+      - {x: 1.0499616, y: 4.763274}
+      - {x: -1.039734, y: 4.761835}
+      - {x: -1.1558486, y: 3.3235214}
+      - {x: -0.88268, y: 1.9418606}
       - {x: -0.81461006, y: -0.019612134}
       - {x: 0.8349863, y: -0.021077365}
-      - {x: 1.0408692, y: 2.0176578}
+      - {x: 0.9371949, y: 2.0176578}
 --- !u!50 &6778172777465543292
 Rigidbody2D:
   serializedVersion: 4
@@ -708,7 +708,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621d757dce9233e49b5dd6168281b662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactDamageAmount: 10
+  contactDamageLvl1: 0
+  contactDamageLvl2: 0
+  levelIndexToLevel2: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 131072

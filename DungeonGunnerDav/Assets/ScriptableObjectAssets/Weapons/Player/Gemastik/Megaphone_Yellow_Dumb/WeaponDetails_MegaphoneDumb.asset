@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WeaponDetails_MegaphoneDumb
   m_EditorClassIdentifier: 
   weaponName: Megaphone
-  weaponListIndex: 7
-  weaponCost: 350
+  weaponListIndex: 6
+  weaponCost: 800
   weaponDescription: Jleb.. siapapun yang diteriaki kata ini pasti akan langsung
     tertusuk hatinya. DUMB!! yang dalam bahasa Indonesia yaitu BODOH
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
@@ -25,8 +25,8 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: a0336e01c7e62b148ad0f5f51069070c, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 30
+  weaponClipAmmoCapacity: 18
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.2
+  weaponFireRate: 0.4
   weaponPrechargeTime: 0
   weaponReloadTime: 1

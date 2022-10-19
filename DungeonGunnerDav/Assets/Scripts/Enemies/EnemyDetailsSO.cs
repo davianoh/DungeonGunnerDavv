@@ -44,6 +44,8 @@ public class EnemyDetailsSO : ScriptableObject
     [Header("ENEMY DROPS")]
     #endregion
     public int coinsDropAmount;
+    public int coinsDropAmountLvl2;
+    public int levelIndexToLvl2;
 
     #region Validation
 #if UNITY_EDITOR

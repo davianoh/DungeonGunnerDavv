@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WeaponDetails_MegaphoneBaa
   m_EditorClassIdentifier: 
   weaponName: Megaphone
-  weaponListIndex: 6
-  weaponCost: 300
+  weaponListIndex: 7
+  weaponCost: 900
   weaponDescription: Saat menakut-nakuti seseorang, kata yang paling umum dan sering
     digunakan adalah BAA. Siapapun pasti akan terkaget bila tiba-tiba diteriaki kata
     ini dengan kencang
@@ -26,8 +26,8 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: 45a215693e94d4545ad90d91afa596da, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 25
+  weaponClipAmmoCapacity: 15
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.25
+  weaponFireRate: 0.5
   weaponPrechargeTime: 0
   weaponReloadTime: 1

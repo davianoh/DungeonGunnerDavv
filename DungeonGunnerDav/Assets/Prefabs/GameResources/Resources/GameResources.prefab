@@ -68,8 +68,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 57d2d663c97967945a44089523b07e90, type: 2}
   - {fileID: 11400000, guid: 4c4bbc9b2c1b84c4ba946bfbf42c9456, type: 2}
   - {fileID: 11400000, guid: 1f8f93445590a0f43a5fd5bd5bb644d9, type: 2}
-  - {fileID: 11400000, guid: f9208c833126c344e8ea787848c0b716, type: 2}
   - {fileID: 11400000, guid: 981428fe2d91df1438e05db978910ec7, type: 2}
+  - {fileID: 11400000, guid: f9208c833126c344e8ea787848c0b716, type: 2}
   - {fileID: 11400000, guid: ac210d46fe5f855459dd487b6cf9bb27, type: 2}
   healthBonus: 0
   attackBonus: 0

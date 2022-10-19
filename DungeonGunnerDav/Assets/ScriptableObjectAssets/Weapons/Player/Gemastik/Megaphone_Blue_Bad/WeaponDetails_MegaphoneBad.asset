@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Megaphone
   weaponListIndex: 4
-  weaponCost: 200
+  weaponCost: 500
   weaponDescription: Berteriak BAD akan selalu ampuh untuk menjatuhkan mental seseorang.
     Kata ini juga sering dipakai untuk memberitahu hewan bahwa perlakuan mereka salah.
     BAD memiliki arti yaitu NAKAL/JELEK
@@ -26,8 +26,8 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: 5bee713eee968474e8ec3c8d0cd71e14, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 25
+  weaponClipAmmoCapacity: 15
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.3
+  weaponFireRate: 0.55
   weaponPrechargeTime: 0
   weaponReloadTime: 1

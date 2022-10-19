@@ -141,7 +141,14 @@ public class Ammo : MonoBehaviour, IFireable
             }
             else
             {
-                health.TakeDamage(ammoDetails.ammoDamage);
+                if(GameResources.Instance.selectedLevelIndex >= ammoDetails.levelIndexToLevel2)
+                {
+                    health.TakeDamage(ammoDetails.ammoDamageLvl2);
+                }
+                else
+                {
+                    health.TakeDamage(ammoDetails.ammoDamage);
+                }
             }
             
 

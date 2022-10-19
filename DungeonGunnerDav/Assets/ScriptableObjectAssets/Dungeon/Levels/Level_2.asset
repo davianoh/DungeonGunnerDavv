@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   levelName: Pembalas Dendaman Kawanan Pencuri
   backgroundMusic: {fileID: 11400000, guid: 77d09e6c5f5a499498ebbc8e7baee7e7, type: 2}
-  totalWaves: 2
+  totalWaves: 3
   wavesEnemySpawnTypes:
   - spawnableObjectRatioList:
     - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
@@ -23,15 +23,23 @@ MonoBehaviour:
   - spawnableObjectRatioList:
     - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
       ratio: 1
+  - spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 54acc2f48b8093142b9d2918bf3ce88f, type: 2}
+      ratio: 1
   wavesEnemySpawnParameters:
-  - maxTotalEnemiesToSpawn: 20
-    maxConcurrentEnemies: 20
-    minSpawnInterval: 2
-    maxSpawnInterval: 2
+  - maxTotalEnemiesToSpawn: 30
+    maxConcurrentEnemies: 10
+    minSpawnInterval: 1
+    maxSpawnInterval: 1
     wavesSurviveTimeInSeconds: 30
-  - maxTotalEnemiesToSpawn: 25
-    maxConcurrentEnemies: 25
-    minSpawnInterval: 1.5
-    maxSpawnInterval: 1.5
-    wavesSurviveTimeInSeconds: 45
+  - maxTotalEnemiesToSpawn: 10
+    maxConcurrentEnemies: 10
+    minSpawnInterval: 0.1
+    maxSpawnInterval: 0.1
+    wavesSurviveTimeInSeconds: 10
+  - maxTotalEnemiesToSpawn: 20
+    maxConcurrentEnemies: 12
+    minSpawnInterval: 0.7
+    maxSpawnInterval: 0.7
+    wavesSurviveTimeInSeconds: 15
   isClearedOfEnemies: 0

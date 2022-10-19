@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Megaphone
   weaponListIndex: 3
-  weaponCost: 150
+  weaponCost: 400
   weaponDescription: Maknanya sangat sederhana, NO!! yang dalam bahasa Indonesia
     berarti TIDAK. Menerikan kata TIDAK akan memberikan pesan yang jelas kepada siapapun
     bahwa kita TIDAK setuju akan perbuatan mereka
@@ -28,6 +28,6 @@ MonoBehaviour:
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 15
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.3
+  weaponFireRate: 0.4
   weaponPrechargeTime: 0
   weaponReloadTime: 1

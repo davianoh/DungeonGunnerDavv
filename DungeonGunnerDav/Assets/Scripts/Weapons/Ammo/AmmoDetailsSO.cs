@@ -62,6 +62,8 @@ public class AmmoDetailsSO : ScriptableObject
     [Tooltip("The damage each ammo deals")]
     #endregion
     public int ammoDamage = 1;
+    public int ammoDamageLvl2 = 2;
+    public int levelIndexToLevel2 = 0;
 
     #region Tooltip
     [Tooltip("The minimum speed of the ammo - the speed will be a random value between the min and max")]

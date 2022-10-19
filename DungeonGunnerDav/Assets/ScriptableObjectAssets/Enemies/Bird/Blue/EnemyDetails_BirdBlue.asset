@@ -27,26 +27,28 @@ MonoBehaviour:
   firingLineOfSightRequired: 0
   enemyHealthDetailsArray:
   - dungeonLevel: {fileID: 11400000, guid: bae11383663896c449b881c492701e51, type: 2}
-    enemyHealthAmount: 15
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: d43c4d11b8e78314396f8abe9024e484, type: 2}
-    enemyHealthAmount: 15
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: d15cbed75342a1b43aeeb8d510cff87b, type: 2}
-    enemyHealthAmount: 15
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: 7c52eb064efd84543afc643490007710, type: 2}
-    enemyHealthAmount: 15
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: f73cde3270a61a0479c66b3963bc29a8, type: 2}
-    enemyHealthAmount: 15
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: 0f43054c75fcc914e88d1c42038d6da4, type: 2}
-    enemyHealthAmount: 20
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: d81b4586294eb204593efc6367c21316, type: 2}
-    enemyHealthAmount: 20
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: de098a1bfa90cc34dbe55f30a5598bd7, type: 2}
-    enemyHealthAmount: 25
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: d158afc7afbe37c4b9f4c2a8fcc08576, type: 2}
-    enemyHealthAmount: 30
+    enemyHealthAmount: 7
   - dungeonLevel: {fileID: 11400000, guid: e0ffa21b15ea8e149ad57779d8e742e6, type: 2}
-    enemyHealthAmount: 35
+    enemyHealthAmount: 10
   isImmuneAfterHit: 0
   hitImmunityTime: 0
   isHealthBarDisplayed: 1
-  coinsDropAmount: 3
+  coinsDropAmount: 6
+  coinsDropAmountLvl2: 8
+  levelIndexToLvl2: 0

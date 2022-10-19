@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Megaphone
   weaponListIndex: 1
-  weaponCost: 50
+  weaponCost: 100
   weaponDescription: 'STOPP!!, siapapun pasti ujungnya akan berhenti bila diteriaki
     kata ini. Kata ini dalam bahasa Indonesia berarti BERHENTI. '
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
@@ -25,8 +25,8 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: 4e808de39f511b44eb13ecb821361f4b, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 15
+  weaponClipAmmoCapacity: 10
   weaponAmmoCapacity: 0
-  weaponFireRate: 0.4
+  weaponFireRate: 0.6
   weaponPrechargeTime: 0
   weaponReloadTime: 1

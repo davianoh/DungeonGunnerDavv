@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Megaphone
   weaponListIndex: 5
-  weaponCost: 250
+  weaponCost: 600
   weaponDescription: 'Terkadang kita tidak perlu meneriakan suatu kata untuk mengagetkan
     seseorang, kita hanya perlu menghasilkan suatu suara dengan kencang untuk membuat
     seseorang terkaget. '
@@ -26,7 +26,7 @@ MonoBehaviour:
   weaponReloadingSoundEffect: {fileID: 11400000, guid: cdaa15a64751a9a49ae238d231c7d693, type: 2}
   hasInfiniteAmmo: 1
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 25
+  weaponClipAmmoCapacity: 20
   weaponAmmoCapacity: 0
   weaponFireRate: 0.25
   weaponPrechargeTime: 0

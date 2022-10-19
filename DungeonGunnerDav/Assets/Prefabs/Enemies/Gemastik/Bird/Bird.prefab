@@ -702,7 +702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621d757dce9233e49b5dd6168281b662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactDamageAmount: 10
+  contactDamageLvl1: 7
+  contactDamageLvl2: 10
+  levelIndexToLevel2: 9
   layerMask:
     serializedVersion: 2
     m_Bits: 132096

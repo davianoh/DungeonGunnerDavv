@@ -104,10 +104,10 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
                 CreateEnemy(randomEnemyHelperClass.GetItem(), grid.CellToWorld(cellPosition));
 
                 yield return new WaitForSeconds(GetEnemySpawnInterval());
-                if (timeToSurvives <= 10)
-                {
-                    break;
-                }
+                //if (timeToSurvives <= 10)
+                //{
+                //    break;
+                //}
             }
         }
     }
@@ -129,9 +129,9 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         //enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
         Enemy enemy = (Enemy)PoolManager.Instance.ReuseComponent(enemyDetails.enemyPrefab, position, Quaternion.identity);
-        enemy.EnemyHealthInit(dungeonLevel);
+        enemy.EnemyHealthInit(dungeonLevel, enemyDetails);
         enemy.gameObject.SetActive(true);
-        enemy.EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
+        enemy.EnemyInitialization(enemiesSpawnedSoFar, dungeonLevel);
         
 
         enemy.gameObject.GetComponent<DestroyedEvent>().OnDestroyed += Enemy_OnDestroyed;
