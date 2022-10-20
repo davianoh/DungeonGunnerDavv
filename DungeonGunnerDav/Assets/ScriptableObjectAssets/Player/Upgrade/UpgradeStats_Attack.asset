@@ -15,4 +15,4 @@ MonoBehaviour:
   icon: {fileID: 3715177081229433735, guid: a24a74ccb900e6a41bdc99ec1e7c535d, type: 3}
   upgradeName: Attack
   upgradeValue: 1
-  upgradeCost: 60
+  upgradeCost: 200

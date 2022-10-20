@@ -84,8 +84,8 @@ public static class Settings
     #endregion
 
     #region Upgrade Stats Player Parameters
-    public const int healthUpgradeMultiplier = 10;
-    public const int attackUpgradeMultiplier = 2;
+    public const int healthUpgradeMultiplier = 20;
+    public const int attackUpgradeMultiplier = 1;
     public const int speedUpgradeMultiplier = 1;
     public const int coinsUpgradeMultiplier = 3;
     #endregion

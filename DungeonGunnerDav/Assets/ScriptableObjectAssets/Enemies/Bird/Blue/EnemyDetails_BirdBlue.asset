@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Bird Blue
   enemyPrefab: {fileID: 1687453101684499643, guid: 1e30ab217ab368449b6a4b009afba840, type: 3}
-  chaseDistance: 45
+  chaseDistance: 44
   enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   enemyMaterializeTime: 2.5
   enemyMaterializeShader: {fileID: -6465566751694194690, guid: 5fec8f8e6ea244648a3c6ede24a56288, type: 3}

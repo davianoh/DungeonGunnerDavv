@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: PlayerDetails_TheGeneral
   m_EditorClassIdentifier: 
   playerCharacterName: The General
-  playerDescription: 'Nuson telah menjadi satpam di museum sejak 20 tahun lalu. Ia
-    selalu serius mengerjakan tugasnya dalam melindungi Artefak Budaya Nusantara
-    dari kerusakan. Pemberani, Jujur, Nasionalis merupakan kata-kata yang mencerminkan
-    Satpam Nuson ini. '
+  playerDescription: Melindungi Artefak Budaya yang berada di museum telah menjadi
+    suatu kewajiban seorang satpam. Nasionalis, Jujur, Pemberani harus kutanamkan
+    pada Generasi Penerus Bangsa Indonesia
   playerMovementDetails: {fileID: 11400000, guid: 0415a78f32af00940a0787b1e6330183, type: 2}
   playerBonusAttack: 0
   playerBonusCoins: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1827894805620461780, guid: a88aa347e6788a046be92c95e2c7c9bb, type: 3}
   upgradeName: Health
-  upgradeValue: 10
-  upgradeCost: 50
+  upgradeValue: 20
+  upgradeCost: 200

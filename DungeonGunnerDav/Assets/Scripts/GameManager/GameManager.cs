@@ -14,6 +14,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion
     [SerializeField] private TextMeshProUGUI messageTextTMP;
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private CanvasGroup canvasGroupLevelWon;
     [SerializeField] private GameObject pauseMenu;
 
     #region Header Dungeon Level
@@ -186,6 +187,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         }
     }
 
+    private IEnumerator FadeLevelWon(float startFadeAlpha, float targetFadeAlpha, float fadeSeconds)
+    {
+        float time = 0;
+
+        while (time <= fadeSeconds)
+        {
+            time += Time.deltaTime;
+            canvasGroupLevelWon.alpha = Mathf.Lerp(startFadeAlpha, targetFadeAlpha, time / fadeSeconds);
+            yield return null;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -261,10 +274,19 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
-        yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE SURVIVE THE NIGHT", Color.white, 3f));
-        yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED : " + gameScore.ToString("###,###0"), Color.white, 4f));
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO CONTINUE", Color.white, 0f));
+        yield return StartCoroutine(Fade(0f, 0.5f, 2f, Color.black));
+        yield return StartCoroutine(DisplayMessageRoutine("KERJA BAGUS " + GameResources.Instance.currentPlayer.playerName + "! \n\n KAMU TELAH BERHASIL MELINDUNGI ARTEFAK BUDAYA INI", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("AMBIL SEMUA KOIN LALU BILA SUDAH SIAP, TEKAN ENTER UNTUK LANJUT", Color.white, 3f));
+
+        GetPlayer().playerControl.EnablePlayer();
+        yield return StartCoroutine(Fade(0.5f, 0f, 2f, Color.black));
+        yield return StartCoroutine(FadeLevelWon(0f, 1f, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER", Color.black, 0f));
+        
+        
+        
+        
 
         gameState = GameState.restartGame;
     }
@@ -287,9 +309,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             enemy.gameObject.SetActive(false);
         }
 
-        yield return StartCoroutine(DisplayMessageRoutine("MY DISSAPOINMENT IS UNMEASURREABLE " + GameResources.Instance.currentPlayer.playerName + "! \n\n YOU HAVE FAIL THE NIGHT", Color.white, 2f));
-        yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED : " + gameScore.ToString("###,###0"), Color.white, 4f));
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS RETURN TO GO BACK", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("KAMU GAGAL " + GameResources.Instance.currentPlayer.playerName + "! \n\n ARTEFAK BUDAYA TELAH RUSAK", Color.white, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 4f));
+        yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER UNTUK KEMBALI", Color.white, 0f));
 
         gameState = GameState.restartGame;
     }
@@ -297,7 +319,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     private void RestartGame()
     {
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("MainMapScene");
     }
 
     
