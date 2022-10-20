@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtainInLevel: 0
   artImage: {fileID: 21300000, guid: 8aced0727f53a6f48a19c1bc8876c1b2, type: 3}
-  nama: Lukisan Adbullah
-  location: Surabaya
-  year: 2022
-  artist: Orc himself
-  artHistory: This is batik in the shape of Orcs the artist
-  artistHistory: The Orc is the best artist among other orcs because he is the only
-    one :)
+  nama: Lukisan Pemandangan Priangan
+  location: Bandung, Jawa Barat
+  year: 1935
+  artist: Abdullah
+  artHistory: Pelukis kelahiran Semarang tahun 1878 ini merupakan anak angkat dari
+    tokoh pergerakan Nasional dr. Wahidin Sudirohusodo, dan merupakan ayah dari Sudjono
+    Abdullah dan Basuki Abdullah.  Mulanya beliau mengambil sekolah kedokteran di
+    Batavia dan meneruskan pendidikan di Belanda. Namun, sesampainya  di sana beliau
+    memutuskan untuk masuk sekolah seni rupa, dan kemudian hingga seterusnya menjadi
+    pelukis.  Beliau sangat suka menggambar objek lukisan pemandangan alam terutama
+    daerah Bandung, sehingga memutuskan tinggal di sana. Setelah beberapa saat tinggal
+    di Bandung, beliau pindah ke Yogyakarta, dan wafat di tahun 1941 di kota ini. 
+    Lukisan beliau salah satunya adalah Lukisan Pemandangan Priangan (1935).
+  artistHistory: --

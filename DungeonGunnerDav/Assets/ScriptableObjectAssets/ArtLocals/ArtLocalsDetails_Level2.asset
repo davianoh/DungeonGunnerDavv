@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtainInLevel: 1
   artImage: {fileID: 21300000, guid: 8bbecf5d7b51db245b933042bc4a59e4, type: 3}
-  nama: Lukisan Anak Agung Gede Sobrat
-  location: Sidoarjo
-  year: 2021
-  artist: Wahyu
-  artHistory: Hedusa Lukisan is the best lukisan in the existence of the hedusa itself
-  artistHistory: Wahyu was the best artist according to himself
+  nama: Lukisan Anak Perempuan Sobrat
+  location: Padangtegal, Ubud
+  year: 1912
+  artist: Anak Agung Gde Sobrat
+  artHistory: Pelukis ini dilahirkan di Padangtegal, Ubud tahun 1912. Pada awal mula
+    karirnya, beliau pernah belajar membuat wayang. Keahlian ini membantunya untuk
+    membuat lukisan Ramayana dan Mahabrata yang cukup sempurna di awal karir melukisnya.
+    Salah satu lukisan yang beliau buat adalah lukisan yang menggambarkan potret
+    anak perempuannya. Sobrat wafat tahun 1992.
+  artistHistory: --

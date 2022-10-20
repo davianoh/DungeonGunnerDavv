@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c53623020292248bb4d7829a644e90, type: 3}
   m_Name: SoundEffect_MegaphoneFire!!
   m_EditorClassIdentifier: 
-  soundEffectName: Megaphone Fire
+  soundEffectName: Megaphone Fire !!
   soundPrefab: {fileID: 6957611040664099785, guid: 452f84e8a30340442880e818236c66f4, type: 3}
-  soundEffectClip: {fileID: 8300000, guid: 71d623ca1199efc429d66921b7070dda, type: 3}
-  soundEffectPitchRandomVariationMin: 0.8
-  soundEffectPitchRandomVariationMax: 1.2
+  soundEffectClip: {fileID: 8300000, guid: b30e0f35fd6f88b429809302293252fa, type: 3}
+  soundEffectPitchRandomVariationMin: 0.95
+  soundEffectPitchRandomVariationMax: 1.05
   soundEffectVolume: 0.504

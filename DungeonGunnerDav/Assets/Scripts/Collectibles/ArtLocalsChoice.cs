@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ArtLocalsChoice : MonoBehaviour, IPointerDownHandler
+public class ArtLocalsChoice : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private ArtLocalsSO artLocalsDetail;
     [SerializeField] private Image artChoiceImage;
@@ -32,7 +32,18 @@ public class ArtLocalsChoice : MonoBehaviour, IPointerDownHandler
                 "\nTahun : " + artLocalsDetail.year +
                 "\nArtist : " + artLocalsDetail.artist;
             ArtLocalMenuUI.Instance.artHistory.text = artLocalsDetail.artHistory;
-            ArtLocalMenuUI.Instance.artistHistory.text = artLocalsDetail.artistHistory;
+            ArtLocalMenuUI.Instance.artDetailName.text = artLocalsDetail.nama;
+            //ArtLocalMenuUI.Instance.artistHistory.text = artLocalsDetail.artistHistory;
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        transform.localScale += new Vector3(0.1f, 0.1f, 0f);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
     }
 }
