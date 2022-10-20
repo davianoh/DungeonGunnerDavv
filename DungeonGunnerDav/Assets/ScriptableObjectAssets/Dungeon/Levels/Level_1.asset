@@ -22,8 +22,8 @@ MonoBehaviour:
       ratio: 1
   wavesEnemySpawnParameters:
   - maxTotalEnemiesToSpawn: 25
-    maxConcurrentEnemies: 8
-    minSpawnInterval: 1
-    maxSpawnInterval: 1
+    maxConcurrentEnemies: 6
+    minSpawnInterval: 1.5
+    maxSpawnInterval: 1.5
     wavesSurviveTimeInSeconds: 30
   isClearedOfEnemies: 0

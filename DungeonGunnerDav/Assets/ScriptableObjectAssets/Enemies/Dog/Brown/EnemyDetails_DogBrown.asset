@@ -51,4 +51,4 @@ MonoBehaviour:
   isHealthBarDisplayed: 1
   coinsDropAmount: 5
   coinsDropAmountLvl2: 7
-  levelIndexToLvl2: 0
+  levelIndexToLvl2: 7
