@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class StartScreenUI : MonoBehaviour
 {
+    private void Start()
+    {
+        MusicManager.Instance.PlayMusic(GameResources.Instance.mainMapMusic);
+    }
+
     public void StartGame()
     {
         SaveSystem.Init();

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61c53623020292248bb4d7829a644e90, type: 3}
-  m_Name: SoundEffect_ButtonUIClick
+  m_Name: SoundEffect_PurchaseClick
   m_EditorClassIdentifier: 
-  soundEffectName: Button UI Click
+  soundEffectName: Purchase Click
   soundPrefab: {fileID: 6957611040664099785, guid: 452f84e8a30340442880e818236c66f4, type: 3}
-  soundEffectClip: {fileID: 8300000, guid: a227d220de3bd024288bce69542f6cdb, type: 3}
+  soundEffectClip: {fileID: 8300000, guid: e75d066aba46664449ccd6cb83f7a6eb, type: 3}
   soundEffectPitchRandomVariationMin: 0.9
   soundEffectPitchRandomVariationMax: 1
-  soundEffectVolume: 1
+  soundEffectVolume: 0.9

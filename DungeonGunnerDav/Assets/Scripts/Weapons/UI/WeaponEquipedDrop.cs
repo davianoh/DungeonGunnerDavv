@@ -28,6 +28,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
         Debug.Log("Droppedd");
         if(eventData.pointerDrag != null && WeaponMenuUI.Instance.unlockWeaponSlots > equipedIndex && WeaponMenuUI.Instance.weaponOwnedList.Contains(eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails.weaponListIndex) && !eventData.pointerDrag.GetComponent<WeaponChoice>().equiped)
         {
+            MapManager.Instance.PlayGridClick();
             weaponEquipedImage.sprite = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponImageChoice.sprite;
             if(equipedIndex == 0)
             {
@@ -52,6 +53,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
     {
         if(MapManager.Instance.totalCoinsInGame >= cost && WeaponMenuUI.Instance.unlockWeaponSlots == equipedIndex)
         {
+            MapManager.Instance.PlayBuyClick();
             MapManager.Instance.totalCoinsInGame -= cost;
             gameObject.GetComponent<Image>().color = Color.white;
             costText.SetActive(false);

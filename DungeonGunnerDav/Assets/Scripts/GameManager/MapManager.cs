@@ -74,4 +74,19 @@ public class MapManager : SingletonMonobehaviour<MapManager>
             highScoreList = saveObjectHighScore.highScoreList;
         }
     }
+
+    public void PlayButtonClick()
+    {
+        SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.buttonClick);
+    }
+
+    public void PlayGridClick()
+    {
+        SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.gridClick);
+    }
+
+    public void PlayBuyClick()
+    {
+        SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.buyClick);
+    }
 }

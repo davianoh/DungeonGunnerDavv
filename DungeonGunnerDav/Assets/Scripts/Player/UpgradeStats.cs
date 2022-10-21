@@ -24,6 +24,7 @@ public class UpgradeStats : MonoBehaviour
     {
         if(MapManager.Instance.totalCoinsInGame >= upgradeStatsSO.upgradeCost && upgradedValue < 6)
         {
+            MapManager.Instance.PlayBuyClick();
             MapManager.Instance.totalCoinsInGame -= upgradeStatsSO.upgradeCost;
             switch (upgradeID)
             {

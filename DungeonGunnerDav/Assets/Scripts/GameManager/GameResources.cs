@@ -65,6 +65,10 @@ public class GameResources : MonoBehaviour
     public MusicTrackSO map1Music;
     public MusicTrackSO map2Music;
 
+    public SoundEffectSO buttonClick;
+    public SoundEffectSO gridClick;
+    public SoundEffectSO buyClick;
+
     #region Header Materials
     [Space(10)]
     [Header("MATERIALS")]

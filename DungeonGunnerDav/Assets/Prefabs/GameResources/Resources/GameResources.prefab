@@ -83,6 +83,9 @@ MonoBehaviour:
   mainMapMusic: {fileID: 11400000, guid: 6e03c9c99bd5faa45a9f547e0717ccac, type: 2}
   map1Music: {fileID: 11400000, guid: 3878ad9b99fdb144e8b95111effc7b26, type: 2}
   map2Music: {fileID: 11400000, guid: 268a14a95582b5e469dddbc2d2066381, type: 2}
+  buttonClick: {fileID: 11400000, guid: 85ac43bc2bc79eb45882e8208d24608c, type: 2}
+  gridClick: {fileID: 11400000, guid: 1e93e372e2e733f42ba893de1c1c576c, type: 2}
+  buyClick: {fileID: 11400000, guid: cc94b3c382ff4e542a45b19daef2896c, type: 2}
   dimmedMaterial: {fileID: 2100000, guid: fd5ae752e16da36428c7ae98c49dc19e, type: 2}
   litMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   variableLitShader: {fileID: -6465566751694194690, guid: 8b92b1316224e8c4da1f74de5d8dc654, type: 3}

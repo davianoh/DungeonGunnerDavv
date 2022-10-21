@@ -103,6 +103,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails.weaponListIndex)
         {
+            MapManager.Instance.PlayBuyClick();
             buying = true;
             MapManager.Instance.totalCoinsInGame -= weaponDetails.weaponCost;
             WeaponMenuUI.Instance.weaponOwnedList.Add(weaponDetails.weaponListIndex);
@@ -119,7 +120,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             originPosition = rectTransform.anchoredPosition;
         }
         WeaponMenuUI.Instance.currentActiveWeaponChoice = weaponDetails.weaponListIndex;
-
+        MapManager.Instance.PlayGridClick();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

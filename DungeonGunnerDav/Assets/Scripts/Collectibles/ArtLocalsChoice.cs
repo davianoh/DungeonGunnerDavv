@@ -26,6 +26,7 @@ public class ArtLocalsChoice : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if(unlock)
         {
+            MapManager.Instance.PlayGridClick();
             ArtLocalMenuUI.Instance.artImage.sprite = artLocalsDetail.artImage;
             ArtLocalMenuUI.Instance.artBriefText.text = "Name : " + artLocalsDetail.nama +
                 "\nLokasi : " + artLocalsDetail.location +
