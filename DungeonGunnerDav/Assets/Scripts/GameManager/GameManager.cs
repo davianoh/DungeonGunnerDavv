@@ -271,7 +271,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
-        yield return StartCoroutine(DisplayMessageRoutine("KERJA BAGUS " + GameResources.Instance.currentPlayer.playerName + "! \n\n KAMU TELAH BERHASIL MELINDUNGI ARTEFAK BUDAYA INI", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("KERJA BAGUS PLAYER! \n\n KAMU TELAH BERHASIL MELINDUNGI ARTEFAK BUDAYA INI", Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("AMBIL SEMUA KOIN LALU BILA SUDAH SIAP, TEKAN ENTER UNTUK LANJUT", Color.white, 3f));
 
@@ -305,7 +305,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             enemy.gameObject.SetActive(false);
         }
 
-        yield return StartCoroutine(DisplayMessageRoutine("KAMU GAGAL " + GameResources.Instance.currentPlayer.playerName + "! \n\n ARTEFAK BUDAYA TELAH RUSAK", Color.white, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("KAMU GAGAL PLAYER! \n\n ARTEFAK BUDAYA TELAH RUSAK", Color.white, 2f));
         yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 4f));
         yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER UNTUK KEMBALI", Color.white, 0f));
 
