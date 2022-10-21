@@ -352,7 +352,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.01}
   serializedVersion: 2
-  m_Radius: 0.02
+  m_Radius: 0.01
 --- !u!60 &6924069672662919482
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aabd82f475bc1b43909544c086e67cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementDetails: {fileID: 11400000, guid: 253f4c777b7350e42850366e7e7127e5, type: 2}
+  movementDetails: {fileID: 11400000, guid: eca576bb9ea68cb4c8fb2eceb5063ae0, type: 2}
   moveSpeed: 0
   updateFrameNumber: 1
   targetArt: 0

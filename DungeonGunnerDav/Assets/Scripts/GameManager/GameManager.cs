@@ -268,10 +268,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             }
             currentLevelUnlockedIndex++;
         }
-        currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
-        Save();
-        SaveWeapons();
-        SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
@@ -391,7 +387,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 yield return null;
             }
 
-            if(middleCutScene)
+            currentTotalCoinsInGame += CoinsManager.Instance.coinsInLevel;
+            Save();
+            SaveWeapons();
+            SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
+
+            if (middleCutScene)
             {
                 middleCutScene = false;
                 SceneManager.LoadScene("CutSceneMiddle");
