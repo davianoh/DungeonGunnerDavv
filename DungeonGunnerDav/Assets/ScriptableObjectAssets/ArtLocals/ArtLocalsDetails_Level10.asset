@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtainInLevel: 9
   artImage: {fileID: 21300000, guid: 9736f702724b1a24c94ed69290f46322, type: 3}
-  nama: Lukisan Sunarni Puji Lestari
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  nama: Lukisan Jack
+  location: Bali
+  year: 2012
+  artist: Sunarni Puji Lestari
+  artHistory: "Nama panggilannya adalah Tarie, merupakan anggota resmi dari GT Yarmouth
+    dan District Society of Artist. Ia mulai melukis di usia yang dini, yaitu usia
+    SD, dan di usia muda tersebut ia memenangkan sejumlah kompetisi. Lukisan yang
+    ia buat antara lain \u201CAnjing Laut\u201D yang dia persembahkan kepada Ratu
+    Elizabeth II, Ratu Inggris, untuk perayaan Diamond Jubilee tahun 2012. Diamond
+    Jubilee adalah perayaan ke 60 dari sebuah peristiwa penting. Misalnya pendirian
+    sebuah organisasi atau lamanya masa bertahta."
+  artistHistory: --

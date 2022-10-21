@@ -5661,7 +5661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Batik Mega Mendung
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c91681d15952b094799ddf42292ceab1, type: 2}
   m_sharedMaterial: {fileID: 3054458359432249209, guid: c91681d15952b094799ddf42292ceab1, type: 2}
@@ -23929,7 +23929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8aced0727f53a6f48a19c1bc8876c1b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29eebd0a8023e4e419cfc4b8a02f2e2a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -24437,7 +24437,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -25829,14 +25829,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fransiskus Xaverius Basuki Abdullah atau yang biasa dikenal dengan nama
-    Basuki Abdullah, pelukis naturalis-realis, lahir di Surakarta, Jawa Tengah, pada
-    tanggal 27 Januari 2915. Ia merupakan putra pelukis pertama Indonesia di abad
-    ke-20, Abdullah Suriosubroto. Sedari kecil, Basuki telah meluki beberapa tokoh
-    ternama, seperti Mahatma Gandhi, Rabindranath, dan beberapa lainnya. Basuki mendapatkan
-    beasiswa untuk belajar di Akademik Seni Rupa di Den Haag, Belanda pada tahun
-    1933. Ia berhasil menyelesaikan studinya di tahun 1936 dan mendapat penghargaan
-    Sertifikat Royal International of Art (RIA).
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
   m_sharedMaterial: {fileID: 8268634858413119108, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
@@ -29172,7 +29165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2026260920865552420, guid: fa400092dc67e2c4f90358d0c8afab9b, type: 3}
+  m_Sprite: {fileID: -1922611212499019070, guid: b6e5070ea2d287441a08295413dddca7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -35745,14 +35738,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Name : Patung Orc
+  m_text: 'Name : -
 
-    Lokasi : Surabaya
+    Lokasi : -
 
-    Tahun : 2022
+    Tahun : -
 
-    Artis
-    : Davv'
+    Artis : -'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
   m_sharedMaterial: {fileID: 8268634858413119108, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
@@ -35886,8 +35878,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MP7 is fast fire-rate weapon with big ammo capacity, but the damage is
-    not that high and the accuracy can be a little yanky
+  m_text: Kata HEY walupun digunakan sehari-hari, namun apabila kita menggunakannya
+    dengan suara kencang, tentu akan membuat takut orang
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
   m_sharedMaterial: {fileID: 8268634858413119108, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
@@ -39892,13 +39884,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Damage : 9
+  m_text: 'Damage : 7
 
-    Accuracy : 2
+    Kejelekan Akurasi : 3
 
-    Fire Rate : 4
+    Jeda Teriak : 0.4
 
-    Ammo capacity : 30'
+    Kapasitas
+    Teriak : 10'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}
   m_sharedMaterial: {fileID: 8268634858413119108, guid: 6031e0e6ca5fe6b44a9f6f886b44280a, type: 2}

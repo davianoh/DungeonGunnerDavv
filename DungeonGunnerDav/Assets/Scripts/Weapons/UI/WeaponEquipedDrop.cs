@@ -43,7 +43,7 @@ public class WeaponEquipedDrop : MonoBehaviour, IDropHandler, IPointerDownHandle
             }
             WeaponMenuUI.Instance.weaponImage.sprite = weaponEquipedImage.sprite;
             WeaponDetailsSO weaponDetails = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails;
-            WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nSpread: " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nFire Rate : " + weaponDetails.weaponFireRate.ToString() + "\nAmmo capacity : " + weaponDetails.weaponClipAmmoCapacity.ToString();
+            WeaponMenuUI.Instance.weaponStats.text = "Damage : " + weaponDetails.weaponCurrentAmmo.ammoDamage.ToString() + "\nKejelekan Akurasi : " + weaponDetails.weaponCurrentAmmo.ammoSpreadMax.ToString() + "\nJeda Teriak : " + weaponDetails.weaponFireRate.ToString() + "\nKapasitas Teriak : " + weaponDetails.weaponClipAmmoCapacity.ToString();
             WeaponMenuUI.Instance.weaponDescription.text = eventData.pointerDrag.GetComponent<WeaponChoice>().weaponDetails.weaponDescription;
         }
     }

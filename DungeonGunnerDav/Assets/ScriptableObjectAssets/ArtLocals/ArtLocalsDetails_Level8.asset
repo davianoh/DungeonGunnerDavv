@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtainInLevel: 7
   artImage: {fileID: 21300000, guid: cdc60a3820ce05c4d8453a78d92a5a15, type: 3}
-  nama: Batik Megamendung
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  nama: Batik Mega Mendung
+  location: Cirebon
+  year: Sekitar Abad ke-16
+  artist: Pangeran Losari
+  artHistory: Bila dilihat sekilas, motif mega mendung seolah menggambarkan awan
+    ketika langit tengah mendung. Diharapkan, seseorang bisa tetap sejuk dan tenang
+    meski sedang marah, sebagaimana cuaca mendung yang membawa kesejukan tersebut.
+    Di sisi lain, lanjutnya, keberadaan motif mega mendung tidak terlepas dari unsur
+    kebudayaan China yang masuk ke Tanah Air. Hal tersebut bisa dilihat sewaktu salah
+    satu tokoh penyebar agama Islam yang berpengaruh di wilayah Cirebon meminang
+    seorang wanita Tionghoa. Seiring berkembangnya zaman, gradasi serta komposisi
+    warna batik mega mendung pun kian variatif. Dari yang dulunya identik dengan
+    warna biru, kini sudah merambah ke warna-warna lembut, atau pastel.
+  artistHistory: --

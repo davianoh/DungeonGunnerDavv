@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: ArtLocalsDetails_Level9
   m_EditorClassIdentifier: 
   obtainInLevel: 8
-  artImage: {fileID: 21300000, guid: b6fad8b98af09794b908496d16f32a6b, type: 3}
-  nama: Lukisan Popo Iskandar
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  artImage: {fileID: 21300000, guid: 1e75b5d1133780b4d95a502c60bc6550, type: 3}
+  nama: Batik Kawung
+  location: Jawa Tengah dan Yogyakarta
+  year: 1593-1645
+  artist: Sultan Agung Hanyokrokusumo
+  artHistory: Kain batik Kawung adalah salah satu batik tua di Jawa. Kain dengan
+    motif ini hanya boleh dikenakan oleh golongan sentana dalem, atau orang tertentu
+    yang berhubungan dengan keluarga Raja. Motif batik kawung berbentuk seperti irisan
+    buah kawung yang dikenal juga dengan buah kolang-kaling atau atau buah aren.
+    Jika dilihat motifnya akan terlihat bentuk simetris dengan bulatan-bulatan yang
+    tersusun secara geometris. Motif ini banyak memiliki variasi baik dari corak
+    lengkung dan hiasan, maupun pewarnaannya. Setelah mengalami beberapa modifikasi,
+    akhirnya motif batik kawung bisa digunakan masyarakat secara bebas.
+  artistHistory: --

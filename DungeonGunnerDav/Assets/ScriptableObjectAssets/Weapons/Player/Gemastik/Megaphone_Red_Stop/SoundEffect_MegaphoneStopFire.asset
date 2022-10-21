@@ -17,4 +17,4 @@ MonoBehaviour:
   soundEffectClip: {fileID: 8300000, guid: 3fd2276f06f31944b962eded367c5133, type: 3}
   soundEffectPitchRandomVariationMin: 0.95
   soundEffectPitchRandomVariationMax: 1.05
-  soundEffectVolume: 0.504
+  soundEffectVolume: 0.4

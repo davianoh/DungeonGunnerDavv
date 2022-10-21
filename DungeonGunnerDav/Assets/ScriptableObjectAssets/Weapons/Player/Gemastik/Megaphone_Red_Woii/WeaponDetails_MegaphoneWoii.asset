@@ -15,8 +15,9 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 2
   weaponCost: 200
-  weaponDescription: Kata WOII merupakan bahasa gaul yang memiliki makna untuk memanggil
-    seseorang, pemakaian kata ini mirip dengan kata HEY namun kata ini lebih keras
+  weaponDescription: Kata WOII memiliki makna yang miirp dengan kata HEY, namun kata
+    ini lebih luwes dan dapat lebih mendapatkan perhatian bila diteriakan dengan
+    lantang dan kencang
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 6a123dbcd28c7384bb65818001045f97, type: 2}
@@ -29,4 +30,4 @@ MonoBehaviour:
   weaponAmmoCapacity: 0
   weaponFireRate: 0.3
   weaponPrechargeTime: 0
-  weaponReloadTime: 1
+  weaponReloadTime: 1.1

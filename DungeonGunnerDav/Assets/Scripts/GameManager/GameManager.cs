@@ -274,14 +274,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         SaveHighScore(gameScore, GameResources.Instance.selectedLevelIndex);
 
         GetPlayer().playerControl.DisablePlayer();
-        yield return StartCoroutine(Fade(0f, 0.5f, 2f, Color.black));
+        yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("KERJA BAGUS " + GameResources.Instance.currentPlayer.playerName + "! \n\n KAMU TELAH BERHASIL MELINDUNGI ARTEFAK BUDAYA INI", Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("AMBIL SEMUA KOIN LALU BILA SUDAH SIAP, TEKAN ENTER UNTUK LANJUT", Color.white, 3f));
 
         GetPlayer().playerControl.EnablePlayer();
-        yield return StartCoroutine(Fade(0.5f, 0f, 2f, Color.black));
-        yield return StartCoroutine(FadeLevelWon(0f, 1f, 2f));
+        yield return StartCoroutine(Fade(1f, 0f, 2f, Color.black));
+        yield return StartCoroutine(FadeLevelWon(0f, 1f, 1f));
         yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER", Color.black, 0f));
         
         

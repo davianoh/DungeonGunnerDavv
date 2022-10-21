@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obtainInLevel: 6
   artImage: {fileID: 21300000, guid: 7710d840d683fb642871cc46fa41d1c1, type: 3}
-  nama: Batik Pawang
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  nama: Batik Parang
+  location: Yogyakarta
+  year: Masa Penembahan Senopati Mataram pada abad XVI
+  artist: Sultan Agung dari Mataram
+  artHistory: "Nama \u2018parang\u2019 sendiri berasal dari kata pereng yang memiliki
+    makna lereng atau tebing batu karang. Motif parang yang disebut perengan ini
+    menggambarkan garis menurun dari tinggi ke rendah secara diagonal. Garis diagonal
+    melambangkan penghormatan, cita-cita, dan kesetiaan pada nilai-nilai yang benar.
+    Sementara dinamika polanya menggambarkan ketangkasan dan kewaspadaan. Susunan
+    jalinan motif parang memiliki makna jalinan tak terputus yang melambangkan kesinambungan.
+    Oleh karena itu, pada jaman dahulu batik parang tidak boleh digunakan oleh sembarangan
+    orang. Batik ini hanya bisa dipakai oleh raja, keluarga keraton, atau ksatria
+    kerajaan."
+  artistHistory: --

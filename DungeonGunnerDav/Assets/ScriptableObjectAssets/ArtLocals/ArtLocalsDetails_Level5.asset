@@ -15,8 +15,16 @@ MonoBehaviour:
   obtainInLevel: 4
   artImage: {fileID: 21300000, guid: 36ede59b1e7b4e740a7a049df42c0739, type: 3}
   nama: Alat Musik Tifa
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  location: Papua dan Maluku
+  year: '-'
+  artist: Masyarakat Papua Maluku
+  artHistory: Tifa merupakan alat musik khas Indonesia bagian Timur, khususnya Maluku
+    dan Papua. Alat musik ini bentuknya menyerupai kendang dan terbuat dari kayu
+    yang di lubangi tengahnya.Tifa mirip dengan alat musik gendang yang dimainkan
+    dengan cara dipukul. Alat musik ini terbuat dari sebatang kayu yang dikosongi
+    atau dihilangi isinya dan pada salah satu sisi ujungnya ditutupi, dan biasanya
+    penutupnya digunakan kulit rusa yang telah dikeringkan untuk menghasilkan suara
+    yang bagus dan indah. Bentuknyapun biasanya dibuat dengan ukiran. Setiap suku
+    di Maluku dan Papua memiliki tifa dengan ciri khas nya masing-masing.Tifa biasanya
+    digunakan untuk mengiringi tarian perang dan beberapa tarian daerah lainnya.
+  artistHistory: --

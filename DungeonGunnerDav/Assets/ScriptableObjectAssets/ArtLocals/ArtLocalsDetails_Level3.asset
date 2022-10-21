@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: ArtLocalsDetails_Level3
   m_EditorClassIdentifier: 
   obtainInLevel: 2
-  artImage: {fileID: 21300000, guid: 085cc6abe2889444c9f87791272f503e, type: 3}
-  nama: Alat Musik Serunai
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  artImage: {fileID: 21300000, guid: b6fad8b98af09794b908496d16f32a6b, type: 3}
+  nama: Lukisan Bulan di Atas Bukit
+  location: Garut
+  year: 1996
+  artist: Popo Iskandar
+  artHistory: Pelukis, penulis esai, kritikus sastra Sunda, dosen seni rupa IKIP
+    Bandung, Popo Iskandar, lahir di Garut pada 17 Desember 1927 dan meninggal pada
+    29 Januari 2000 pada umur 72 Tahun. Pada mulanya lukisan Popo, terpengaruh oleh
+    gurunya, Ries Mulder, orang Belanda yang mengajar di Juruan Seni Rupa dan cenderung
+    berkiblat pada mazhab kubisme dan abstrak. Dalam perkembangan selanjutnya, Popo
+    menemukan gaya sendiri. Lukisan Popo Iskandar banyak dikoleksi dan sekaligus
+    dijadikan sebagai hiasan dekorasi interior dalam rumah bergaya modern dan minimalis,
+    karya-karya Lukisanya banyak mendapatkan apresiasi dari para pengamat seni, baik
+    dalam dan luar negeri.
+  artistHistory: --

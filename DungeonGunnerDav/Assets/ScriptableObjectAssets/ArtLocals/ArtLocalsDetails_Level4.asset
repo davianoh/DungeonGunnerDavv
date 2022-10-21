@@ -15,8 +15,16 @@ MonoBehaviour:
   obtainInLevel: 3
   artImage: {fileID: 21300000, guid: 57c351c28216ea348bcc7dfa66c76505, type: 3}
   nama: Alat Musik Angklung
-  location: Gresik
-  year: 2020
-  artist: Simeme
-  artHistory: Patung slime first dicovered in the mud across the street
-  artistHistory: Slimeme is the best name ever
+  location: Jawa Barat
+  year: Sebelum Era Hindu
+  artist: Masyarakat Sunda
+  artHistory: Angklung adalah alat musik multitonal (bernada ganda) yang berkembang
+    dari masyarakat Sunda. Alat musik ini dibuat dari bambu, dibunyikan dengan cara
+    digoyangkan (bunyi disebabkan oleh benturan badan pipa bambu) sehingga menghasilkan
+    bunyi yang bergetar dalam susunan nada 2, 3, sampai 4 nada dalam setiap ukuran,
+    baik besar maupun kecil. Jenis bambu yang biasa digunakan sebagai alat musik
+    tersebut adalah bambu hitam(awi wulung) dan bambu ater(awi temen), yang jika
+    mengering berwarna kuning keputihan. Hingga saat ini angklung sudah banyak digunakan
+    untuk pementasan kesenian daerah. Eksistensinya juga terus dilestarikan oleh
+    banyak pihak.
+  artistHistory: --

@@ -15,9 +15,8 @@ MonoBehaviour:
   weaponName: Megaphone
   weaponListIndex: 3
   weaponCost: 400
-  weaponDescription: Maknanya sangat sederhana, NO!! yang dalam bahasa Indonesia
-    berarti TIDAK. Menerikan kata TIDAK akan memberikan pesan yang jelas kepada siapapun
-    bahwa kita TIDAK setuju akan perbuatan mereka
+  weaponDescription: 'NO, memiliki arti bahasa Indonesia yaitu TIDAK, siapapun yang
+    diteriaki kata ini, tentu akan berpikir ulang tindakannya. '
   weaponSprite: {fileID: 21300000, guid: 47f152846fb03434e8b1ad9e72f5abb9, type: 3}
   weaponShootPosition: {x: 2.18, y: 1.1, z: 0}
   weaponCurrentAmmo: {fileID: 11400000, guid: 9e2d2d8f4b5cc244288675fefa89b3e6, type: 2}
@@ -30,4 +29,4 @@ MonoBehaviour:
   weaponAmmoCapacity: 0
   weaponFireRate: 0.4
   weaponPrechargeTime: 0
-  weaponReloadTime: 1
+  weaponReloadTime: 1.1
