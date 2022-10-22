@@ -21,6 +21,7 @@ public class MapManager : SingletonMonobehaviour<MapManager>
 
         Load();
         LoadHighScore();
+        LoadPlayer();
     }
 
 
@@ -72,6 +73,23 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         {
             SaveObjectHighScores saveObjectHighScore = JsonUtility.FromJson<SaveObjectHighScores>(saveString);
             highScoreList = saveObjectHighScore.highScoreList;
+        }
+    }
+
+    private void LoadPlayer()
+    {
+        string saveString = SaveSystem.LoadPlayer();
+        if (saveString != null)
+        {
+            SaveObjectPlayer saveObjectPlayer = JsonUtility.FromJson<SaveObjectPlayer>(saveString);
+            GameResources.Instance.healthBonus = saveObjectPlayer.healthUpgrade;
+            GameResources.Instance.attackBonus = saveObjectPlayer.attackUpgrade;
+            GameResources.Instance.speedBonus = saveObjectPlayer.speedUpgrade;
+            GameResources.Instance.coinsBonus = saveObjectPlayer.coinsUpgrade;
+        }
+        else
+        {
+            Debug.Log("No Save");
         }
     }
 

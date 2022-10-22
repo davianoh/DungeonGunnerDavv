@@ -38,7 +38,7 @@ MonoBehaviour:
     maxSpawnInterval: 0.3
     wavesSurviveTimeInSeconds: 10
   - maxTotalEnemiesToSpawn: 20
-    maxConcurrentEnemies: 8
+    maxConcurrentEnemies: 7
     minSpawnInterval: 1
     maxSpawnInterval: 1
     wavesSurviveTimeInSeconds: 15

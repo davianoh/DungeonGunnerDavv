@@ -911,7 +911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PELINDUNG ARTIFAK BUDAYA
+  m_text: PELINDUNG ARTEFAK BUDAYA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d7b033a91aecaf40a1841f5b656b4f3, type: 2}
   m_sharedMaterial: {fileID: 7987158469909663376, guid: 0d7b033a91aecaf40a1841f5b656b4f3, type: 2}
@@ -938,8 +938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
-  m_fontSizeBase: 13
+  m_fontSize: 12.5
+  m_fontSizeBase: 12.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
