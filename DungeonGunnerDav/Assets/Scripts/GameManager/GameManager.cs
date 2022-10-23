@@ -273,12 +273,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         yield return StartCoroutine(DisplayMessageRoutine("KERJA BAGUS PLAYER! \n\n KAMU TELAH BERHASIL MELINDUNGI ARTEFAK BUDAYA INI", Color.white, 3f));
         yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 3f));
-        yield return StartCoroutine(DisplayMessageRoutine("AMBIL SEMUA KOIN LALU BILA SUDAH SIAP, TEKAN ENTER UNTUK LANJUT", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("AMBIL SEMUA KOIN LALU BILA SUDAH SIAP, TEKAN SPACEBAR UNTUK LANJUT", Color.white, 3f));
 
         GetPlayer().playerControl.EnablePlayer();
         yield return StartCoroutine(Fade(1f, 0f, 2f, Color.black));
         yield return StartCoroutine(FadeLevelWon(0f, 1f, 1f));
-        yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER", Color.black, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("TEKAN SPACEBAR", Color.black, 0f));
         
         
         
@@ -307,7 +307,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         yield return StartCoroutine(DisplayMessageRoutine("KAMU GAGAL PLAYER! \n\n ARTEFAK BUDAYA TELAH RUSAK", Color.white, 2f));
         yield return StartCoroutine(DisplayMessageRoutine("SKORMU ADALAH : " + gameScore.ToString("###,###0"), Color.white, 4f));
-        yield return StartCoroutine(DisplayMessageRoutine("TEKAN ENTER UNTUK KEMBALI", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("TEKAN SPACEBAR UNTUK KEMBALI", Color.white, 0f));
 
         gameState = GameState.restartGame;
     }
@@ -374,7 +374,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         if(displaySeconds > 0f)
         {
             float timer = displaySeconds;
-            while (timer > 0f && !Input.GetKeyDown(KeyCode.Return))
+            while (timer > 0f && !Input.GetKeyDown(KeyCode.Space))
             {
                 timer -= Time.deltaTime;
                 yield return null;
@@ -382,7 +382,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         }
         else
         {
-            while (!Input.GetKeyDown(KeyCode.Return))
+            while (!Input.GetKeyDown(KeyCode.Space))
             {
                 yield return null;
             }
