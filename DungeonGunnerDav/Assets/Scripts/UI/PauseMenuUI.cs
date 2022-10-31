@@ -3,26 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class PauseMenuUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI musicLevelText;
     [SerializeField] private TextMeshProUGUI soundsLevelText;
+    [SerializeField] private Transform panelGraphic;
 
-    private void Start()
-    {
-        gameObject.SetActive(false);
-    }
 
     private void OnEnable()
     {
-        Time.timeScale = 0f;
         StartCoroutine(InitialiseUI());
+        panelGraphic.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        panelGraphic.DOScale(new Vector3(1f, 1f, 1f), 0.1f).SetEase(Ease.OutSine);
+        Invoke("TimeScaleOff", 0.11f);
+
     }
 
-    private void OnDisable()
+
+    public void ExitPauseMenu()
     {
         Time.timeScale = 1f;
+
+        panelGraphic.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0.1f).SetEase(Ease.InSine).OnComplete(() =>
+        {
+            this.gameObject.SetActive(false);
+        });
+    }
+
+    public void TimeScaleOff()
+    {
+        Time.timeScale = 0f;
     }
 
     public void LoadMainMapMenu()

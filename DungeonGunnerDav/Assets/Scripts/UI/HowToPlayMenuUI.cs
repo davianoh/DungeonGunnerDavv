@@ -1,17 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using DG.Tweening;
 
-public class ArtLocalMenuUI : SingletonMonobehaviour<ArtLocalMenuUI>
+public class HowToPlayMenuUI : MonoBehaviour
 {
-    public Image artImage;
-    public TextMeshProUGUI artBriefText;
-    public TextMeshProUGUI artHistory;
-    public TextMeshProUGUI artDetailName;
-    //public TextMeshProUGUI artistHistory;
     [SerializeField] private Transform panelGraphic;
 
     private void OnEnable()
@@ -21,7 +14,7 @@ public class ArtLocalMenuUI : SingletonMonobehaviour<ArtLocalMenuUI>
     }
 
 
-    public void ExitArtLocalMenu()
+    public void ExitTutorialMenu()
     {
         panelGraphic.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0.1f).SetEase(Ease.InSine).OnComplete(() =>
         {

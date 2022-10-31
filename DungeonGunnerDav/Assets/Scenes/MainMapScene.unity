@@ -1323,10 +1323,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 167003425}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 167003427}
+        m_TargetAssemblyTypeName: ArtLocalMenuUI, Assembly-CSharp
+        m_MethodName: ExitArtLocalMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1752,10 +1752,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8883470638922260101}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 8883470638922260120}
+        m_TargetAssemblyTypeName: PauseMenuUI, Assembly-CSharp
+        m_MethodName: ExitPauseMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2503,6 +2503,7 @@ MonoBehaviour:
   artBriefText: {fileID: 1782519100}
   artHistory: {fileID: 1306983440}
   artDetailName: {fileID: 336748355}
+  panelGraphic: {fileID: 1457473068}
 --- !u!223 &167003428
 Canvas:
   m_ObjectHideFlags: 0
@@ -5316,6 +5317,7 @@ MonoBehaviour:
   playerName: {fileID: 1957072623}
   playerDescription: {fileID: 621915288}
   playerStats: {fileID: 311789446}
+  panelGraphic: {fileID: 213545974}
 --- !u!1001 &311015268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7484,10 +7486,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1612414437}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1612414439}
+        m_TargetAssemblyTypeName: HowToPlayMenuUI, Assembly-CSharp
+        m_MethodName: ExitTutorialMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -32427,6 +32429,7 @@ GameObject:
   - component: {fileID: 1612414442}
   - component: {fileID: 1612414441}
   - component: {fileID: 1612414440}
+  - component: {fileID: 1612414439}
   m_Layer: 5
   m_Name: HowToPlay
   m_TagString: Untagged
@@ -32454,6 +32457,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1612414439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612414437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29973af9e995ab645b7e7bd5270a74ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelGraphic: {fileID: 1290186873}
 --- !u!114 &1612414440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44967,6 +44983,7 @@ MonoBehaviour:
   weaponStats: {fileID: 1995620722}
   weaponDescription: {fileID: 1785829083}
   currentActiveWeaponChoice: 0
+  panelGraphic: {fileID: 4662851938625958271}
 --- !u!1001 &6326706690552242624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46697,7 +46714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &8883470638922260102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46752,6 +46769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicLevelText: {fileID: 8883470638698009714}
   soundsLevelText: {fileID: 8883470639057092413}
+  panelGraphic: {fileID: 8883470638248442426}
 --- !u!223 &8883470638922260121
 Canvas:
   m_ObjectHideFlags: 0
@@ -47194,9 +47212,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.00033569336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8883470639273540347
 GameObject:

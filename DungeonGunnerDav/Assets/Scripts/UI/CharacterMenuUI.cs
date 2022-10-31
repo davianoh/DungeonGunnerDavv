@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using DG.Tweening;
 
 public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
 {
@@ -22,6 +23,8 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
     [SerializeField] private TextMeshProUGUI playerDescription;
     [SerializeField] private TextMeshProUGUI playerStats; 
 
+    [SerializeField] private Transform panelGraphic;
+
     protected override void Awake()
     {
         base.Awake();
@@ -32,6 +35,8 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
     private void OnEnable()
     {
         MapManager.Instance.ItemBuyed();
+        panelGraphic.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        panelGraphic.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.OutSine);
     }
 
     public void CharacterSelectedChange(int selectedPlayerIndexView)
@@ -54,7 +59,10 @@ public class CharacterMenuUI : SingletonMonobehaviour<CharacterMenuUI>
     {
         SavePlayer();
         PassingUpgradeStats();
-        this.gameObject.SetActive(false);
+        panelGraphic.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0.1f).SetEase(Ease.InSine).OnComplete(() =>
+        {
+            this.gameObject.SetActive(false);
+        });
     }
 
     public void SavePlayer()

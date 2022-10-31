@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
 {
@@ -31,11 +32,13 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
     public TextMeshProUGUI weaponDescription;
 
     public int currentActiveWeaponChoice = 99;
+    [SerializeField] private Transform panelGraphic;
 
     protected override void Awake()
     {
         base.Awake();
         LoadWeapons();
+        
     }
 
     private void Start()
@@ -50,13 +53,22 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
         MapManager.Instance.ItemBuyed();
     }
 
+    private void OnEnable()
+    {
+        panelGraphic.localScale = new Vector3(0.01f, 0.01f, 0.01f);
+        panelGraphic.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.OutSine);
+    }
+
 
     public void WeaponMenuUIToggle()
     {
         SaveWeapons();
         MapManager.Instance.Save();
-
-        this.gameObject.SetActive(false);
+        panelGraphic.DOScale(new Vector3(0.01f, 0.01f, 0.01f), 0.1f).SetEase(Ease.InSine).OnComplete(() =>
+        {
+            this.gameObject.SetActive(false);
+        });
+        
     }
 
     public void SaveWeapons()

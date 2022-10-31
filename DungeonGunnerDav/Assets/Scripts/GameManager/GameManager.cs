@@ -346,7 +346,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         }
         else if(gameState == GameState.gamePaused)
         {
-            pauseMenu.SetActive(false);
+            pauseMenu.GetComponent<PauseMenuUI>().ExitPauseMenu();
             GetPlayer().playerControl.EnablePlayer();
 
             gameState = previousGameState;

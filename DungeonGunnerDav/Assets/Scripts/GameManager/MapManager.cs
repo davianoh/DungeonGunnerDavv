@@ -22,6 +22,8 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         Load();
         LoadHighScore();
         LoadPlayer();
+
+        Time.timeScale = 1f;
     }
 
 
