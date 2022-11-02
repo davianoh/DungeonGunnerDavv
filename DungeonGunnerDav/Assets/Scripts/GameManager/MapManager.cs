@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MapManager : SingletonMonobehaviour<MapManager>
 {
@@ -15,6 +16,8 @@ public class MapManager : SingletonMonobehaviour<MapManager>
     public List<long> highScoreList;
     public List<TextMeshProUGUI> highScoreTextList;
 
+    public Image museum2;
+
     protected override void Awake()
     {
         base.Awake();
@@ -22,8 +25,6 @@ public class MapManager : SingletonMonobehaviour<MapManager>
         Load();
         LoadHighScore();
         LoadPlayer();
-
-        Time.timeScale = 1f;
     }
 
 
@@ -36,6 +37,10 @@ public class MapManager : SingletonMonobehaviour<MapManager>
             highScoreTextList[i].text = highScoreList[i].ToString("###,###0");
         }
         
+        if(unlockLevelListIndex >= 5)
+        {
+            museum2.color = Color.white;
+        }
     }
 
 

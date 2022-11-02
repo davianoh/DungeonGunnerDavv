@@ -12,13 +12,18 @@ public class PauseMenuUI : MonoBehaviour
     [SerializeField] private Transform panelGraphic;
 
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+        gameObject.SetActive(false);
+    }
+
     private void OnEnable()
     {
         StartCoroutine(InitialiseUI());
         panelGraphic.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        panelGraphic.DOScale(new Vector3(1f, 1f, 1f), 0.1f).SetEase(Ease.OutSine);
-        Invoke("TimeScaleOff", 0.11f);
-
+        panelGraphic.DOScale(new Vector3(1f, 1f, 1f), 0.2f).SetEase(Ease.OutSine).SetUpdate(true);
+        Time.timeScale = 0f;
     }
 
 
@@ -32,10 +37,6 @@ public class PauseMenuUI : MonoBehaviour
         });
     }
 
-    public void TimeScaleOff()
-    {
-        Time.timeScale = 0f;
-    }
 
     public void LoadMainMapMenu()
     {
