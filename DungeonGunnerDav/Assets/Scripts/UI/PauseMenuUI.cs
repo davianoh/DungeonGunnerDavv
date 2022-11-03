@@ -10,6 +10,8 @@ public class PauseMenuUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI musicLevelText;
     [SerializeField] private TextMeshProUGUI soundsLevelText;
     [SerializeField] private Transform panelGraphic;
+    [SerializeField] private GameObject pausePage;
+    [SerializeField] private GameObject creditPage;
 
 
     private void Start()
@@ -77,5 +79,17 @@ public class PauseMenuUI : MonoBehaviour
     public void GameQuit()
     {
         Application.Quit();
+    }
+
+    public void CreditPageOpen()
+    {
+        pausePage.SetActive(false);
+        creditPage.SetActive(true);
+    }
+
+    public void PausePageOpen()
+    {
+        creditPage.SetActive(false);
+        pausePage.SetActive(true);
     }
 }
