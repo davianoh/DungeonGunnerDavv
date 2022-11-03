@@ -8467,6 +8467,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
+      propertyPath: isHey
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455406790677790245, guid: 7ecac8e390d44324293a3a8ecb8a3838, type: 3}
       propertyPath: weaponDetails
       value: 
       objectReference: {fileID: 11400000, guid: 3fd52a675a68edb44992f0a4c698668b, type: 2}
@@ -45420,7 +45424,7 @@ MonoBehaviour:
   weaponImage: {fileID: 1453052604}
   weaponStats: {fileID: 1995620722}
   weaponDescription: {fileID: 1785829083}
-  currentActiveWeaponChoice: 0
+  currentActiveWeaponChoice: {fileID: 0}
   panelGraphic: {fileID: 4662851938625958271}
 --- !u!1001 &6326706690552242624
 PrefabInstance:

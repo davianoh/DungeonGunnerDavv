@@ -31,7 +31,8 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
     public TextMeshProUGUI weaponStats;
     public TextMeshProUGUI weaponDescription;
 
-    public int currentActiveWeaponChoice = 99;
+    //public int currentActiveWeaponChoice = 99;
+    public WeaponDetailsSO currentActiveWeaponChoice;
     [SerializeField] private Transform panelGraphic;
 
     protected override void Awake()
@@ -50,6 +51,7 @@ public class WeaponMenuUI : SingletonMonobehaviour<WeaponMenuUI>
         weaponEquipedImage2.sprite = weaponEquiped2.weaponCurrentAmmo.ammoSprite;
         weaponEquipedImage3.sprite = weaponEquiped3.weaponCurrentAmmo.ammoSprite;
 
+        currentActiveWeaponChoice = GameResources.Instance.weaponList[0];
         MapManager.Instance.ItemBuyed();
     }
 

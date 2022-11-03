@@ -21,6 +21,8 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public bool equiped = false;
     private bool buying = false;
 
+    public bool isHey = false;
+
     private void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -43,7 +45,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         if (!WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex))
         {
-            if(WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails.weaponListIndex)
+            if(WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails)
             {
                 costWeaponText.SetActive(false);
                 buyWeaponText.SetActive(true);
@@ -58,8 +60,24 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         {
             if(WeaponMenuUI.Instance.weaponEquiped1 == weaponDetails || WeaponMenuUI.Instance.weaponEquiped2 == weaponDetails || WeaponMenuUI.Instance.weaponEquiped3 == weaponDetails)
             {
-                equiped = true;
-                equipedText.SetActive(true);
+                if(isHey && ((WeaponMenuUI.Instance.unlockWeaponSlots == 3) || 
+                    ((WeaponMenuUI.Instance.weaponEquiped1 == weaponDetails || WeaponMenuUI.Instance.weaponEquiped2 == weaponDetails) && WeaponMenuUI.Instance.unlockWeaponSlots == 2) || 
+                    (WeaponMenuUI.Instance.weaponEquiped1 == weaponDetails && WeaponMenuUI.Instance.unlockWeaponSlots == 1)))
+                {
+                    equiped = true;
+                    equipedText.SetActive(true);
+                }
+                else if (isHey)
+                {
+                    equiped = false;
+                    equipedText.SetActive(false);
+                }
+                else
+                {
+                    equiped = true;
+                    equipedText.SetActive(true);
+                }
+
             }
             else
             {
@@ -101,7 +119,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails.weaponListIndex)
+        if(MapManager.Instance.totalCoinsInGame >= weaponDetails.weaponCost && !WeaponMenuUI.Instance.weaponOwnedList.Contains(weaponDetails.weaponListIndex) && WeaponMenuUI.Instance.currentActiveWeaponChoice == weaponDetails)
         {
             MapManager.Instance.PlayBuyClick();
             buying = true;
@@ -119,7 +137,7 @@ public class WeaponChoice : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
             isDraged = false;
             originPosition = rectTransform.anchoredPosition;
         }
-        WeaponMenuUI.Instance.currentActiveWeaponChoice = weaponDetails.weaponListIndex;
+        WeaponMenuUI.Instance.currentActiveWeaponChoice = weaponDetails;
         MapManager.Instance.PlayGridClick();
     }
 

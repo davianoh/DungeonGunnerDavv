@@ -23,6 +23,9 @@ public class MainMapUI : MonoBehaviour
 
     public void PlayLevel(int levelIndex)
     {
+        museum1.DOKill();
+        museum2.DOKill();
+        logo.DOKill();
         GameResources.Instance.selectedLevelIndex = levelIndex;
         MapManager.Instance.Save();
         SceneManager.LoadScene("MainGameScene");
@@ -42,8 +45,14 @@ public class MainMapUI : MonoBehaviour
 
     public void LogoTween()
     {
-        logo.DOScaleY(1.04f, 1.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutBack);
-        logo.DOScaleX(0.96f, 1.5f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutBack);
+        logo.DOScaleY(1.04f, 0.5f).SetEase(Ease.InOutBack).SetDelay(1f);
+        logo.DOScaleX(0.96f, 0.5f).SetEase(Ease.InOutBack).SetDelay(1f).OnComplete(LogoTweenBack);
+    }
+
+    public void LogoTweenBack()
+    {
+        logo.DOScaleY(1f, 0.5f).SetEase(Ease.InOutBack).SetDelay(1f);
+        logo.DOScaleX(1f, 0.5f).SetEase(Ease.InOutBack).SetDelay(1f).OnComplete(LogoTween);
     }
 
 
